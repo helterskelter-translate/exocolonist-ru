@@ -1,0 +1,19 @@
+ID	Name	Location	CardSuit	perk30	perk60	perk100	Notes
+empathy	Эмпатия	Creche	social	spa	relaxBetter	loveDestress	Понимание других людей
+persuasion	Убеждение	Command	social	socialPlusOne	extraKudos	boostSocial	Харизма, позволяющая руководить людьми и выступать на публике
+creativity	Творчество	Creche	social	shopClothes	skillsBoost	giftBetter	Художественные способности и умение генерировать идеи
+bravery	Смелость	Command	social	extraDraw	reduceExploreStress	extraDraw	Умение справляться с социальными и опасными ситуациями
+							
+reasoning	Логика	Engineering	mental	mentalPlusOne	autoplayFairy	boostMental	Навыки решения проблем и общие знания
+organization	Собранность	Creche	mental	gearSlot	extraDraw	skipNewCard	Приверженность аккуратности и организованности
+engineering	Инженерия	Engineering 	mental	extraDraw	shopGadgets	gearSlot	Знание машин, физики, математикми и программирования
+biology	Биология	Geoponics	mental	jobAnalyzePlants	collectiblesMore	extraStartingPerk	Знание растений, биохимии и человеческого тела
+							
+toughness	Стойкость	Garrison	physical	physicalPlusOne	training	injuryImmune	Физическая сила и выносливость
+perception	Внимание	Expeditions	physical	collectiblesHighlight	collectiblesMore	noBottlenecks	Умение находить предметы и быть незаметным
+combat	Combat	Garrison	physical	shopWeapons	extraDraw	boostPhysical	Навыки тактики и оружия
+animals	Ксенология	Expeditions	physical	petUpgrades1	gearSlot	petUpgrades2	Знание ксенофауны, охоты и скотоводства
+							
+kudos	Похвала		none				Валюта, основанная на репутации
+stress	Стресс		none				Физическое и психическое истощение
+rebellion	Мятежность		none				Отношения со взрослыми и правительством колонии

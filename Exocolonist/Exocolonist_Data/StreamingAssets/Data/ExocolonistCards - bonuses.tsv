@@ -1,0 +1,15 @@
+BattleIDs and rules hardcoded in BattleBonus.cs										
+ID	Name	Group	Value	CardCount	Suit	Only suit battles	Suit Battle Bonus	Suit Battle Rules Text	Notes	OLD value
+straight3	Стрит из 3	straight	3	3	social		3	Social (yellow) straights worth +3		3
+straight4	Стрит из 4	straight	6	4	social		3			6
+straight5	Стрит из 5	straight	10	5	social		3			10
+pair2	Две равных	pair	1	2	physical		3	Physical (red) pairs worth +3	Show only one battle rules text but apply multiplier to all 2-3-4-5 of a kind	1
+pair3	Три равных	pair	3	3	physical		3			3
+pair4	Четыре равных	pair	6	4	physical		3			6
+pair5	Пять равных	pair	10	5	physical		3			10
+flush2	Флеш из 2	flush	1	2	mental		3	Mental (blue) flushes worth +3		1
+flush3	Флеш из 3	flush	3	3	mental		3			3
+flush4	Флеш из 4	flush	6	4	mental		3			6
+flush5	Флеш из 5	flush	10	5	mental		3			10
+										
+rainbow3	Радужный флеш из 3	flush	0	3	wildcard		3		Requires CardAbilityID.rainbowFlushes which defines the bonus value too, counts as a flush for things giving bonuses to flushes	0

@@ -1,0 +1,81 @@
+Additional rules for the battle			1: 11 - 13, 2: 14 - 16, 3: 17 - 24								
+ID	Name (debug only, use Ability name)	Battle Suit	Battle Age Group	AbilityID	AbilitySuit	AbilityValue	GoalAdjust		Notes1	Notes2	
+socialPlusOne	Social (yellow) cards get +1	social	0	plusAll	social	1			From skill perk		
+mentalPlusOne	Mental (blue) cards get +1	mental	0	plusAll	mental	1			From skill perk		
+physicalPlusOne	Physical (red) cards get +1	physical	0	plusAll	physical	1			From skill perk		
+											
+panePhysical1	One slot will turn card physical (red)	physical	1	paneSuit	physical						
+paneSocial1	One slot will turn card social (yellow)	social	1	paneSuit	social						
+paneMental1	One slot will turn card mental (blue)	mental	1	paneSuit	mental						
+paneSet1	Card in one slot has value 2	wildcard	1	paneSet		2	-1				
+panePlus1	One slot card gets +1	wildcard	1	panePlus		1	1				
+paneCardLocked1	Card in one slot will be locked	wildcard	1	paneCardLocked					One card is already played for you and can't be changed		
+exactAwardFiveKudos1a	5 Kudos reward if total equal goal	wildcard	1	exactRewardKudos		5					
+exactAwardFiveKudos1b	5 Kudos reward if total equal goal	wildcard	1	exactRewardKudos		5					
+											
+panePhysical2	One slot will turn card physical (red)	physical	2	paneSuit	physical						
+paneSocial2	One slot will turn card social (yellow)	social	2	paneSuit	social						
+paneMental2	One slot will turn card mental (blue)	mental	2	paneSuit	mental						
+paneSet2	Card in slot has value 3	wildcard	2	paneSet		3	-2				
+panePlus2	One slot card gets +2	wildcard	2	panePlus		2	2				
+paneCardLocked2	Card in one slot will be locked	wildcard	2	paneCardLocked			-2		One card is already played for you and can't be changed		
+exactAwardFiveKudos2a	5 Kudos reward if total equal goal	wildcard	2	exactRewardKudos		5					
+exactAwardFiveKudos2b	5 Kudos reward if total equal goal	wildcard	2	exactRewardKudos		5					
+											
+freeCollectible2	First collectible use is free	wildcard	2	freeCollectible					One collectible per game	collectible stack locks once it has been used once, but amounts don't actually reduce	
+pairsBonus2	Pairs worth +2	wildcard	2	pairsBonus		2	2		Includes pairs, 3 of a kind, 4 of a kind, 5 of a kind		
+straightsBonus2	Straights worth +2	wildcard	2	straightsBonus		2	2		No Bonus for straights		
+											
+panePhysical3	One slot will turn card physical (red)	physical	3	paneSuit	physical						
+paneSocial3	One slot will turn card social (yellow)	social	3	paneSuit	social						
+paneMental3	One slot will turn card mental (blue)	mental	3	paneSuit	mental						
+panePlus3	One slot card gets +3	wildcard	3	panePlus		3	3				
+paneSet3	Card in slot has value 4	wildcard	3	paneSet		4	-3				
+paneCardLocked3	Card in one slot will be locked	wildcard	3	paneCardLocked			-3		One card is already played for you and can't be changed		
+exactAwardTenKudos3a	10 Kudos reward if total equal goal	wildcard	3	exactRewardKudos		10					
+exactAwardTenKudos3b	10 Kudos reward if total equal goal	wildcard	3	exactRewardKudos		10					
+freeCollectible3	First collectible use is free	wildcard	3	freeCollectible					One collectible per game	collectible stack locks once it has been used once, but amounts don't actually reduce	
+pairsBonus3	Pairs worth +3	wildcard	3	pairsBonus		3	3		Includes pairs, 3 of a kind, 4 of a kind, 5 of a kind		
+straightsBonus3	Straights worth +3	wildcard	3	straightsBonus		3			No Bonus for straights		
+											
+flushesMentalBonus3	Mental (blue) flushes worth +5	mental	3	flushesBonus	mental	5	5		No bonus for flushes		
+pairsPhysicalBonus3	Physical (red) pairs worth +5	physical	3	pairsBonus	physical	5	5		Includes pairs, 3 of a kind, 4 of a kind, 5 of a kind		
+gemsWild3	Cards with gems are wild	wildcard	3	gemsWild							
+											
+											
+											
+											
+											
+											
+	removed	wildcard	2	gemsWild							
+	Flushes worth -3	wildcard	2	flushesBonus		-3	-3		No bonus for flushes		
+	Flushes worth -5	wildcard	3	flushesBonus		-5	-5		No bonus for flushes		
+											
+	OLD CONDITIONS TABLE										
+	Straight bonuses doubled	social	1	straightsDoubled							
+	Collectible cards aren't destroyed on use	social	1	freeCollectibles					Can only use each type of one-use item once	collectible stack locks once it has been used once, but amounts don't actually reduce	straightsDoubled
+	Mental (blue) flush bonuses doubled	mental	1	flushesDoubled	mental						freeCollectibles
+	Double card value in random slot	mental	1	paneDoubled					The base value of the card in one slot s doubled		mentalFlushesDoubled
+	Two or more of a kind bonuses doubled	physical	1	pairsDoubled							paneDoubled
+	One slot will turn card red (physical)	physical	1	paneSuit	physical						pairsDoubled
+											panePhysical
+	Card in slot has value 1	social	2	paneSet							
+	-10 Stress reward if total equal goal	social	2	exactRewardStress		-10					paneOne
+	Win if your score is a multiple of ten	social	2	winIfMultiple		10					exactReward
+	Card in one slot will be locked	mental	2	paneCardLocked					One card is already played for you and can't be changed	persists in all 3 rounds for story	multipleOfTen
+	You must play the curse card	mental	2	temporaryCard				curse1		curse is mental 0 but double the value of this card after bonuses	paneLocked
+	Physical cards are 0s	mental	2	setAll	physical	1				In hand too??? no just on board? Nonviolence	curseCard1
+	Three of a kind worth 3x	physical	2	tripletsTripled					Exactly 3 of the same number in a row gets triple the bonus		physicalOnes
+	5 Kudos reward if total higher than goal	physical	2	overkillRewardKudos		5					triplets
+	Negative bonuses for flushes	physical	2	flushesNegative					Flushes subtract points instead of adding them. Avoid flushes of 3+ cards!		overkillReward1
+											noFlushes
+		social	3	straightsDoubled	social						
+	Win if 5-card score is under 10	social	3	winUnderValue		10			Must fill all open slots in last round. Can still win the regular way instead.		socialStraights
+	Physical and Mental cards get -1	social	3	plusNotSuit	social	-1					underTen
+	You must play the curse card	mental	3	temporaryCard				curse2		TODO very similar to noFlushes but more interesting, shouldn't be blue though	nonsocialMinus
+	2+ of a kind worth negative points	mental	3	pairsNegative						TODO this is lame for a level 3 and easy to avoid	curseCard2
+	Random slot is disabled	mental	3	paneEmptyLocked					Can't play cards in one slot	One of the middle 3 only for story challenges	noPairs
+	Physical cards get +3	physical	3	plusAll	physical	3					paneDisabled
+	10 Kudos reward if total higher than goal	physical	3	overkillRewardKudos		10					physicalPlusThree
+	One slot card gets +5	physical	3	panePlus		5					overkillReward2
+											panePlusFive

@@ -1,0 +1,93 @@
+ID	Name	Description	Hidden?	Notes	Where	SteamID	Progression?	Playstation rank 1020
+general_first_attack	Это было страшно	Достичь десяти лет		automatic for finishing first year	exoscript	0		bronze
+general_helios_lands	Гелиопауза	Гелиос приземляется в пятнадцать лет	TRUE	automatic for reaching age 15	exoscript	1		bronze
+general_sneak_out	Что там?	Ускользнуть, чтобы исследовать			exoscript	2		bronze
+general_won_vertumnalia	Ты чемпион	Победить на Вертумналии			status = popular	3		bronze
+general_second_life	Проснуться снова	Начать свою вторую жизнь		make sure you must get some ending first, same as ending the game	exoscript	4		bronze
+skill_suit_max	Динь-динь-динь!	Достичь 100 во всех 4 навыках одного типа			Princess.setSkill	5	400/400 points	bronze
+skill_rebellion_max	Я ненавижу тебя!	Достичь 100 мятежности			Princess.setSkill	6	100/100 rebellion	bronze
+ending_earth	Жизнь на Земле	Получить концовку Парадокс	TRUE	special_earth (also special_shipDestroyed)	Ending.AwardEnding	7		bronze
+ending_timelord	Парадокс	Получить концовку Трансцендентность времени	TRUE	special_timeLord	Ending.AwardEnding	8		bronze
+ending_bomb	Побег	Получить концовку Побег	TRUE	special_bomb	Ending.AwardEnding	9		bronze
+ending_joingardeners	Трансформация	Получить концовку Примкнуть к Садовникам	TRUE	special_joinGardeners	Ending.AwardEnding	10		bronze
+ending_destroygardeners	Подрыв	Получить концовку Отключить Массив	TRUE	special_destroyGardeners	Ending.AwardEnding	11		bronze
+ending_virus	Зелёная Вертумна навсегда	Получить концовку Средство Тангент	TRUE	special_virus	Ending.AwardEnding	12		bronze
+ending_colonydestroyed	Всё напрасно	Получить концовку Колония уничтожена	TRUE	special_colonyDestroyed	Ending.AwardEnding	13		bronze
+ending_all	Все возможные ты	Получить все 29 концовок			Ending.AwardEnding	14	29/29 endings	gold
+chara_anemone	Верность Энимоны	Разблокировать Энимону в главном меню		need their 3rd level card, requires love 10 plus event	Chara.AwardCardThree	15		bronze
+chara_cal	Сила Кела	Разблокировать Кела в главном меню		need their 3rd level card, requires love 10 plus event	Chara.AwardCardThree	16		bronze
+chara_tang	Фокус Тангент	Разблокировать Тангент в главном меню		need their 3rd level card, requires love 10 plus event	Chara.AwardCardThree	17		bronze
+chara_dys	Секрет Диса	Разблокировать Диса в главном меню		need their 3rd level card, requires love 10 plus event	Chara.AwardCardThree	18		bronze
+chara_marz	Амбиции Марц	Разблокировать Марц в главном меню		need their 3rd level card, requires love 10 plus event	Chara.AwardCardThree	19		bronze
+chara_tammy	Забота Темми	Разблокировать Темми в главном меню		need their 3rd level card, requires love 10 plus event	Chara.AwardCardThree	20		bronze
+chara_rex	Объятья Рекса	Разблокировать Рекса в главном меню		need their 3rd level card, requires love 10 plus event	Chara.AwardCardThree	21		bronze
+chara_nomi	Энтузиазм Номи	Разблокировать Номи в главном меню		need their 3rd level card, requires love 10 plus event	Chara.AwardCardThree	22		bronze
+chara_vace	Уверенность Вейса	Разблокировать Вейса в главном меню		need their 3rd level card, requires love 10 plus event	Chara.AwardCardThree	23		bronze
+chara_sym	Любопытство Сима	Разблокировать Сима в главном меню		need their 3rd level card, requires love 10 plus event	Chara.AwardCardThree	24		bronze
+chara_all	Все друзья	Разблокировать всех персонажей в меню			Chara.AwardCardThree	25	10/10 characters	bronze
+pet_pet	Ласковый питомец	Погладьте своего питомца		have any pet and click on it	Pet	26		bronze
+pet_all	Четыре питомца	Получите всех четырех питомцев за одну игру		hopeye, vriki, unisaur, robovac at the same time, don't all need to be equipped	Princess gear	27	4/4 pets at once	bronze
+save_tammy	Принцесса и мишка	Спасти Темми	TRUE	automatic during second life	exoscript	28		bronze
+save_tonin	Главный Геодезист	Спасти дядю Тонина	TRUE	poisoning him also counts	exoscript	29		bronze
+save_hal	В инженерию!	Спасти профессора Хала	TRUE		exoscript	30		bronze
+save_mom	Больше нет голода	Положить конец голоду	TRUE	preventing wormhole accident does NOT count	exoscript	31		silver
+save_dad	Его маленькая помидорка	Помочь Тангент излечить Шиммер	TRUE		exoscript	0		silver
+love_meet_sym	Кто... или Что...	Встретить Садовника Сима	TRUE		exoscript	1		bronze
+love_connect_rex_nomi	Сводник	Помочь Номи признаться в любви Рексу	TRUE	wherever mem_nomiRexDate is set	exoscript	2		bronze
+love_break_up_anemone_vace	Разлучник	Разорвать отношения Энимоны и Вейса	TRUE	five different places where mem_anemoneVaceBreakup is set	exoscript	3		bronze
+love_prevent_cal_tammy	Встать между	Помешать Келу и Темми начать встречаться	TRUE	without tammy dying obviously. if you date one or tell cal to back off or neg tammy AND she's your best friend and tells you about it	exoscript	4		bronze
+love_all	Дружелюбнейший друг	Довести пять отношений до пяти сердец			Princess.SetLove	5	5/5 relationships to 5 hearts	silver
+battle_score	Рекорд	Набрать 75 очков за одну руку		histograms of 7 decks showed one could reach 75 with an 11% chance, others could only reach 65 with a 2% chance. this is a cheevo you have to work at.	after submitting a battle hand	6	75/75 high score	silver
+battle_big_card	Вот это ценность!	Получить карту со значением 50 или выше			UpdateEverything	7		bronze
+battle_win_streak	Суровый винстрик	Победить десять раз подряд в сложном режиме			after winning battle	8	10/10 wins in a row	bronze
+battle_flush_fives	Флеш пятёрками	Собрать флеш из пяти пятёрок		five 5s in the same color, must submit	after submitting a battle hand	9		bronze
+battle_impossible	Сложно? Невозможно!	Пройти невозможное испытание в сложном режиме			after winning battle	10		silver
+battle_mono	Моноколода	Получить колоду карт одного цвета или с вайлдами		wildcards ok	battle start or deck menu open	11		silver
+battle_cards_all	Собрать их все	Разблокировать все карты в галерее (больше, чем 151)			after gaining card	12		gold
+story_delusions	Больше никаких снов	Экспериментальное лечение ваших бредовых идей	TRUE		exoscript	13		bronze
+story_kill_faceless	Вопреки всему	Убить Безликого	TRUE	during year 14 attack or while hunting (mem_defeatedFaceless or mem_killedFaceless which are different things)	exoscript	14		silver
+story_defeat_lum	Это переворот!	Сместите Губернатора Люма	TRUE	you or marz is governor	exoscript	15		bronze
+story_stop_tangent	Сегодня без дождей	Остановить рукотворную чуму Тангент	TRUE	After starting it of course, either regular way or via dys bomb, NOT by becoming governor	exoscript	16		bronze
+story_peace	Мир на Вертумне	Провести переговоры с Садовниками в конце 19 лет	TRUE	not really an ending but kind of, happens during attack 19, must be governor	exoscript	17		silver
+	playstation_platinum	(not in the game - only on playstation)		automatically awarded on playstation when you get every other cheevo	playstation servers		50/50 cheevos complete	platinum
+								
+								
+								
+								
+								
+	save_eudicot							
+	Get a Raise	Mastered a Job		automatic for doing a job 10 times then beating ultimate challenge			general_job_ultimate	
+	Do every explore job in one game							
+	Find the artifacts end zone							
+	Date Utopia	Date Utopia during the endgame	TRUE	need to flirt with her, get explore ending, have no partner (too obscure?)				
+	kiss multiple characters in one game							
+	triad achievements: Dys/Sym/Sol, Marz/Rex/Sol, Rex/Nomi/Sol (if added)							
+	get Dys and Sym to date							
+	whoops! hooked up with Tang too soon							
+	enemies-to-lovers hookup with Vace in the fight scene							
+	break up with any character							
+	finish game without flirting with anyone							
+	max love with a pet							
+	learn about the convergent domain							
+	learn about the Gardener's surveillance system							
+	go to a funeral							
+	rest three months in a row							
+	coward: never help out on the walls/leave shelter during an attack							
+	loner: no relationship over 3 love at endgame							
+	superlover: all relationships over 7 love							
+	losing streak (3+ card losses)							
+	easy card game loss							
+	max out a skill							
+	max out three skills from different categories							
+	dump stat: finish the game with one skill at 0							
+	homebody: never leave the colony							
+	good thing we have those: survive a grievous injury							
+	you didn't see nothing: knowingly allow Dys to bomb the colony							
+	have Sym sacrifice himself to broker peace with the Gardeners							
+	save the food supply from being destroyed in the wormhole							
+	win the manticore vs. snapbladder bet							
+	choose all three chosen sex options during the puberty event							
+	yes, you can do that here: change pronouns mid-game							
+	hi, my name is: change name mid-game							
+	start your fifth life							
+	start your tenth life							

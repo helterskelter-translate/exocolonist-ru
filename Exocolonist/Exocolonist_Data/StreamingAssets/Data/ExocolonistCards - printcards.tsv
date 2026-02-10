@@ -1,0 +1,619 @@
+	273	71 / 66 / 80 / 56				110 / 105 / 124 / 76						71				0	0											
+ID	Name	Type	Suit	Level	Value	Ability1	Value1	Suit1	Ability2	Value2	Suit2	Ability3	Not Used	Kudos	UpgradeFrom	HowGet	Artist	StoryEvents	Age	Unused	Notes	Usages			Artist Name	Artist Website	Artist Social At	Artist Social URL
+		Social - straights, positionals, kudos and stress, odd														kudos, stress, straightBonus												
+		Mental - low values, suit, self effects, wacky, card drawing														draw, keep, flushesBonus												
+		Physical - high values, pairs, simple, even										Count Cards with Value	Value + Value1			duplicate, pairsBonus												
+		social	0-3	4-6	7-9	10+			110	71	< 0	1	4															
+		mental	0-3	4-6	7-9	10+			105	66	0	13	0			multIfHighest, plusForPosition, 												
+		phys	0-3	4-6	7-9	10+			124	80	1	19	10															
+		gear							47	34	2	35	28															
+		collectible							14	9	3	36	31		Level 1 Cards:	51												
+		wild							15	13	4	36	45		Level 2 Cards:	79												
+											5	30	25		Level 3 Cards:	54												
+											6	16	16		Level 4 Cards:	46												
+											7	9	9															
+											8	18	19															
+											9	4	4															
+											10	10	10		-10 Because the vertumnalia prizes and the "Second" jobs artificially inflate it													
+											11	0	4															
+											12	2	10															
+											13	0	3															
+											14	0	2															
+											15	0	1															
+											> 15	1	7															
+																												
+	Intro Starting Cards																											
+																												
+social0	Giggling		social	1	0									10		trainingBuy	Mei - Done	gamestartintro	10			1 social			Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+social1	First Words		social	1	1									20	social0	training	Mei - Done	gamestartintro, (gym upgrade)	10			1 social	1		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+social2	Negotiating		social	1	2									50	social1	training	Mei - Done	gamestartintro, (gym upgrade), marzDeliveryUnlockEnd	10			2 social	2		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+social3	Commanding		social	2	4									100	social2	training	Mei - Done	(store upgrade)	11			1 social	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																						 						
+mental0	Wondering		mental	1	0									10		trainingBuy	Mei - Done	gamestartintro	10			1 mental			Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+mental1	Discovering		mental	1	1									20	mental0	training	Mei - Done	gamestartintro, (gym upgrade)	10			1 mental	1		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+mental2	Deducing		mental	1	2									50	mental1	training	Mei - Done	gamestartintro, (gym upgrade)	10			1 mental	2		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+mental3	Innovating		mental	2	4									100	mental2	training	Mei - Done	(store upgrade)	11			1 mental	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																						 						
+physical0	Crawling		physical	1	0									10		trainingBuy	Mei - Done	gamestartintro	10			1 physical			Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+physical1	First Steps		physical	1	1									20	physical0	training	Mei - Done	gamestartintro, (gym upgrade)	10			1 physical	1		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+physical2	Running		physical	1	2									50	physical1	training	Mei - Done	gamestartintro, (gym upgrade)	10			1 physical	2		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+physical3	Leaping		physical	2	4									100	physical2	training	Mei - Done	(store upgrade)	11			1 physical	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																												
+																												
+																												
+																						 						
+	Intro Choice Cards																											
+																						 						
+introTrowel	Gardening Trowel	gear	none	1		gearBiology	5		straightsBonus	1				50		shopDefault	Ed - Done	gamestartintro, (store)	10			2 none	5		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+introBook	Animal Book	gear	none	1		gearAnimals	5		flushesBonus	1				50		shopDefault	Ed - Done	gamestartintro, (store)	10			2 none	5		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+introDoll	Doll	gear	none	1		gearPersuasion	5		pairsBonus	1				50		shopDefault	Ed - Done	gamestartintro, (store)	10			2 none	5		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+introHat	Eudicot's Old Hat	gear	none	1		gearEmpathy	5		straightsBonus	1				50		shopClothes	Ed - Done	gamestartintro, (store)	10			2 none	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+introTablet	Learning Tablet	gear	none	1		gearReasoning	5		flushesBonus	1				50		shopGadgets	Ed - Done	gamestartintro, (store)	10			2 none	5		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+introSportsball	Sportsball	gear	none	1		gearToughness	5		pairsBonus	1				50		shopWeapons	Ed - Done	gamestartintro, (store)	10			2 none	5		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																						 						
+perk_eyes	Eagle Eyes I		physical	2	0	plusWinSkill	1	physical								unique	Ed - Done	gamestartintro, allextrastartingperk	10			1 physical	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+perk_extraFingers	Extra Fingers I		social	2	0	plusWinSkill	1	social								unique	Ed - Done	gamestartintro, allextrastartingperk	10			1 social	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+perk_spongyBrain	Absorbent Brain I		mental	2	0	plusWinSkill	1	mental								unique	Ed - Done	gamestartintro, allextrastartingperk	10			1 mental	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+perk_muscles	Super Strength I		physical	2	5											unique	Ed - Done	gamestartintro, allextrastartingperk	10			1 physical	5		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+perk_calm	Calm Temperament I		social	2	0	stress	-1									unique	Ed - Done	gamestartintro, allextrastartingperk	10			1 social	-1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+	// perk = nothing has no card																					 						
+																						 						
+perk_eyes2	Eagle Eyes II		physical	3	3	plusWinSkill	1	physical				gem		70	perk_eyes	training	Sarah - Done	(gym upgrade)	11			1 physical	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+perk_extraFingers2	Extra Fingers II		social	3	3	plusWinSkill	1	social				gem		70	perk_extraFingers	training	Sarah - Done	(gym upgrade)	11			1 social	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+perk_spongyBrain2	Absorbent Brain II		mental	3	3	plusWinSkill	1	mental				gem		70	perk_spongyBrain	training	Sarah - Done	(gym upgrade)	11			1 mental	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+perk_muscles2	Super Strength II		physical	3	5	plusForSuit	2	physical				gem		70	perk_muscles	training	Sarah - Done	(gym upgrade)	11			1 physical	7		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+perk_calm2	Calm Temperament II		social	3	1	stress	-5					gem		70	perk_calm	training	Sarah - Done	(gym upgrade)	11			1 social	-4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+	// perk = nothing has no card																					 						
+																												
+tradition	Tradition 		physical	1	2	setRight	2	physical				gem					Ed - Done	gamestartintro	10			1 physical	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+idealism	Idealism 		social	1	2	firstToLast	1					gem					Ed - Done	gamestartintro	10			1 social	3		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+futurism	Futurism 		mental	1	1	plusLast	2					gem					Ed - Done	gamestartintro	10			1 mental	3		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+dreamPeople	Dream People		social	1	4							gem					Ed - Done	gamestartintro	10			1 social	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+engineeringBooks	Engineering Books	gear	none	2		plusWinSkill	1	mental	globalBonusGear	2	mental						Ed - Done	gamestartintro	10			1 none	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																						 						
+stressCry	Stress Cry		social	1	2												Ed - Done	gamestartintro	10		babysitting?	1 social	2		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+toughFace	Tough Face		physical	1	2												Ed - Done	gamestartintro	10		babysitting?	1 physical	2		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+distraction	Distraction 		mental	1	1	draw	1										Ed - Done	gamestartintro	10		babysitting?	1 mental	2		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																						 						
+sunMedallion	Sun Medallion	gear	none	1		globalBonusGear	1									unique	Ed - Done	dadMonth1, main_month1	10			1 none	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+sunMedallion2	Sun Medallion II	gear	none	3		globalBonusGear	5								sunMedallion	unique	Ed - Done	main_birthday15	15			1 none	5		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																						 						
+																						 						
+																						 						
+																						 						
+	Shop Items																											
+																						 						
+	introHat	gear	none	1		gearEmpathy	5		straightsBonus	1						shopClothes	Ed - Done	gamestartintro, (store)				2 none	5					
+jacket	Cool jacket	gear	none	2		gearPersuasion	20		straightsBonus	2	social			100		shopClothes	Ed - Done	marz3Earth, (store)	11			2 none	20		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+emojiproji	Emojiproji	gear	none	2		gearAllSkills	10	social	globalBonusGear	2	social			100		shopClothes	Ed - Done	depotmarzsteal, (store)	12			3 none	10		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+cape	Superhero Cape	gear	none	4		gearBravery	30		straightsDoubled					200		shopClothes	Ed - Done	(store)	13			1 none	30		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+backpack	Memory Backpack	gear	none	4		draw	1							300		shopClothes	Ed - Done	(store)	13			1 none	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																						 						
+	introSportsball	gear	none	1		gearToughness	5		pairsBonus	1						shopWeapons	Ed - Done	gamestartintro, (store)				2 none	5					
+plascutter	Plascutter	gear	none	2		gearCombat	10		globalBonusGear	2	physical			100		shopWeapons	Ed - Done	surveystart, (store)	13			2 none	10		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+tazegloves	Tazegloves	gear	none	2		gearCombat	20		pairsBonus	2	physical			100		shopWeapons	Ed - Done	(store)	13			2 none	20		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+autohelm	Targeting Autohelm	gear	none	4		autoplayOrder			plusAll	2				200		shopWeapons	Ed - Done	(store)	13			1 none			Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+dronerifle	Drone Rifle	gear	none	4		gearCombat	50		pairsDoubled		physical			300		shopWeapons	Ed - Done	deliveryGarrison, (store)	13			2 none	50		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																						 						
+	introTablet	gear	none	1		gearReasoning	5		flushesBonus	1						shopGadgets	Ed - Done	gamestartintro, (store)				2 none	5					
+virtHelmet	Virtspace Helmet	gear	none	2		gearReasoning	10		flushesBonus	2	mental			100		shopGadgets	Ed - Done	(store)	13			1 none	10		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+brainTrainer	Brain Trainer	gear	none	3		gearAllSkills	15							200		shopGadgets	Ed - Done	(store)	13			1 none	#REF!		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+holoeye	Holoeye Display	gear	none	4		gearEngineering	30		freeCollectible					300		shopGadgets	Ed - Done	(store)	13			1 none	15		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+fidgetSpinner	Vintage Focus Device	gear	none	4		allWildNumber		mental						300		shopGadgets	Ed - Done	(store)	13			1 none			Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																						 						
+	photophonor	gear	none	1		plusAll	1	social								shopDefault	Ed - Done	main_birthday12				4 none	1					
+	introTrowel	gear	none	1		gearBiology	5		straightsBonus	1						shopDefault	Ed - Done	gamestartintro, (store)				2 none	5					
+	introBook	gear	none	1		gearAnimals	5		flushesBonus	1						shopDefault	Ed - Done	gamestartintro, (store)				2 none	5					
+	introDoll	gear	none	1		gearPersuasion	5		pairsBonus	1						shopDefault	Ed - Done	gamestartintro, (store)				2 none	5					
+	cake	collectible	none	1												shopDefault	Ed - Done	tammybirthdaycake, tammyrepeat, tutoringtammy, cookingrepeat, main_birthday16				3 none						
+																						 						
+																						 						
+hopeye	Pet Hopeye		wildcard	1	1											unique	Sarah - Done	engineeringtangeggsend, nearbybosshopeye	10			1 wildcard	1		Lindsay Ishihiro	http://www.lindsayishihiro.ca	neomeruru	http://twitter.com/neomeruru
+hopeye2	Hopeye II	gear	none	2		gearReduceStress	2		pairsBonus	2		pet			hopeye	unique	100exocards	relaxparkbondhopeye	12			1 none	2		geotalon	https://geotaloncommissions.weebly.com/	geotalon	https://twitter.com/geotalon
+hopeye3	Hopeye III	gear	none	4		gearReduceStress	3		pairsBonus	3		pet			hopeye2	unique	100exocards	relaxparkultimatehopeye	12			1 none	3		Beth Sparks	https://www.artstation.com/sparksel	Sparksel	https://twitter.com/Sparksel
+																												
+vriki	Vriki	gear	none	1		plusWinSkill	1		straightsBonus	1		pet				unique	Sarah - Done	lookoutvriki, main_attack12	12			2 none	1		Lindsay Ishihiro	http://www.lindsayishihiro.ca	neomeruru	http://twitter.com/neomeruru
+vriki2	Vriki II	gear	none	2		plusWinSkill	1		straightsBonus	3		pet			vriki	unique	100exocards	relaxparkbondvriki	12			1 none	1		Lindsay Peltz	https://www.dinopony.com	dinosaurandpony	https://twitter.com/dinosaurandpony
+vriki3	Chirring Vriki		social	1	0										vriki2	unique	100exocards	relaxparkultimatevriki	12			1 social			Blue	http://bluebry.weebly.com/gallery.html	bluebryjam	https://twitter.com/bluebryjam
+																												
+unisaur	Unisaur	gear	none	2		rainbowFlushes	3					pet				unique	Sarah - Done	animalsunisaur	14			3 none	3		Lindsay Ishihiro	http://www.lindsayishihiro.ca	neomeruru	http://twitter.com/neomeruru
+unisaur2	Unisaur II	gear	none	3		rainbowFlushes	4					pet			unisaur	unique	100exocards	relaxparkbondunisaur	14			1 none	4		Erica Doyle	eadoyle.com	eadoyle	https://twitter.com/eadoyle
+unisaur3	Unisaur III	gear	none	4		rainbowFlushes	5					pet			unisaur2	unique	100exocards	relaxparkultimateunisaur	14			1 none	5		Grave Omens	graveomens.com	graveomens	https://twitter.com/graveomens
+																						 						
+vacubot	Pet Bot	gear	none	4		gearAllSkills	20	mental	plusLast	4		pet				unique	Ed - Done	robotultimate	15			2 none	20		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																												
+																						 						
+alienWeapon	Sonic Emitter	gear	none	4		plusAll	3	physical									Ed - Done	huntUltimate3	18			1 none	3		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																												
+																						 						
+	Collectibles																											
+																						 						
+yellowFlower	Yellow Flower	collectible	none	1		collectiblePlusSuit	1	social									Ed - Done	explorecollectibleflower, forageflowers, foragelowboss, nearbylowboss	10			1 none	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+fruit	Bobber Fruit	collectible	none	1		collectiblePlusSuit	1	mental									Ed - Done	explorecollectiblefruit, foragelowboss, nearbylowboss	10			1 none	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+egg	Xeno Egg	collectible	none	1		collectiblePlusSuit	1	physical									Ed - Done	explorecollectibleegg, foragemanticoreegg, foragelowboss	10			3 none	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+wood	Mushwood Log	collectible	none	1		collectiblePlus	2										Ed - Done	explorecollectiblewood, nearbylogging, nearbyloggingalone	10			1 none	2		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+roots	Medicinal Roots	collectible	none	1		collectibleDraw	1										Ed - Done	explorecollectibleroots, nearbyhole	10			1 none	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+crystal	Crystal Cluster	collectible	none	1		collectibleNewHand											Ed - Done	explorecollectiblecrystal, surveysparkle, surveybossbushbubbower	10			1 none			Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																												
+device	Strange Device	collectible	none	1													Ed - Done	explorecollectibledevice, artifactsstart, artifactsdysmonitoring	10			1 none			Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																						 						
+cake	Cake	collectible	none	1										50		shopDefault	Ed - Done	tammybirthdaycake, tammyrepeat, tutoringtammy, cookingrepeat, main_birthday16	10			3 none			Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																												
+																												
+																												
+																						 						
+	whiteFlower	collectible	none	1													Ed - Done	main_birthday12				3 none						
+																						 						
+	Charas																											
+																						 						
+anemone1	Anemone's Loyalty		physical	2	2	setUpTo	2	physical								unique	Sarah - Done	anemone2Nick, gamestartintro	10			1 physical	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+anemone2	Anemone's Loyalty II		physical	3	5	setUpTo	3	physical							anemone1	unique	Sarah - Done	anemone5Lawful	14			1 physical	8		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+anemone3	Anemone's Loyalty III		physical	4	9	setUpTo	5	physical							anemone2	unique	Sarah - Done	anemone10Ultimate	17			1 physical	14		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+cal1	Cal's Strength		physical	2	4											unique	Sarah - Done	cal2mom, gamestartintro	10			1 physical	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+cal2	Cal's Strength II		physical	3	7										cal1	unique	Sarah - Done	cal5Pacifist	14			1 physical	7		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+cal3	Cal's Strength III		physical	4	10										cal2	unique	Sarah - Done	cal10Ultimate	17			1 physical	10		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+tang1	Tangent's Focus		mental	2	3	plusIfHighest	1									unique	Sarah - Done	tang3nickname, gamestartintro	10			1 mental	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+tang2	Tangent's Focus II		mental	3	2	plusIfHighest	6								tang1	unique	Sarah - Done	tang6Work	14			1 mental	8		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+tang3	Tangent's Focus III		mental	4	5	plusIfHighest	6								tang2	unique	Sarah - Done	tang10Ultimate	17			1 mental	11		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+dys1	Dys's Secret		mental	2	2	plusForEdge	2									unique	Sarah - Done	dys2tang, gamestartintro	10			1 mental	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+dys2	Dys's Secret II		mental	3	3	plusForEdge	3								dys1	unique	Sarah - Done	dys6explore	14			1 mental	6		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+dys3	Dys's Secret III		mental	4	5	plusForEdge	5								dys2	unique	Sarah - Done	dys10Ultimate	17			1 mental	10		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+marz1	Marz's Ambition		social	2	5	kudos	-1									unique	Sarah - Done	marz1dys, gamestartintro, test	10			1 social	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+marz2	Marz's Ambition II		social	3	7	kudos	-3								marz1	unique	Sarah - Done	marz5datehint	14			1 social	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+marz3	Marz's Ambition III		social	4	7	kudos	5								marz2	unique	Sarah - Done	marz10ultimate	17			1 social	12		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+tammy1	Tammy's Care		social	2	2	plusRight	1									unique	Sarah - Done	tammy1favorites, gamestartintro	10			1 social	3		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+tammy2	Tammy's Care II		social	3	3	plusRight	3								tammy1	unique	Sarah - Done	tammy6Ears	14			1 social	6		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+tammy3	Tammy's Care III		social	4	3	doubleRight									tammy2	unique	Sarah - Done	tammy10Ultimate	17			1 social	3		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+rex1	Rex's Hug		social	2	2	plusForHighStress	2									unique	Sarah - Done	rex2BuildStart	15			1 social	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+rex2	Rex's Hug II		social	3	4	plusForHighStress	4								rex1	unique	Sarah - Done	rex4Hugs	15			1 social	8		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+rex3	Rex's Hug III		social	4	6	plusForHighStress	6								rex2	unique	Sarah - Done	rex10Ultimate	18			1 social	12		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+nomi1	Nomi's Enthusiasm		wildcard	2	3											unique	Sarah - Done	nomi1Drawing	15			1 wildcard	3		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+nomi2	Nomi's Spice II		wildcard	3	6	setSuitNeighbors		wildcard							nomi1	unique	Sarah - Done	nomi5Multiplayer	15			1 wildcard	6		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+nomi3	Nomi's Spice III		wildcard	4	9	setSuitAllRight		wildcard							nomi2	unique	Sarah - Done	nomi10Ultimate	15			1 wildcard	9		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+vace1	Vace's Confidence		physical	2	5	plusNeighbors	-1									unique	Sarah - Done	vace2Effortless	15			1 physical	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+vace2	Vace's Confidence II		physical	3	12	plusOthers	-1								vace1	unique	Sarah - Done	vace5Aspiration	17			1 physical	11		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+vace3	Vace's Confidence III		physical	4	18	plusOthers	-2								vace2	unique	Sarah - Done	vace10Ultimate	17			1 physical	16		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+sym1	Sym's Curiosity		mental	2	1	ifOnlySuit	4	mental				gem				unique	Sarah - Done	sym2Sandwich	10			1 mental	5		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+sym2	Sym's Curiosity II		mental	3	3	ifOnlySuit	7	mental				gem			sym1	unique	Sarah - Done	sym6Death	16			1 mental	10		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+sym3	Sym's Curiosity III		mental	4	5	ifOnlySuit	10	mental				gem			sym2	unique	100exocards	sym10Ultimate	19			1 mental	15		AlePresser	alepresser.com		
+																						 						
+congruence	Congruence		mental	3	3											unique	Sarah - Done	gamestartintro, robotcongruencebroken	10		robot is 15, start is hog	3 mental	3		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+dad	Dad's Love		social	3	3	plusToAndFrom	1	social								unique	Sarah - Done	dadShimmerSaved	16			1 social	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+mom	Mom's Love		physical	3	5	plusWinSkill	1									unique	Sarah - Done	momLives	15			1 physical	6		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																												
+																												
+																												
+	(Cal)																					 						
+	fixing		mental	3	2	ifLeftSuit	1	mental									Sarah - Done	cal6hoverboardbroken, rex40, robotvacubot, lookoutrobot			everything is 15 except lookoutrobot is 13, okay	4 mental	3					
+																						 						
+tammyGift	Tammy's Homemade Gift	gear	none	1		gearEmpathy	5		plusToGems	1							Ed - Done	tammy4gift	10		Used tammyHat for art. Doesn't actually look like any of the text descriptions but oh well	1 none	5		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																												
+	caught		social	1	1							gem					100exocards	tammytoninprevent, engineeringtangsearchoffice, sneakutopia			engineeringtangsearchoffice is 17 but it's a punishment so okay	3 social	1					
+surpriseParty	Surprise Party		social	3	5	plusLastStage	3										100exocards	tammy8sentimental, main_birthday18, tammy80	18			1 social	8		Neana	www.neanaillustration.com	snowneana	https://twitter.com/snowneana
+																												
+																												
+																												
+	(Tang)																											
+	caught		social	1	1							gem					100exocards	tammytoninprevent, engineeringtangsearchoffice, sneakutopia			engineeringtangsearchoffice is 17 but it's a punishment so okay	3 social	1					
+tangbang	Releasing Endorphins		mental	3	6	plusForSuit	1	mental									Sarah - Done	tang8Depressed	17			1 mental	7		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																												
+	(Marz)																											
+	sharing		social	1	1	plusRight	1	social				gem					100exocards	tammy20, sportsballsoldiers, marzDeliveryUnlockEnd			animalssqueedger is 14, add to another tammy event	2 social	2					
+	social2		social	1	2										social1	training	Mei - Done	gamestartintro, (gym upgrade), marzDeliveryUnlockEnd				2 social	2					
+ateThem	I Ate Them All!		physical	1	2												Sarah - Done	marzDeliveryUnlockEnd	10			1 physical	2		Dorian Dutrieux		damousey	https://twitter.com/damousey
+																												
+	jacket	gear	none	2		gearPersuasion	20		straightsBonus	2	social					shopClothes	Ed - Done	marz3Earth, (store)				2 none	20					
+marzLeader	Friend in High Places		social	4	4	plusForSuit	2	social									Sarah - Done	marzLeader	19			1 social	6		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																												
+																												
+																												
+	(Vace)																					 						
+	violentTale		physical	2	4	plusNeighbors	-2	social									100exocards	anemone20, vace1vain, animalscalfloatcow			vace and animals = 14	2 physical	2					
+vaceStopFight	Breaking up a Fight		physical	3	8												Sarah - Done	vace8Past	17			1 physical	8		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+	headache		physical	3	8												Ed - Done	artifactsboss3pyramid, vaceFight			school? getting hit on the head? vace?	2 physical	8					
+																						 						
+	(Sym)																											
+overseer	Meeting the Overseer		physical	4	12											unique	100exocards	sym8overseer	17			2 physical	12		Sariel Snowings	https://sarielsnowings.artstation.com	SarielSnowings	https://twitter.com/SarielSnowings
+																												
+																						 						
+	Main Priority Events																											
+																						 						
+vertumnaliaPhysical	Bot-Athalon Champion		physical	2	5												100exocards	main_vertumnalia10-14	10			1 physical	5		GuilhermeRM	https://www.artstation.com/guilhermerm_art	GuilhermeRM_art	https://twitter.com/GuilhermeRM_art
+vertumnaliaSocial	Talent Show Champion		social	2	5												100exocards	main_vertumnalia10-14	10			1 social	5		amuk.art	https://amukart.wixsite.com/portfolio	amuk.art	https://www.instagram.com/amuk.art/
+vertumnaliaMental	Science Fair Champion		mental	2	4												100exocards	main_vertumnalia10-14	10			1 mental	4		Onsta	https://onstamonsta.weebly.com/portfolio.html	OnstaMonsta	https://twitter.com/OnstaMonsta
+vertumnaliaPhysical2	Xeno Wrangling Champion		physical	3	8												100exocards	main_vertumnalia15-17	15			1 physical	8		alienmandy	https://alienmandy.com/	alienmandy_	alienmandy_
+vertumnaliaSocial2	Talent Show Champion II		social	3	8												100exocards	main_vertumnalia15-17	15			1 social	8		kitsuneten	https://kitsuneten.tumblr.com/	kitsuneten	https://twitter.com/kitsuneten
+vertumnaliaMental2	Trivia Champion		mental	3	3												100exocards	main_vertumnalia15-17	15			1 mental	3		jubiboon	https://kimcan.wixsite.com/kimcandesign	jubiboon	https://twitter.com/jubiboon
+vertumnaliaBaking	Bake-off Champion		wildcard	3	8												100exocards	main_vertumnalia15-17	15			1 wildcard	8		Jillus	https://jillpowell3.wixsite.com/jilldraws	Jillus	https://twitter.com/Jillus
+																						 						
+secondCommand	Second Administrator		social	4	10	plusWinSkill	2	social				gem				unique	Sarah - Done	main_vertumnalia19	19			1 social	12		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+secondGarrison	Second Security Officer		physical	4	10	plusWinSkill	2	physical				gem				unique	Sarah - Done	main_vertumnalia19	19			1 physical	12		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+secondEngineering	Second Engineer		mental	4	10	plusWinSkill	2	mental				gem				unique	Sarah - Done	main_vertumnalia19	19			1 mental	12		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+secondGeoponics	Second Cultivator		mental	4	10	plusWinSkill	2	mental				gem				unique	Sarah - Done	main_vertumnalia19	19			1 mental	12		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+secondQuarters	Second Steward		social	4	10	plusWinSkill	2	social				gem				unique	Sarah - Done	main_vertumnalia19	19			1 social	12		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+secondExpeditions	Second Surveyor		physical	4	10	plusWinSkill	2	physical				gem				unique	Sarah - Done	main_vertumnalia19	19			1 physical	12		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																						 						
+																						 						
+	(Age 10)																					 						
+pinkCandy	Pink Candy		social	1	2												Ed - Done	main_tammyDie	10			1 social	2		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+tammySaved	Saving Tammy		social	2	4												Sarah - Done	main_tammyDie	10			1 social	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+hiding	Hiding in the Creche		social	1	2	unchangeable										unique	Ed - Done	main_attack10, main_attack11	10			2 social	2		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+bravery	Bravely Helping to Fight		physical	1	3	plusLeft	1									unique	Ed - Done	main_attack10, main_attack11	10			2 physical	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+eyebeast	Facing the Eyebeast		physical	1	3											unique	100exocards	main_attack10	10			1 physical	3		Daniel Joel Newman	https://www.danieljoelnewman.com/illustration/	dananddna	https://twitter.com/dananddna
+delusions	Delusions		wildcard	1	-1												100exocards	dys3conspiracies, marzearthshipslum, momsym, tammytoninprevent, vace1vain, artifactsearthquake, geoponicscalpetstart, relaxvisions, main_month1, main_birthday11, main_attack17	10				-1		Donovan	https://dortchbianca.wixsite.com/gallery	astr0dile	https://twitter.com/astr0dile
+																												
+																												
+	(Age 11)																											
+	hiding		social	1	2	unchangeable										unique	Ed - Done	main_attack10, main_attack11				2 social	2					
+	bravery		physical	1	3	plusLeft	1									unique	Ed - Done	main_attack10, main_attack11				2 physical	4					
+hal	Hal's Gratitude		mental	2	2	plusWinSkill	1	mental								unique	Ed - Done	main_attack11HalWinThanks	12			1 mental	3		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+tonin	Uncle Tonin's Smile		social	2	4											unique	Ed - Done	main_toninThanks	11			1 social	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+toninDeath	Uncle Tonin and the Manticore		physical	2	4												Sarah - Done	nearbyBossToninDeath	11			1 physical	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																												
+	(Age 12)																											
+																												
+																												
+																												
+	(Age 13)																											
+whiteFlower	White Astrantia	collectible	none	1													Ed - Done	main_birthday12	12			3 none			Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+toyXeno	Toy Xenofauna	gear	none	1		plusAll	1	physical									Ed - Done	main_birthday12	12			1 none	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+photophonor	Photophonor	gear	none	1		plusAll	1	social						100		shopDefault	Ed - Done	main_birthday12	12			4 none	1		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+	photophonor	gear	none	1		plusAll	1	social								shopDefault	Ed - Done	main_birthday12				4 none	1					
+	feast		social	2	4	plusToGems	2										100exocards	main_vertumnalia13				2 social	6					
+	fellingGiant		physical	3	9	plusHigher	-3					gem					100exocards	guardFlying, main_attack13, huntBalneal			hard to get so okay	3 physical	6					
+swallowedWhole	Swallowed Whole		physical	1	0	unchangeable						gem					Sarah - Done	main_attack13	13		punishment card	1 physical			Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																												
+																												
+	(Age 14)																											
+anne	Aunty Ceedent's Love		social	2	4												Sarah - Done	main_birthday14	14			1 social	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+	smart		mental	2	4							gem					100exocards	farmcalplanting, tang40, main_birthday14				4 mental	4					
+defeatedFaceless	Defeated a Faceless		physical	4	8	plusIfHighest	6									unique	Ed - Done	main_attack14, huntFacility, huntFaceless	14		big reward	2 physical	14		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+attack14	Destruction of the Strato		physical	2	3	keep										unique	Sarah - Done	main_attack14	14			1 physical	3		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+eudicot	Rescuing the Governor		social	2	4	plusOthers	1	social								unique	Sarah - Done	main_attack14	14			1 social	5		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																												
+	(Age 15)																											
+																												
+																												
+	(Age 16)																											
+dataBand	Gift from a Secret Admirer	gear	none	3		plusLast	2										Ed - Done	main_vertumnalia16	16			1 none	2		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+dadDeath	Saying Goodbye		physical	2	5												Sarah - Done	main_shimmerEnd	16			1 physical	5		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																												
+	(Age 17)																											
+	noctilucent		physical	3	10	plusNonSuitNeighbors	-5	physical								unique	Sarah - Done	huntNoctilucent, main_attack17				2 physical	5					
+																												
+																												
+	(Age 18)																											
+																												
+																												
+	Location Events																											
+																						 						
+sfcMembership	Secret Funtimes Club		social	2	2	plusForGems	1									unique	Ed - Done	commandClubUniform	10			1 social	3		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+sfcMembership2	Secret Funtimes Club II		social	4	4	plusToAndFromGems	2								sfcMembership	unique	Ed - Done	commandclublum	15			1 social	6		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+sfcMystery	The Mystery of the Weird Smell		social	2	3												Sarah - Done	commandClubMystery	11			1 social	3		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																						 						
+socks	Cal's Pet Socks		physical	1	1	plusLastStage	3									unique	Sarah - Done	geoponicsCalPetBite	11			1 physical	4		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+socks2	Cal's Pet Socks II		physical	3	5	plusLastStage	5								socks	unique	Sarah - Done	geoponicsCalPetDiscovered	17			1 physical	10		Lindsay Ishihiro	http://www.lindsayishihiro.ca	neomeruru	http://twitter.com/neomeruru
+																												
+shimmerCure	The Shimmer Cure		mental	2	1	setSuitAllRight		mental								unique	100exocards	engineeringShimmerCure	12		Removes the shimmerSick card from your deck - the bad memory is repaired. Tang.	1 mental	1		Oenomene	oenomene.carrd.co	oenomene	https://twitter.com/oenomene
+tangEvidence	Engineered Plague		mental	3	8											unique	100exocards	engineeringTangSearchOffice, engineeringTangHelp	17			2 mental	8		koloquials	http://kolo.games/illustration	koloquials	https://twitter.com/koloquials
+	tangEvidence		mental	3	8											unique	100exocards	engineeringTangSearchOffice, engineeringTangHelp				2 mental	8					
+																												
+rankCadet	Cadet Rank		physical	2	4											unique	Ed - Done	garrisonRank1	12			1 physical	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+rankOfficer	Officer Rank		physical	3	7										rankCadet	unique	Ed - Done	garrisonRank2	15			1 physical	7		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+rankLieutenant	Lieutenant Rank		physical	4	9										rankOfficer	unique	Ed - Done	garrisonRank3	18			1 physical	9		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																												
+																												
+echinacea	Babysitting for Echinacea		social	2	5							gem					Sarah - Done	quartersTammyBaby	18			1 social	5		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+																												
+																						 						
+	Jobs Ultimates	93																										
+																						 						
+																												
+ultimate_shovel	Playing Shovelball with Cal		physical	4	8	plusLower	2									unique	100exocards	shovelUltimate	10			1 physical	10		PyrokidSosa	pyrokidsosa.carrd.co	PKSosa	https://twitter.com/PKSosa
+ultimate_farm	Harvesting the Fastest		mental	4	7	plusForSuit	2	mental								unique	100exocards	farmUltimate	12			1 mental	9		navasketch	https://navasketch.com/	navasketch	https://twitter.com/navasketch
+ultimate_plants	Native Hybrid		mental	4	6	draw	2									unique	100exocards	plantsUltimate	13			1 mental	8		Jooyoung Chang	https://www.jooyoungchang.com/	joouerart	https://twitter.com/joouerart
+ultimate_animals	Ending the Trippet Revolts		physical	4	3	plusNeighbors	1	physical								unique	100exocards	animalsUltimate	14			1 physical	4		Mattibee	https://mattibee-portfolio.tumblr.com	mattibee_arts	https://twitter.com/mattibee_arts
+ultimate_babysitting	Hide and Seek with Nougat		social	4	3	setUpTo	3					gem				unique	Sarah - Done	babysittingUltimate	11			1 social	6		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+ultimate_cooking	Snapbladder Surprise		social	4	8	wildNumber						gem				unique	100exocards	cookingUltimate	13			1 social	8		Michelle Barros	https://www.artstation.com/michellebarros	kure_indreams	https://www.instagram.com/kure_indreams/
+ultimate_barista	The Mixologist		social	4	5	setSuitAllRight		social								unique	100exocards	baristaUltimate	18			1 social	5		Gzei		Gzeidraws	https://twitter.com/Gzeidraws
+ultimate_photophonor	Coloring the World		wildcard	4	4	setSuitRight		wildcard								unique	Alexis - Done	photophonorUltimate	11			1 wildcard	4		Alexis Dean-Jones	https://www.alexisdeanjones.com/	musclewing	https://twitter.com/musclewing
+ultimate_biology	Birthed a Floatcow		mental	4	6											unique	100exocards	biologyUltimate	10			1 mental	6		Shari McConochie	https://www.behance.net/sharimc	merlemage	https://twitter.com/merlemage
+ultimate_physics	Fixing the power array		mental	4	2	doubleRight										unique	100exocards	physicsUltimate	15			1 mental	2		Mhuyo	https://mhuyoportfolio.tumblr.com/	Mhuyo	https://twitter.com/Mhuyo
+ultimate_writing	The Vertumna News Report		mental	4	8	kudos	5									unique	Ed - Done	writingUltimate	15			1 mental	13		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+ultimate_tutoring	Tutoring for the Big Test		mental	4	1	plusOthers	3	mental								unique	100exocards	tutoringUltimate	13			1 mental	4		Agui-chart	https://www.behance.net/paulagonzart	Agui_chart	https://twitter.com/Agui_chart
+ultimate_nurse	Saving a Patient		mental	4	8	flushesBonusThis	5									unique	Sarah - Done	nurseUltimate	17			1 mental	13		Sarah Webb	https://artofsarahwebb.com/	BearsAreRed	https://twitter.com/bearsarered
+ultimate_nurseFail	Losing a Patient		mental	4	8	flushesBonusThis	-5									unique	Sarah - Done	nurseUltimate	17			1 mental	3		Sarah Webb	https://artofsarahwebb.com/	BearsAreRed	https://twitter.com/bearsarered
+ultimate_sportsball	Winning the Championship		physical	4	6	setNeighbors	6									unique	100exocards	sportsballUltimate	15			1 physical	12		Karagna	https://karagna.carrd.co/#portfolio	Karagna_	https://twitter.com/Karagna_
+	vacubot	gear	none	4		gearAllSkills	20	mental	plusLast	4		pet				unique	Ed - Done	robotultimate				2 none	20					
+ultimate_defense	The Ultimate Showdown		physical	4	5	setSuitAllRight		physical								unique	100exocards	defenseUltimate	15			1 physical	5		Ian Garces	https://ko-fi.com/lonriac0053/gallery	lonriac	https://twitter.com/lonriac
+ultimate_lookout	Staying Awake on Guard Duty		physical	4	10	unchangeable						gem				unique	100exocards	lookoutUltimate	13			1 physical	10		Matt Xie	https://prairiecryptid.com	prairiecryptid	https://twitter.com/prairiecryptid
+ultimate_guard	Leading the East Wall Defense		physical	4	7	duplicate	1									unique	100exocards	guardUltimate	15			1 physical	8		Tactician Tactless	https://tacticiantactless.weebly.com/	tactician_tactless	https://www.instagram.com/tactician_tactless/
+ultimate_delivery	The Most Efficient Route		mental	4	6	plusWinSkill	1	mental								unique	100exocards	deliveryUltimate	15			1 mental	7		PigDemonArt	https://www.artstation.com/pigdemonart	PigDemonArt	https://twitter.com/PigDemonArt
+ultimate_depot	Organizing the Storage Room		mental	4	5	forEachNeighbor	3	mental								unique	Ed - Done	depotUltimate	15			1 mental	8		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+ultimate_construction	Building the Tallest Tower		mental	4	6	plusLast	5									unique	Ed - Done	constructionUltimate	15			1 mental	11		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+ultimate_assistant	Earth's Fleet is Coming		social	4	5	duplicate	2									unique	Ed - Done	assistantUltimate	18			1 social	7		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+ultimate_leader	Stopping the Earth Fleet		social	4	10	plusOthers	3	social								unique	100exocards	leaderUltimate	19		can also happen if marz is leader	1 social	13		Maliheh	https://www.malihehrahrovan.com/	maliheh_rahrovan	https://twitter.com/maliheh_rahrovan
+																												
+																												
+	Geoponics																											
+																												
+stuckMud	Up to your Armpits in Mud		physical	1	2												100exocards	shovelmuck, nearbyDirtSeasonal	10			3 physical	2		Dannaria	https://dannaria.carrd.co/	dannariart	https://twitter.com/dannariart
+workMuscles	Working those Muscles		physical	1	2	plusIfSuitBattle	1	physical									100exocards	defenseexercise, shovelplow, farmcalplanting, babysittingTrouble	10			4 physical	3		ElectroHex	https://gabitoussaint.carrd.co/	galactigatorr	https://twitter.com/galactigatorr
+roboPower	Robo Power		mental	2	1	duplicate	2										Sarah - Done	physicsship, robotnomi, shovelplow	10			3 mental	3		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+hotSun	Under the Hot Hot Sun		physical	1	3	plusNeighbors	-1										100exocards	artifactsheat, shovelsun, nearbyDirtSeasonal	10			3 physical	2		Fruzsina Pittner	https://fruzsipittner.com	rynezion	https://twitter.com/rynezion
+cookingSpices	The Spice Must Flow		social	2	4							gem					100exocards	shovelcalterroir, cookingquestspiceend	10			2 social	4		jrpgdog	https://artpghero.tumblr.com/	jrpgdog	https://twitter.com/jrpgdog
+ironStomach	Iron Stomach		physical	2	4												100exocards	vacerepeat40, shovelcalterroir, cookingalien, cookingtammyspicy	11			3 physical	4		Comicenginealex	https://www.comicenginealex.com/	Comicenginealex	https://twitter.com/Comicenginealex
+																						 						
+stealFood	Stealing Food to Survive		social	3	3	plusForSuit	2	physical									100exocards	deliveryquartersstarve, farmstarverepeat, cookingstarverepeat	12		better than usual is ok	3 social	5		Mélanie Christin	meli.deviantart.com	Melibellule	https://twitter.com/Melibellule
+starve	So... Hungry...		mental	2	0	plusOthers	2	physical									Sarah - Done	deliveryquartersstarve, farmstarverepeat, cookingstarverepeat, main_starvedeath	12			3 mental	2		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+	composer		social	2	5							gem					100exocards	deliveryquartersstarve, photophonorcompose			made a bit higher because you need to buy photophonor	3 social	5					
+	workMuscles		physical	1	2	plusIfSuitBattle	1	physical									100exocards	defenseexercise, shovelplow, farmcalplanting, babysittingTrouble				4 physical	3					
+singing	Singing Your Heart Out		social	1	1	plusOthers	1	social									100exocards	farmcalplanting, photophonorperformstart	11			3 social	2		Lars Carrijo	larsfazartesgallery.carrd.co	larsfazartes	https://twitter.com/larsfazartes
+smart	Smart for my Age		mental	2	4							gem					100exocards	farmcalplanting, tang40, main_birthday14	12			4 mental	4		Tim Ross	timrossart.com.au	tim.oci	https://www.instagram.com/tim.oci
+pestControl	Pest Control		mental	3	6	plusAll	-1	physical									100exocards	mom80, guardburrower, guardflying, farmflyingpestsstart, farmflyingpestsend	12		quest at 12, reg at 15	3 mental	5		Sophie Boerlage	https://sophieboerlage.com/art/		
+dizzyWeed	Dizzy Weed		mental	3	2												100exocards	farmDizzyWeed, plantsDizzyWeed	15			2 mental	2		Darcy Dee	https://darcydee.com/	neptuneboneface	https://twitter.com/neptuneboneface
+pullWeed	Pulling Weeds		physical	3	7	plusNotSuit	-1	physical									100exocards	farmDizzyWeed	15			2 physical	6		Melissa Peacock	http://www.yellowmellearts.com/portfolio.html	Yellowmelle	https://twitter.com/Yellowmelle
+																						 						
+plantsSpongecake	Cultivating Spongecake		mental	2	2	plusToGems	2										100exocards	foragespongecake, plantsspongecake	13			1 mental	4		Haveafreakday	https://s-cport.tumblr.com/	Haveafreakday	https://twitter.com/Haveafreakday
+radPlant	Radioactive Plant		mental	3	8							gem					Ed - Done	artifactsRadioactive, artifactsBoss3Pyramid, cal80	15			1 mental	8		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+knowMushwood	Harvesting Mushwood		mental	2	3	plusForGems	1										Sarah - Done	constructionlumber, nearbylogging, plantsmushwoodend	10			3 mental	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+humanTest	Testing on Humans		mental	3	6	setSuitNeighbors		mental									100exocards	defensestungloves, plantsblep	14			3 mental	6		Diana Nguyen	https://dianavn.portfoliobox.net/	requiemofkings	https://twitter.com/requiemofkings
+blepTea	A Potent Brew		social	2	4												100exocards	forageblep, plantsblep, baristastart	14			3 social	4		Michel Mims	https://michelmims.artstation.com	mimscosara	https://twitter.com/mimscosara
+																						 						
+violentTale	Telling a Violent Tale		physical	2	4	plusNeighbors	-2	social									100exocards	anemone20, vace1vain, animalscalfloatcow	10		vace and animals = 14	2 physical	2		Marina Rubio	https://marinarubio.portfoliobox.net/	marinukpencilp	https://twitter.com/marinukpencilp
+gentleTale	Telling a Gentle Tale		social	2	2	plusNeighbors	2	social									100exocards	tutoringnougat2, animalscalfloatcow, babysittingtammystory	10		animals = 14	3 social	4		Rachel Harvey	https://rachelharveyillustration.weebly.com/	rekio_art	https://twitter.com/rekio_art
+milkSqueedger	Milking the Squeedger		physical	2	6							gem					100exocards	foragesqueedger, foragebosshive, animalssqueedger	14			3 physical	6		JayJay	https://rebecca-polidori.tumblr.com/	Lopteldr	https://twitter.com/Lopteldr
+friendHelp	Friends Helping Friends		social	2	5												100exocards	animalssqueedger	14			1 social	5		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+	buttKicked		physical	2	5												Sarah - Done	anemone40, defenseexercise, animalssqueedger			animals is 14	2 physical	5					
+	unisaur	gear	none	2		rainbowFlushes	3					pet				unique	Sarah - Done	animalsunisaur				3 none	3					
+animalTest	Testing on Animals		physical	3	5	setRight	5										100exocards	dad80, defensexeno, animalstangsamples	14			2 physical	10		Lance (artbyvalence)	artbyvalence.artstation.com	artbyvalence	https://twitter.com/artbyvalence
+	humanTest		mental	3	6	setSuitNeighbors		mental									100exocards	defensestungloves, plantsblep				3 mental	6					
+																												
+																												
+	Quarters																											
+																												
+	gentleTale		social	2	2	plusNeighbors	2	social									100exocards	tutoringnougat2, animalscalfloatcow, babysittingtammystory			animals = 14	3 social	4					
+boring	Boooorriiiiing		social	2	1	setAllRight	1										100exocards	marz20, depotmarzflirt, babysittingtammystory	10			2 social	2		Hoo? Its Claire	https://hooitsclaire.wixsite.com/hooitsclaire	hooitsclaire	https://twitter.com/hooitsclaire
+scaryFace	Putting on your Scary Face		social	2	0	wildNumber											100exocards	dys40, foragebossmanticorehopeye, babysittingtantrum	10		babysitting is game 2+, others are age 12+	2 social			Tash-Fia Constant	tashyuu.wixsite.com/tashyuu	Tashyuwu	https://twitter.com/Tashyuwu
+compromising	Compromising		social	2	2	plusIfSuitBattle	3	social									100exocards	depotmarzangry, babysittingtantrum, cookingcarnivore	10		cooking is 13+	4 social	5		Mhuyo	https://mhuyoportfolio.tumblr.com/	Mhuyo	https://twitter.com/Mhuyo
+askAdult	Asking an Adult		social	2	2	plusLast	1										100exocards	tammy40, assistantstart, babysittingtrouble	11		assistant is 15+ but whatever	2 social	3		Rebecca Snowden	https://www.rebeccasnowden.com/personal-art-1	cgkpluie	https://twitter.com/cgkpluie
+debatable	That's Debatable		social	2	5												100exocards	marz40, biologyTangExpeditions	11			2 social	5		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+comeDown	Come Down, Nougat!		social	1	4							gem					100exocards	babysittingtrouble	11			1 social	4		JulieJubz	juliejubz.com	juliejubz	https://twitter.com/juliejubz
+	getCreative		social	3	3												100exocards	babysittingtrouble, baristarex, photophonorperformstart			barista is 16. skill check for age 11 babysitting 30, okay enough	4 social	3					
+	workMuscles		physical	1	2	plusIfSuitBattle	1	physical									100exocards	defenseexercise, shovelplow, farmcalplanting, babysittingTrouble				4 physical	3					
+																						 						
+	stealFood		social	3	3	plusForSuit	2	physical									100exocards	deliveryquartersstarve, farmstarverepeat, cookingstarverepeat			better than usual is ok	3 social	5					
+	starve		mental	2	0	plusOthers	2	physical									Sarah - Done	deliveryquartersstarve, farmstarverepeat, cookingstarverepeat, main_starvedeath				3 mental	2					
+sabotage	Sabotaging the Stew		social	2	4	plusLeft	-1										100exocards	deliverypaperoute, lookoutrobot, cookingcarnivore	10		good so you're tempted by it, cooking is 13	3 social	3		Angela Intriago	https://www.behance.net/angela_intriago	LaMalaMuerte	https://twitter.com/LaMalaMuerte
+carnivore	Becoming a Carnivore		social	2	4							gem					Sarah - Done	dys20, foragebristleslug, cookingcarnivore	13			2 social	4		Lindsay Ishihiro	http://www.lindsayishihiro.ca	neomeruru	http://twitter.com/neomeruru
+	compromising		social	2	2	plusIfSuitBattle	3	social									100exocards	depotmarzangry, babysittingtantrum, cookingcarnivore			cooking is 13+	4 social	5					
+	cookingSpices		social	2	4							gem					100exocards	shovelcalterroir, cookingquestspiceend				2 social	4					
+	ironStomach		physical	2	4												100exocards	vacerepeat40, shovelcalterroir, cookingalien, cookingtammyspicy				3 physical	4					
+bully	Being a Bully		social	2	4												100exocards	cookingTammySpicy, relaxChoose, defenseVace	10			2 social	4		Bubble Tea Penguin	https://bubbleteapenguin.weebly.com/	bobateapenguin	https://twitter.com/bobateapenguin
+	edible		wildcard	2	3							gem					Sarah - Done	surveyunlockforage, cookingalien				2 wildcard	3					
+	ironStomach		physical	2	4												100exocards	vacerepeat40, shovelcalterroir, cookingalien, cookingtammyspicy				3 physical	4					
+																						 						
+	blepTea		social	2	4												100exocards	forageblep, plantsblep, baristastart				3 social	4					
+																												
+getCreative	Getting Creative		social	3	3												100exocards	babysittingtrouble, baristarex, photophonorperformstart	11		barista is 16. skill check for age 11 babysitting 30, okay enough	4 social	3		Giulia Zielasko Biazus	www.giuliabiazus.com	giuliabiazus	https://twitter.com/giuliabiazus
+braidingHair	Braiding Tammy's Hair		social	1	2	setSuitRight		social									100exocards	relaxchoose	10			1 social	2		Georgia Liu	https://georgialiu.weebly.com/	largeonions	https://twitter.com/largeonions
+gossip	Dishing the Dirt		social	3	8												100exocards	marz80, baristaanemone	17			1 social	8		Makorie	https://ello.co/makorie	MakorieTV	https://twitter.com/MakorieTV
+																												
+composer	Composing a Song		social	2	5							gem					100exocards	deliveryquartersstarve, photophonorcompose	11		made a bit higher because you need to buy photophonor	3 social	5		Polina Raspbrrd	https://www.behance.net/e4479050	raspbrrd	https://www.instagram.com/raspbrrd
+performing	Performing for an Audience		social	2	4	plusNeighbors	1	social									100exocards	photophonorperformunlockrepeat, photophonorperformstart	11		made a bit higher because you need to buy photophonor	3 social	5		FelineTrickster	https://www.felinetrickster.com/	FelineTrickster	https://twitter.com/FelineTrickster
+	singing		social	1	1	plusOthers	1	social									100exocards	farmcalplanting, photophonorperformstart				3 social	2					
+	performing		social	2	4	plusNeighbors	1	social									100exocards	photophonorperformunlockrepeat, photophonorperformstart			made a bit higher because you need to buy photophonor	3 social	5					
+	getCreative		social	3	3												100exocards	babysittingtrouble, baristarex, photophonorperformstart			barista is 16. skill check for age 11 babysitting 30, okay enough	4 social	3					
+	performing		social	2	4	plusNeighbors	1	social									100exocards	photophonorperformunlockrepeat, photophonorperformstart			made a bit higher because you need to buy photophonor	3 social	5					
+																												
+	bully		social	2	4												100exocards	cookingTammySpicy, relaxChoose, defenseVace				2 social	4					
+	holopalming		mental	1	3												Sarah - Done	tang20, physicsholopalm, relaxchoose				2 mental	3					
+	getCreative		social	3	3												100exocards	babysittingtrouble, baristarex, photophonorperformstart			barista is 16. skill check for age 11 babysitting 30, okay enough	4 social	3					
+																						 						
+																												
+	Engineering																											
+																												
+writing	Writing an Essay		mental	1	2	ifLeftSuit	1	mental									100exocards	biologydissectsugarbug, writingMarzEnvironment	10			2 mental	3		Josh Cornillon	http://joshcornillon.com	joshcornillon	https://twitter.com/joshcornillon
+dissection	Dissecting a Sugarbug		mental	1	3							gem					100exocards	biologydissectsugarbug	10			1 mental	3		denimbxy	https://denimbxy.artstation.com/	denimbxy	https://www.instagram.com/denimbxy
+	gutFeeling		physical	2	2	setRight	3										100exocards	nearbybossliarflower, biologyTangExpeditions				2 physical	5					
+	counting		mental	1	2	duplicate	1										Sarah - Done	cal20, biologyTangExpeditions				2 mental	3					
+	debatable		social	2	5												100exocards	marz40, biologyTangExpeditions				2 social	5					
+passTest	Acing a Test		mental	1	2												100exocards	biologytest, physicstangtest	10			4 mental	2		Joanna Yu	yujoanna.com	yuphrates	https://twitter.com/yuphrates
+failTest	Flunking a Test		mental	1	1	keep											100exocards	biologytest, physicstangtest	10			4 mental	1		R0ppi	https://krystalcandelario.wixsite.com/krystalcandelario	R0ppi00	https://twitter.com/R0ppi00
+embarrassingLesson	Embarrassing Lesson		mental	2	4	keep											100exocards	cal40, biologysexed, tutoringnomi	13			2 mental	4		Paniistaa		paniistaa	https://www.instagram.com/paniistaa
+																						 						
+	passTest		mental	1	2												100exocards	biologytest, physicstangtest				4 mental	2					
+	failTest		mental	1	1	keep											100exocards	biologytest, physicstangtest				4 mental	1					
+holopalming	Hooked on your Holopalm		mental	1	3												Sarah - Done	tang20, physicsholopalm, relaxchoose	10			2 mental	3		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+goofOff	Goofing Off		social	1	3	plusLeft	-1										100exocards	depotmarzflirt, physicsship, tutoringanemone, lookoutanemone	10			3 social	2		Qushung		qushung	https://www.instagram.com/qushung
+	roboPower		mental	2	1	duplicate	2										Sarah - Done	physicsship, robotnomi, shovelplow				3 mental	3					
+	passTest		mental	1	2												100exocards	biologytest, physicstangtest				4 mental	2					
+	failTest		mental	1	1	keep											100exocards	biologytest, physicstangtest				4 mental	1					
+	smart		mental	2	4							gem					100exocards	farmcalplanting, tang40, main_birthday14				4 mental	4					
+																						 						
+	writing		mental	1	2	ifLeftSuit	1	mental									100exocards	biologydissectsugarbug, writingMarzEnvironment				2 mental	3					
+	learningPast		mental	1	3												100exocards	writingcolonialism, writingMarzEnvironment				3 mental	3					
+																												
+																						 						
+	goofOff		social	1	3	plusLeft	-1										100exocards	depotmarzflirt, physicsship, tutoringanemone, lookoutanemone				3 social	2					
+	payingAttention		physical	2	3	pairsBonus	1										100exocards	tutoringanemone, lookoutanemone, lookoutrobot				3 physical	4					
+	passTest		mental	1	2												100exocards	biologytest, physicstangtest				4 mental	2					
+	failTest		mental	1	1	keep											100exocards	biologytest, physicstangtest				4 mental	1					
+	learningPast		mental	1	3												100exocards	writingcolonialism, writingMarzEnvironment				3 mental	3					
+	gentleTale		social	2	2	plusNeighbors	2	social									100exocards	tutoringnougat2, animalscalfloatcow, babysittingtammystory			animals = 14	3 social	4					
+	embarrassingLesson		mental	2	4	keep											100exocards	cal40, biologysexed, tutoringnomi				2 mental	4					
+																						 						
+fixing	Fixing Rundown Tech		mental	3	2	ifLeftSuit	1	mental									Sarah - Done	cal6hoverboardbroken, rex40, robotvacubot, lookoutrobot	13		everything is 15 except lookoutrobot is 13, okay	4 mental	3		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+	roboPower		mental	2	1	duplicate	2										Sarah - Done	physicsship, robotnomi, shovelplow				3 mental	3					
+	fixing		mental	3	2	ifLeftSuit	1	mental									Sarah - Done	cal6hoverboardbroken, rex40, robotvacubot, lookoutrobot			everything is 15 except lookoutrobot is 13, okay	4 mental	3					
+	congruence		mental	3	3											unique	Sarah - Done	gamestartintro, robotcongruencebroken			robot is 15, start is hog	3 mental	3					
+																												
+smellyInside	Smells Worse Inside		mental	2	3	plusNotSuit	-1	mental									100exocards	nursetang1, foragepollencloud	13		nurse is 16	2 mental	2		human person	hmnprsn.org	hmnprsn	https://twitter.com/hmnprsn
+geniusDeduction	Genius Deduction		mental	3	5	plusIfSuitBattle	5	mental									100exocards	tang80, constructionrexbar, nursefire	15			2 mental	10		Blue	https://blueranyk.carrd.co/	blueranyk	https://twitter.com/blueranyk
+stressfulMoment	A Stressful Event		social	2	8	stress	10										100exocards	dys80, nursefire, nearbybossspiderrock	10		nurse is 16, dys probably 15, other is a boss... let it ride	2 social	18		cupidbeaux	https://cupidbeauxportfolio.carrd.co/	cupidbeaux	https://twitter.com/cupidbeaux
+	learningPast2		mental	3	7												100exocards	assistantseeqsecret, tutoringnougat2, nurseinstanceearth			assistant is 15, nurse 16, fine	2 mental	7					
+																												
+																												
+	Garrison																											
+																						 						
+sportsballPlaying	Playing Sportsball		physical	1	1	setNeighbors	1										100exocards	sportsballstart, sportsballcalanemone, sportsballAnemoneWar	10			3 physical	2		ChevyRay	https://instagram.com/ChevyRay	ChevyRay	https://twitter.com/ChevyRay
+	sportsballPlaying		physical	1	1	setNeighbors	1										100exocards	sportsballstart, sportsballcalanemone, sportsballAnemoneWar				3 physical	2					
+standUp	Standing Up for Something		social	2	4	unchangeable											100exocards	sportsballsoldiers, defensexeno	10		defense is 15	3 social	4		Sophie Calhoun	https://www.sophiecalhoun.com/illustration	sophcal_art	https://www.instagram.com/sophcal_art
+sharing	Sharing is Caring		social	1	1	plusRight	1	social				gem					100exocards	tammy20, sportsballsoldiers, marzDeliveryUnlockEnd	10		animalssqueedger is 14, add to another tammy event	2 social	2		Luke Ge	https://www.lukege.com/	strawbearrymilk	https://twitter.com/strawbearrymilk
+	sportsballPlaying		physical	1	1	setNeighbors	1										100exocards	sportsballstart, sportsballcalanemone, sportsballAnemoneWar				3 physical	2					
+																						 						
+buttKicked	Getting Your Butt Kicked		physical	2	5												Sarah - Done	anemone40, defenseexercise, animalssqueedger	11		animals is 14	2 physical	5		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+	workMuscles		physical	1	2	plusIfSuitBattle	1	physical									100exocards	defenseexercise, shovelplow, farmcalplanting, babysittingTrouble				4 physical	3					
+	humanTest		mental	3	6	setSuitNeighbors		mental									100exocards	defensestungloves, plantsblep				3 mental	6					
+lostTemper	Losing your Temper		social	2	5	plusLast	-3										100exocards	depotmarzangry, defensestungloves, guardflying	12		guard, defense 15	3 social	2		Rin	https://regammaro.tumblr.com/	Rinbaka	https://twitter.com/Rinbaka
+hurtingFriend	Hurting a Friend		physical	2	6	plusLast	-4										100exocards	anemone80, defensestungloves	15			1 physical	2		Sarah Mendonça	https://www.behance.net/sitriga	Sitriga	https://twitter.com/Sitriga
+	animalTest		physical	3	5	setRight	5										100exocards	dad80, defensexeno, animalstangsamples				2 physical	10					
+	standUp		social	2	4	unchangeable											100exocards	sportsballsoldiers, defensexeno			defense is 15	3 social	4					
+workMuscles2	Working Those Muscles 2		physical	2	4	plusIfSuitBattle	2	physical									100exocards	deliverygeoponics, constructionrexbar, defensexeno	14			3 physical	6		Vin Werneck	https://www.vinwerneck.com/	VinWerneck	https://twitter.com/VinWerneck
+																						 						
+	goofOff		social	1	3	plusLeft	-1										100exocards	depotmarzflirt, physicsship, tutoringanemone, lookoutanemone				3 social	2					
+	sharpshoot		physical	3	4	plusIfHighest	6										100exocards	vace80, lookoutanemone, guardburrower			yeah but it's a hard to use 3 so okay	2 physical	10					
+payingAttention	Paying Attention		physical	2	3	pairsBonus	1										100exocards	tutoringanemone, lookoutanemone, lookoutrobot	13			3 physical	4		Kira Chang	www.kirachangart.format.com	rwrabbit	https://twitter.com/rwrabbit
+	sabotage		social	2	4	plusLeft	-1										100exocards	deliverypaperoute, lookoutrobot, cookingcarnivore			good so you're tempted by it, cooking is 13	3 social	3					
+	fixing		mental	3	2	ifLeftSuit	1	mental									Sarah - Done	cal6hoverboardbroken, rex40, robotvacubot, lookoutrobot			everything is 15 except lookoutrobot is 13, okay	4 mental	3					
+	payingAttention		physical	2	3	pairsBonus	1										100exocards	tutoringanemone, lookoutanemone, lookoutrobot				3 physical	4					
+spying	Spying on a Friend		physical	2	4												100exocards	sym40, lookoutanemonevace, lookoutdysbomb, cookingtammysneak	13			2 physical	4		Nísa A. D.	https://www.shiroganejpg.com/gallery	shiroganejpg	https://twitter.com/shiroganejpg
+	spying		physical	2	4												100exocards	sym40, lookoutanemonevace, lookoutdysbomb, cookingtammysneak				2 physical	4					
+																						 						
+	pestControl		mental	3	6	plusAll	-1	physical									100exocards	mom80, guardburrower, guardflying, farmflyingpestsstart, farmflyingpestsend			quest at 12, reg at 15	3 mental	5					
+slaughterHordes	Slaughtering the Hordes		physical	3	8	plusOthers	-1										100exocards	foragequesttangeggs, hunthopeyesline, guardburrower	14			3 physical	7		JayJay	https://rebecca-polidori.tumblr.com/	Lopteldr	https://twitter.com/Lopteldr
+sharpshoot	Sharpshooting		physical	3	4	plusIfHighest	6										100exocards	vace80, lookoutanemone, guardburrower	13		yeah but it's a hard to use 3 so okay	2 physical	10		Sabrina Carlin		beasprout	https://twitter.com/beasprout
+	lostTemper		social	2	5	plusLast	-3										100exocards	depotmarzangry, defensestungloves, guardflying			guard, defense 15	3 social	2					
+	pestControl		mental	3	6	plusAll	-1	physical									100exocards	mom80, guardburrower, guardflying, farmflyingpestsstart, farmflyingpestsend			quest at 12, reg at 15	3 mental	5					
+fellingGiant	Felling a Giant		physical	3	9	plusHigher	-3					gem					100exocards	guardFlying, main_attack13, huntBalneal	13		hard to get so okay	3 physical	6		Eggsy Zhang	https://ezhangart.tumblr.com/	ezhangart	https://twitter.com/ezhangart
+																						 						
+	Command																											
+																												
+paperwork	Doing Paperwork		mental	1	1	plusUnplayedCards	1										100exocards	mom20, deliverypaperoute, constructionrexbar	10		constructionrexbar is 15, fine because this gets better with time	2 mental	2		boni	https://www.artstation.com/bartokk	itsameboni	https://twitter.com/itsameboni
+	sabotage		social	2	4	plusLeft	-1										100exocards	deliverypaperoute, lookoutrobot, cookingcarnivore			good so you're tempted by it, cooking is 13	3 social	3					
+	workMuscles2		physical	2	4	plusIfSuitBattle	2	physical									100exocards	deliverygeoponics, constructionrexbar, defensexeno				3 physical	6					
+	stealFood		social	3	3	plusForSuit	2	physical									100exocards	deliveryquartersstarve, farmstarverepeat, cookingstarverepeat			better than usual is ok	3 social	5					
+	starve		mental	2	0	plusOthers	2	physical									Sarah - Done	deliveryquartersstarve, farmstarverepeat, cookingstarverepeat, main_starvedeath				3 mental	2					
+investigate	Investigation		mental	2	2	ifLeftSuit	1	mental									100exocards	deliveryengineering, assistantstart	12		assistantstart is 15	3 mental	3		Michelle Siddiqui	https://www.artstation.com/animichii	animichii	https://twitter.com/animichii
+	smart		mental	2	4							gem					100exocards	farmcalplanting, tang40, main_birthday14				4 mental	4					
+	dronerifle	gear	none	4		gearCombat	50		pairsDoubled		physical					shopWeapons	Ed - Done	deliveryGarrison, (store)				2 none	50					
+																												
+	compromising		social	2	2	plusIfSuitBattle	3	social									100exocards	depotmarzangry, babysittingtantrum, cookingcarnivore			cooking is 13+	4 social	5					
+	lostTemper		social	2	5	plusLast	-3										100exocards	depotmarzangry, defensestungloves, guardflying			guard, defense 15	3 social	2					
+	emojiproji	gear	none	2		gearAllSkills	10	social	globalBonusGear	2	social					shopClothes	Ed - Done	depotmarzsteal, (store)				3 none	10					
+	investigate		mental	2	2	ifLeftSuit	1	mental									100exocards	deliveryengineering, assistantstart			assistantstart is 15	3 mental	3					
+	standUp		social	2	4	unchangeable											100exocards	sportsballsoldiers, defensexeno			defense is 15	3 social	4					
+makeout	Making Out		social	2	4	plusThisAndRight	1	social									100exocards	rex4hugs, depotmarzflirt, marzSecretAdmirer	15			1 social	5		Sita Duncan	https://www.artstation.com/sitaart	sitaart	https://twitter.com/sitaart
+multitask	Multitasking		mental	3	3	wildNumber											100exocards	mom40, depotmarzflirt, assistanttomarz	15			2 mental	3		Emily Yates	https://www.behance.net/cherriesorbet	cherriesorbet	https://twitter.com/cherriesorbet
+	boring		social	2	1	setAllRight	1										100exocards	marz20, depotmarzflirt, babysittingtammystory				2 social	2					
+																						 						
+highestHeight	Up to the Highest Height		physical	3	6	plusIfHighest	2										100exocards	constructionrex, artifactsbridge	15		explore	2 physical	8		Sean'nell		shiioneru	https://twitter.com/shiioneru
+planComesTogether	When a Plan Comes Together		mental	3	6	flushesBonusThis	5										100exocards	rex80, constructionrex, assistanttomarz	15		explore	1 mental	11		Pattra Audcharevorakul		ohpatpatt	https://www.instagram.com/ohpatpatt
+	knowMushwood		mental	2	3	plusForGems	1										Sarah - Done	constructionlumber, nearbylogging, plantsmushwoodend				3 mental	4					
+	paperwork		mental	1	1	plusUnplayedCards	1										100exocards	mom20, deliverypaperoute, constructionrexbar			constructionrexbar is 15, fine because this gets better with time	2 mental	2					
+	workMuscles2		physical	2	4	plusIfSuitBattle	2	physical									100exocards	deliverygeoponics, constructionrexbar, defensexeno				3 physical	6					
+	geniusDeduction		mental	3	5	plusIfSuitBattle	5	mental									100exocards	tang80, constructionrexbar, nursefire				2 mental	10					
+																												
+	multitask		mental	3	3	wildNumber											100exocards	mom40, depotmarzflirt, assistanttomarz				2 mental	3					
+	investigate		mental	2	2	ifLeftSuit	1	mental									100exocards	deliveryengineering, assistantstart			assistantstart is 15	3 mental	3					
+	askAdult		social	2	2	plusLast	1										100exocards	tammy40, assistantstart, babysittingtrouble			assistant is 15+ but whatever	2 social	3					
+learningPast	Learning About Earth		mental	1	3												100exocards	writingcolonialism, writingMarzEnvironment	10			3 mental	3		anqi	https://anqi.pb.studio/	anqitwt	https://twitter.com/anqitwt
+learningPast2	Learning About Earth II		mental	3	7												100exocards	assistantseeqsecret, tutoringnougat2, nurseinstanceearth	13		assistant is 15, nurse 16, fine	2 mental	7		anqi	https://anqi.pb.studio/	anqitwt	https://twitter.com/anqitwt
+vertumnaGroup	The Vertumna Group		mental	2	3	plusUnplayedCards	1										100exocards	writingvertumna	10			1 mental	4		Tan Juan Gee	https://juangeedraws-portfolio.squarespace.com/	juangeedraws	https://twitter.com/juangeedraws
+feast	A grand feast		social	2	4	plusToGems	2										100exocards	main_vertumnalia13	13			2 social	6		Louis Chen	https://www.artstation.com/lolouie	lolouie.art	https://www.instagram.com/lolouie.art/
+	dizzyWeed		mental	3	2												100exocards		15				2					
+																												
+																						 						
+																						 						
+																						 						
+	Nearby																											
+																						 						
+caught	Getting Caught		social	1	1							gem					100exocards	tammytoninprevent, engineeringtangsearchoffice, sneakutopia	10		engineeringtangsearchoffice is 17 but it's a punishment so okay	3 social	1		Lilla	https://www.artstation.com/lililla	s4liller	https://twitter.com/s4liller
+camping	Camping Outside		physical	1	3							gem					100exocards	nearbyBossDysCamp	10			1 physical	3		Adrien Brégeot	https://adrienbregeot.cargo.site/	ade.breg	https://www.instagram.com/ade.breg/
+	stressfulMoment		social	2	8	stress	10										100exocards	dys80, nursefire, nearbybossspiderrock			nurse is 16, dys probably 15, other is a boss... let it ride	2 social	18					
+	whiteFlower	collectible	none	1													Ed - Done	main_birthday12				3 none						
+	pullWeed		physical	3	7	plusNotSuit	-1	physical									100exocards	farmDizzyWeed				2 physical	6					
+	knowMushwood		mental	2	3	plusForGems	1										Sarah - Done	constructionlumber, nearbylogging, plantsmushwoodend				3 mental	4					
+																												
+gutFeeling	Gut Feeling		physical	2	2	setRight	3										100exocards	nearbybossliarflower, biologyTangExpeditions	10			2 physical	5		Kenby L.	https://aileenmliu.wixsite.com/portfolio	milkbabbit	https://twitter.com/milkbabbit
+stranger	A Mysterious Stranger		physical	1	4							gem				unique	100exocards	artifactsghostfish, artifactsheat, foragepollencloud, foragemanticoreegg, huntmuckwalker, huntfacility, nearbyhopeyeaggro, nearbybossliarflower, surveybushbubharvest, surveybushbubdance, surveywandererstomp, surveynomidyschoose, test	10			4 physical	4		Ooorangy	https://www.instagram.com/ooorangy	ooorangy	https://twitter.com/ooorangy
+stranger2	A Mysterious Stranger II		physical	2	5							gem			stranger	unique	Sarah - Done	artifactsghostfish, artifactsheat, foragepollencloud, foragemanticoreegg, huntmuckwalker, huntfacility, nearbyhopeyeaggro, nearbybossliarflower, surveybushbubharvest, surveybushbubdance, surveywandererstomp, surveynomidyschoose	10			1 physical	5		Ooorangy	https://www.instagram.com/ooorangy	ooorangy	https://twitter.com/ooorangy
+stranger3	A Mysterious Stranger III		physical	3	8							gem			stranger2	unique	Sarah - Done	artifactsghostfish, artifactsheat, foragepollencloud, foragemanticoreegg, huntmuckwalker, huntfacility, nearbyhopeyeaggro, nearbybossliarflower, surveybushbubharvest, surveybushbubdance, surveywandererstomp, surveynomidyschoose, test	10		okay, prob won't happen that early	1 physical	8		Ooorangy	https://www.instagram.com/ooorangy	ooorangy	https://twitter.com/ooorangy
+	beautiful		physical	3	5	stress	-1					gem					Sarah - Done	exploreglowbeautiful, huntunisaurchill				2 physical	4					
+beautifulVista	A Beautiful Vista		wildcard	1	2							gem					Sarah - Done	sneakstartdysboss	10			1 wildcard	2		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+																												
+	snow		physical	1	3							gem					Sarah - Done	surveysnow, nearbyDirtSeasonal				2 physical	3					
+	lost		mental	1	3												100exocards	foragelost, nearbyDirtSeasonal				2 mental	3					
+	hotSun		physical	1	3	plusNeighbors	-1										100exocards	artifactsheat, shovelsun, nearbyDirtSeasonal				3 physical	2					
+	stuckMud		physical	1	2												100exocards	shovelmuck, nearbyDirtSeasonal				3 physical	2					
+																												
+																												
+																												
+																												
+	Survey																											
+																												
+	egg	collectible	none	1		collectiblePlusSuit	1	physical									Ed - Done	explorecollectibleegg, foragemanticoreegg, foragelowboss				3 none	1					
+counting	Hopeye Facts		mental	1	2	duplicate	1										Sarah - Done	cal20, biologyTangExpeditions				2 mental	3		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+	thumper		physical	3	6							gem					Sarah - Done	surveyunlockartifactsstart, huntthumper				2 physical	6					
+	scaryFace		social	2	0	wildNumber											100exocards	dys40, foragebossmanticorehopeye, babysittingtantrum			babysitting is game 2+, others are age 12+	2 social						
+bounceWeasels	Raining Bounce Weasels		physical	2	6												Sarah - Done	artifactsbounceweasel, surveyquestfarming	13			2 physical	6		Lindsay Ishihiro	http://www.lindsayishihiro.ca	neomeruru	http://twitter.com/neomeruru
+edible	Are Those Edible?		wildcard	2	3							gem					Sarah - Done	surveyunlockforage, cookingalien	13			2 wildcard	3		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+stayingCool	Staying Cool		wildcard	2	2												100exocards	nomi40, surveynomiridebalneal, shovelsun	10			1 wildcard	2		Goldie Bartlett	https://marigoldbartlett.tumblr.com	GhostTownGoldie	https://twitter.com/GhostTownGoldie
+snow	Playing in the Snow		physical	1	3							gem					Sarah - Done	surveysnow, nearbyDirtSeasonal	10			2 physical	3		Meilee Chao	bkomei.carrd.co	bkomei	https://twitter.com/bkomei
+enormous	That's one Big... Something		wildcard	2	5							gem				unique	Sarah - Done	nomi80, surveywandererstomp	13			1 wildcard	5		Sarah Webb	https://artofsarahwebb.com/	BearsAreRed	https://twitter.com/bearsarered
+bushbubDance	The Bushbub's Dance		physical	2	3	plusRight	2	physical								unique	Sarah - Done	surveybushbubdance, surveydysbushbubs	13			2 physical	5		Lindsay Ishihiro	http://www.lindsayishihiro.ca	neomeruru	http://twitter.com/neomeruru
+	stranger		physical	1	4							gem				unique	100exocards	artifactsghostfish, artifactsheat, foragepollencloud, foragemanticoreegg, huntmuckwalker, huntfacility, nearbyhopeyeaggro, nearbybossliarflower, surveybushbubharvest, surveybushbubdance, surveywandererstomp, surveynomidyschoose, test				4 physical	4					
+																												
+																												
+	Forage																											
+																												
+lost	Getting Lost in the Fog		mental	1	3												100exocards	foragelost, nearbyDirtSeasonal	10			2 mental	3		QuinncySama	https://quinncysama.portfoliobox.net/progressivestyle	quinncysama	https://twitter.com/quinncysama
+	milkSqueedger		physical	2	6							gem					100exocards	foragesqueedger, foragebosshive, animalssqueedger				3 physical	6					
+floatcow	Lassoing a Floatcow		physical	2	4	plusForGems	1										Sarah - Done	dad20, foragefloatcows	14			1 physical	5		Lindsay Ishihiro	http://www.lindsayishihiro.ca	neomeruru	http://twitter.com/neomeruru
+	egg	collectible	none	1		collectiblePlusSuit	1	physical									Ed - Done	explorecollectibleegg, foragemanticoreegg, foragelowboss				3 none	1					
+	milkSqueedger		physical	2	6							gem					100exocards	foragesqueedger, foragebosshive, animalssqueedger				3 physical	6					
+	blepTea		social	2	4												100exocards	forageblep, plantsblep, baristastart				3 social	4					
+helpAnimal	Helping an Animal		physical	2	2	plusRight	1					gem					100exocards	dad40, foragebossmanticorebeset	14			1 physical	3		Haveafreakday	https://s-cport.tumblr.com/	Haveafreakday	https://twitter.com/Haveafreakday
+	carnivore		social	2	4							gem					Sarah - Done	dys20, foragebristleslug, cookingcarnivore				2 social	4					
+	smellyInside		mental	2	3	plusNotSuit	-1	mental									100exocards	nursetang1, foragepollencloud			nurse is 16	2 mental	2					
+	bushbubDance		physical	2	3	plusRight	2	physical								unique	Sarah - Done	surveybushbubdance, surveydysbushbubs				2 physical	5					
+	stranger		physical	1	4							gem				unique	100exocards	artifactsghostfish, artifactsheat, foragepollencloud, foragemanticoreegg, huntmuckwalker, huntfacility, nearbyhopeyeaggro, nearbybossliarflower, surveybushbubharvest, surveybushbubdance, surveywandererstomp, surveynomidyschoose, test				4 physical	4					
+	stranger		physical	1	4							gem				unique	100exocards	artifactsghostfish, artifactsheat, foragepollencloud, foragemanticoreegg, huntmuckwalker, huntfacility, nearbyhopeyeaggro, nearbybossliarflower, surveybushbubharvest, surveybushbubdance, surveywandererstomp, surveynomidyschoose, test				4 physical	4					
+shimmerGlade	Escaping the Shimmer Glade		wildcard	1	0							gem					Ed - Done	forageShimmer	14		A bad card after you nearly die	1 wildcard			Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+	slaughterHordes		physical	3	8	plusOthers	-1										100exocards	foragequesttangeggs, hunthopeyesline, guardburrower				3 physical	7					
+																												
+																												
+	Artifacts																											
+																												
+	hotSun		physical	1	3	plusNeighbors	-1										100exocards	artifactsheat, shovelsun, nearbyDirtSeasonal				3 physical	2					
+	highestHeight		physical	3	6	plusIfHighest	2										100exocards	constructionrex, artifactsbridge			explore	2 physical	8					
+	composer		social	2	5							gem					100exocards	deliveryquartersstarve, photophonorcompose			made a bit higher because you need to buy photophonor	3 social	5					
+	singing		social	1	1	plusOthers	1	social									100exocards	farmcalplanting, photophonorperformstart				3 social	2					
+weird	That Was Weird		physical	3	3	ifLeftSuit	6	mental									Ed - Done	sym80, artifactstimeanomaly, exploreglowfairycircle	15			2 physical	9		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+headache	Ow my head		physical	3	8												Ed - Done	artifactsboss3pyramid, vaceFight	15		school? getting hit on the head? vace?	2 physical	8		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+	overseer		physical	4	12											unique	100exocards	sym8overseer				2 physical	12					
+																												
+	bounceWeasels		physical	2	6												Sarah - Done	artifactsbounceweasel, surveyquestfarming				2 physical	6					
+																												
+																												
+	Hunting																											
+																												
+thumper	Thud of the Thumper		physical	3	6							gem					Sarah - Done	surveyunlockartifactsstart, huntthumper	15			2 physical	6		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+tracking	Tracking the Airsquid		physical	3	5	plusFirst	2	physical	plusLast	2	physical						100exocards	huntTrack4	17			1 physical	7		Collin Wilhelm	https://collinwilhelm.squarespace.com/art/illustrations	MandrakorArt	https://twitter.com/MandrakorArt
+noctilucent	Noctilucent's Disdain		physical	3	10	plusNonSuitNeighbors	-5	physical								unique	Sarah - Done	huntNoctilucent, main_attack17	17			2 physical	5		Lindsay Ishihiro	http://www.lindsayishihiro.ca	neomeruru	http://twitter.com/neomeruru
+unisaurHorn	A Unisaur's Horn		wildcard	3	4	plusToGems	1					gem					Ed - Done	huntunisauraggrohorn, huntunisaurchill	17			2 wildcard	5		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+	unisaurHorn		wildcard	3	4	plusToGems	1					gem					Ed - Done		17				5					
+	slaughterHordes		physical	3	8	plusOthers	-1										100exocards		14				7					
+	stuckMud		physical	1	2												100exocards		10				2					
+	defeatedFaceless		physical	4	8	plusIfHighest	6									unique	Ed - Done		14			big reward	14					
+leftForDead	Crushed by a Faceless		physical	1	0	flushesBonusThis	-5					gem				unique	Sarah - Done	huntfaceless, huntfacility	17		punishment so okay	2 physical	-5		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+	leftForDead		physical	1	0	flushesBonusThis	-5					gem				unique	Sarah - Done		17			punishment so okay	-5					
+payload	Priming the Payload		mental	4	7	plusAll	3	physical									Ed - Done	engineeringPayload	19			1 mental	10		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+	fellingGiant		physical	3	9	plusHigher	-3					gem					100exocards		13			hard to get so okay	6					
+																												
+																												
+	Glow																											
+																												
+beautiful	It's all too Beautiful		physical	3	5	stress	-1					gem					Sarah - Done	exploreglowbeautiful, huntunisaurchill	16			2 physical	4		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart
+	weird		physical	3	3	ifLeftSuit	6	mental									Ed - Done		15				9					
+wormhole	Timey Wimey Wormhole Stuff		mental	4	8	setSuitNeighbors		wildcard	wildNumber								Ed - Done	exploreGlowBeautiful	16			1 mental	8		Eduardo Vargas	http://www.edvargasart.com	edvargasart	https://twitter.com/edvargasart

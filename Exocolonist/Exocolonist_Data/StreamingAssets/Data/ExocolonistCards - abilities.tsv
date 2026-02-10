@@ -1,0 +1,176 @@
+	111							
+ID	Name	Category	Text	Tooltip	Tooltip Singular	Tooltip Negative	Tooltip Gear Collectible Condition	Notes
+								
+								
+	Change suit							
+								
+gemsWild	Gems are wild	global	Карты с гемами становятся вайлдами	Все карты с гемами равны каждой масти				Needs to be an action but is a battle condition
+								
+setSuitRight	Set Suit Right	positional	Карта справа станет [suit]					
+setSuitNeighbors	Set Suit Neighbors	positional	Соседние станут [suit]					
+setSuitAllRight	Set Suit All Right	positional	Все карты справа станут [suit]					
+								
+collectiblePlusSuit	Plus Value and Change Suit	self	[+x] к карте\nМеняет масть на [suit]	[+x] и меняет масть на [suit] (от одноразовой находки)			[+x] к карте и меняет масть на [suit]. Опустить на карту для использования. Одноразовое.	Appear on collectibles (never activated) and on card (after using collectible, hidden but can activate)
+								
+paneSuit	Suit Slot	pane	Карта становится [suit]	Меняет масть карты в этом слоте на [x]			Один слот меняет масть на [suit]	
+								
+								
+	No Pane - Card Gear Condition							
+								
+firstToLast	First to Last	global	Первая карта получает [-x]\nПоследняя [+x]	Первая карта получает [-x]\nПоследняя [+x]				
+plusFirst	Plus First	global	[+x] к первой [suit] карте	[+x] к [suit] карте в самом левом слоте				
+plusLast	Plus Last	global	[+x] к последней [suit] карте	[+x] к [suit] карте в самом правом слоте				
+plusAll	Plus All	global	[+x] к [suit] картам	[+x] к [suit] картам				
+plusNotSuit	Plus All Not Suit	global	[+x] к не [suit] картам	[+x] к картам, которые не [suit]				
+plusToGems	Plus To Gems	global	[+x] к картам с гемами	[+x] к картам с иконкой гема внизу карты				
+allWildNumber	Set All Wild Number	global	Значение всех [suit] карт становится вайлдом	Значение вайлдов соответствует всем парам и стритам				Needs to be an action but is a gear
+								
+								
+	In Pane - Effects on this card							
+								
+ifLeftSuit	If Left Suit	positional	[+x] если карта слева [suit]					
+ifRightSuit	If Right Suit	positional	[+x] если карта справа [suit]					
+ifOnlySuit	If Only Suit	positional	[+x] если это единственная [suit] карта					
+plusForPosition	Plus For Position	positional	[+x] за каждую [suit] карту слева					
+plusForEdge	Plus in Edge Panes	positional	[+x] если в первом или последнем слоте					
+plusIfSuitBattle	Plus If Suit Challenge	positional	[+x] во время [suit] испытаний					
+plusForGems	Plus For Gems	positional	[+x] за каждый гем на [suit] картах					
+plusLastStage	Plus on Third Stage	self	[+x] в третьем раунде	Эффект работает только в третьем раунде				
+plusForHighStress	Plus for High Stress	self	[+x] если стресс выше 50					
+plusUnplayedCards	Plus for Unplayed Cards	positional	[+x] за каждую неразыгранную карту					
+forEachNeighbor	For Each Neighbor	positional	[+x] если левая карта [suit]\n[+x] если карта справа [suit]					
+wildNumber	Wildcard Number	self	Вайлд-значение	Значение вайлдов соответствует всем парам и стритам				
+								
+collectiblePlus	Plus Value	self	[+x] к карте	[+x] к карте (от одноразовой находки)			[+x] к карте. Опустите на карту для использования. Одноразовое.	Appear on collectibles (never activated) and on card (after using collectible, hidden but can activate)
+plusForSuit	Plus For Suit	positional	[+x] за каждую другую [suit] карту					
+plusToAndFrom	Plus To And From Suit	positional	[+x] к и от других [suit] карт	[+x] к каждой [suit] карте, и [+x] к этой карте от каждой [suit] карты				
+								
+paneSet	Set-value slot	pane	Карта становится [x]	Меняет значение карты на [x]			Меняет значение карты в одном слоте на [x]	
+panePlus	Plus to Slot	pane	Карта получает [+x]	Карта в этом слоте получает [+x]			Карта в одном слоте получает [+x]	
+paneCardLocked	Locked Slot	pane	Карта заблокирована	Одна карта уже разыграна и не может быть заменена			Случайная карта заблокирована в одном слоте	persists in all 3 rounds for story, not actually activated
+								
+								
+								
+	In Pane - Affect neighbor cards							
+								
+plusLeft	Plus Left	positional	[+x] к [suit] карте слева					
+plusRight	Plus Right	positional	[+x] к [suit] карте справа					
+plusNeighbors	Plus Neighbors	positional	[+x] к соседним [suit] картам					
+plusNonSuitNeighbors	Plus Non Suit Neighbors	positional	[+x] к соседним не [suit] картам	[+x] к соседним картам, которые не [suit]				
+plusOthers	Plus All Other	positional	[+x] ко всем другим [suit] картам					
+plusAllLeft	Plus All Left	positional	[+x] ко всем [suit] картам слева					
+plusAllRight	Plus All Right	positional	[+x] ко всем [suit] картам справа					
+plusToAndFromGems	Plus To And From Gems	positional	[+x] к и от картам с гемами	[+x] к каждой карте с гемом, и [+x] к этой карте от каждого гема				
+plusThisAndRight	Plus To This And Right	positional	если карта справа [suit], [+x] к обеим					
+								
+								
+								
+	Set Values							
+								
+setRight	Set Right	positional	[Suit] карта справа становится [x]					
+setNeighbors	Set Neighbors	positional	Устанавливает соседние [suit] на [x]					
+setAllRight	Set All Right	positional	Все [suit] карты справа становятся [x]					
+								
+setAll	Set All	global	Все [suit] карты становятся [x]	Все [suit] карты получают значение [x]				
+setUpTo	Set Up To	global	Все [suit] карты ниже [x] становятся [x]	Все [suit] карты со значением [x] увеличиваются до [x]				
+								
+								
+								
+	Check Values							
+								
+plusForOdd	Plus For Odd	positional	[+x] за каждую другую нечётную [suit] карту					
+plusLower	Plus Lower	positional	[+x] к [suit] картам со значением ниже	Меньшие значения, чем у этой карты, при счете слева направо				
+plusHigher	Plus Higher	positional	[+x] к [suit] картам со значением выше	Большие значения, чем у этой карты, при счете слева направо				
+								
+plusIfHighest	Plus If Highest	positional	[+x] если имеет высшее значение	[+x] если карта имеет высшее значение, равные не считаются.				
+multIfHighest	Mult If Highest	positional	x[x] если имеет высшее значение	x[x] если карта имеет высшее значение, равные не считаются.				
+								
+paneDoubled	Double Slot	pane	Удваивает значение карты	Итоговое значение этой карты удвоено			Двойное значение карты в одном слоте	
+doubleRight	Double Right	positional	Удваивает [suit] карты справа	Итогое значение [suit] карты справа удвоено				
+								
+								
+setNeighborsSame	Set Neighbors to Same	positional	Устанавливает соседние [suit] на это значение	Включая бонусы, полученные этой картой.				after doubling, this is both a set and a check
+								
+								
+								
+								
+								
+	Non-Activated Card Statuses							
+								
+unchangeable	Unchangeable	status	Неизменная	Значение этой карты и масть не могут быть изменены				
+temporary	Temporary	status		Создается в испытании и не отправляется в стопку сброса				Does not go to discard pile - removed from game instead. Created during battle.
+								
+pet	Pet	status		Питомцы следуют за тобой и могут появляться в событиях				Just a flag
+gem	Gem	status		Gems matter for other cards				
+locked	Locked	status	Заблокированная	Нельзя перемещать заблокированную карту				
+keep	Keep	status	Сохраняется между раундами	Возвращается в руку после розыгрыша между раундами				
+straightsBonusThis	Straights Bonus for this card	status	[+x] к [suit] стритам с этой картой					
+pairsBonusThis	Pairs Bonus for this card	status	[+x] к [suit] парам с этой картой	Включает в себя пары из трёх, четырёх и пяти карт				
+flushesBonusThis	Flushes Bonus for this card	status	[+x] к [suit] флешам с этой картой					
+								
+								
+draw	Draw Card	status	[x] бонусные карты при розыгрыше	Бонусные карты вытягиваются при розыгрыше этой карты				
+duplicate	Duplicate Card	status	[x] дубликата при розыгрыше	Клонированная карта создаётся при розыграше этой карты				
+kudos	Gain Kudos	status	[+x] Похвалы	[+x] похвал в конце раунда, если эта карта была разыграна				
+stress	Gain Stress	status	[+x] Стресса	[+x] стресса в конце раунда.		[+x] стресса в конце раунда. Не работает, если у вас уже 100 стресса		
+								
+								
+collectibleDraw	Draw a Card	status	Нарисовать карту	Мгновенно рисует новую карту			Рисует одну карту. Опустите на стол для использования. Одноразовое.	Appears on collectibles, activated by using collectible
+collectibleNewHand	Redraw Hand	status	Перерисовать карты	Сбросить и перерисовать карты			Убрать и перерисовать карты. Опустите на стол для использования. Одноразовое.	Appears on collectibles, activated by using collectible
+								
+								
+								
+	Global Gear or Card or Condition							
+								
+straightsBonus	Straights Bonus	status	[+x] бонус к [suit] стритам	[+x] к [suit] стритам из трёх и более карт				
+pairsBonus	Pairs Bonus	status	[+x] бонус к [suit] парам	[+x] к [suit] парам из трёх, четырёх или пяти карт				
+flushesBonus	Flushes Bonus	status	[+x] ко всем [suit] флешам	[+x] к [suit] флешам из двух и более карт				
+straightsDoubled	Straight bonuses doubled	status	2x бонус к [suit] стритам	Двойной бонус к стритам из трёх, четырёх или пяти кард				
+pairsDoubled	Pair bonuses doubled	status	2x бонус к [suit] парам	Включает соседние карты из трёх, четырёх или пяти кард				
+flushesDoubled	Flush bonuses doubled	status	2x бонус к [suit] флешам	Двойной бонус к двум-пяти картам одного цвета				
+tripletsTripled	Three of a kind bonus tripled	status	3x бонус к трём [suit] одного значения	Ровно три одинаковых карты получают утроенный бонус				
+pairsZeroed	Pairs worth nothing	status	Все пары равны нулю	Пары больше не дают очков				
+straightsZeroed	Straights worth nothing	status	Все стриты равны нулю	Стриты больше не дают очков				
+flushesZeroed	Fushes worth nothing	status	Все флеши равны нулю	Флеши больше не дают очков				
+								
+exactRewardKudos	Kudos reward for exact total	status	[x] Похвалы, если сумма равна цели	Похвала добавляется после победы, если сумма точно равна цели				
+globalBonusGear	Global Bonus	status	[+x] к [suit] испытаниям	[+x] очка к сумме очков на первом раунде [suit] испытания				Used for perks (battleBonusSocial, battleBonusMental, battleBonusPhysical)
+freeCollectible	One Free One Use card	status	Первое использование бесплатно	Используйте любую одноразовую находку бесплатно один раз				collectible stack locks once it has been used once, but amounts don't actually reduce
+rainbowFlushes	Rainbow Flushes	status	[+x] за радужные флеши из трёх карт	Социальные, ментальные и физические карты вместе в любом порядке				
+								
+globalBonus	Global Bonus	status	[+x] к [suit] испытаниям	[+x] к сумме очков в [suit] испытании				Used for perks (battleBonusSocial, battleBonusMental, battleBonusPhysical)
+autoplayOrder	Autoplay in draw order	status	Авторозыгрыш карт	Карты сами разыгрываются в порядке вытягивания и не могут быть изменены				
+autoplayBest	Autoplay best hand	status	Авторозыгрыш лучшей руки	Лучшая рука всегда будет разыграна, и её можно изменить				
+plusWinSkill	Plus Win Skill	status	[+x] к навыку за победу в [suit] испытании	[+x] очков навыка в конце [suit] испытания, если вы выиграете				
+								
+								
+								
+	Non-Battle Gear or Perk							
+								
+gearEmpathy	Empathy	external	[+x] Эмпатия	Нет эффекта в испытаниях				
+gearPersuasion	Persuasion	external	[+x] Убеждение	Нет эффекта в испытаниях				does nothing in the game; gives you skill outside the game if equipped
+gearCreativity	Creativity	external	[+x] Творчество	Нет эффекта в испытаниях				
+gearBravery	Bravery	external	[+x] Смелость	Нет эффекта в испытаниях				
+gearReasoning	Reasoning	external	[+x] Логика	Нет эффекта в испытаниях				
+gearOrganization	Organization	external	[+x] Собранность	Нет эффекта в испытаниях				
+gearEngineering	Engineering	external	[+x] Инженерия	Нет эффекта в испытаниях				
+gearBiology	Biology	external	[+x] Биология	Нет эффекта в испытаниях				
+gearToughness	Toughness	external	[+x] Стойкость	Нет эффекта в испытаниях				
+gearPerception	Perception	external	[+x] Внимание	Нет эффекта в испытаниях				
+gearCombat	Combat	external	[+x] Навыки боя	Нет эффекта в испытаниях				
+gearAnimals	Animals	external	[+x] Ксенология	Нет эффекта в испытаниях				
+								
+perkPerceptionAnimals	Bonus Perception and Animals Skills	external	[+x] когда получаете очки Внимания или Ксенологии	Нет эффекта в испытаниях				
+perkCreativityOrganization	Bonus Creativity and Organization Skills	external	[+x] когда получаете очки Творчества или Собранности	Нет эффекта в испытаниях				
+perkBiologyEngineering	Bonus Biology and Engineering Skills	external	[+x] когда получаете очки Биологии или Инженерии	Нет эффекта в испытаниях				
+perkToughnessCombat	Bonus Toughness and Combat Skills	external	[+x] когда получаете очки Стойкости или Навыков Боя	Нет эффекта в испытаниях				
+								
+gearDraw	Draw Card Gear	external	Вытащить [x] дополнительных карты	Бонусные карты вытаскиваются в начале испытания				
+gearAllSkills	All Skills	external	[+x] ко всем [suit] навыкам	Нет эффекта в испытаниях				
+gearReduceStress	Reduce Stress	external	Получить на [x] меньше стресса	Снижает стресс на [x] каждый раз, когда он растёт		Увеличивает стресс на [-x] каждый раз, когда он растёт		outside of combat, reduce incoming stress
+	Multiply skill increases	external	На [+x]% больше очков для [suit] навыков	Нет эффекта в испытаниях				
+extraKudos	Extra Kudos	external	[+x] Похвал, когда получаете похвалу	Нет эффекта в испытаниях				
+multiplyRebellion	Multiply rebellion increases	external	На [+x]% больше прирост мятежности	Нет эффекта в испытаниях				
+multiplyKudos	Multiply Kudos gained	external	На [+x]% больше похвал	Нет эффекта в испытаниях				
+plusSkill	Bonus skill increases	external	[+x] когда получаете [suit] навыки	Нет эффекта в испытаниях				
+plusSkillChance	Chance to gain an extra skill	external	[+x]% шанс получить 1 бонусный навык	Нет эффекта в испытаниях				

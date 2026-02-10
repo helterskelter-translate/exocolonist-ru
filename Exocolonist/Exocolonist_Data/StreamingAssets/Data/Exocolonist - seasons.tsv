@@ -1,0 +1,7 @@
+ID	Name	firstWeek	lastWeek	Color	Mood	BiomeID	Biome Region Name	Direction
+quiet	Тишина	1	3	light blue	somber	plains	Прозаичная равнина	north
+pollen	Пыльца	4	6	pink	exciting	valley	Долина головокружения	east
+dust	Пыль	7	9	dusky orange-yellow	happy	ridge	Западное нагорье	west
+wet	Влага	10	12	dark green	scary	swamp	Подводные болота	south
+glow	Сияние	13	13	black	weird			surrounding
+none	Ничего					nearby	Окраина колонии	surrounding

@@ -1,0 +1,43 @@
+	29	Empathy	2	Reasoning	1	Toughness	2	
+	21	Persuasion	1	Organization	2	Perception	1	
+		Creativity	1	Engineering	1	Combat	2	
+		Bravery	2	Biology	2	Animals	1	
+ID	Name	Preamble	Required Memory	Required Job	Other Jobs	Skills	Chara	Other Memory
+special_shipDestroyed	Стратосферик разрушен	Червоточина закрыта. Навсегда.						
+special_earth	Жизнь на Земле	Это как-то неправильно...						
+special_timeLord	Трансцендентность времени	Вот так всё и началось...						
+special_bomb	Побег	Ты никогда не вернёшься...						
+special_joinGardeners	Примкнуть к Садовникам	Когда ты возвращаешься, ты уже иной.						
+special_destroyGardeners	Отключить Массив	Защитники Вертумны исчезли...						
+special_virus	Средство Тангент	Ксеносов больше нет...						
+special_colonyDestroyed	Колония уничтожена	Колония была разрушена...						
+								
+								
+governor	Губернатор	Тебе исполнилось 20 лет...	endGovernor				marz	
+								
+hunter	Ксеноохотник	Тебе исполнилось 20 лет...	!ending_special_peace	hunt	defenseTraining	combat		garrison
+athlete	Герой спотрбола	Тебе исполнилось 20 лет...		sportsball		toughness		garrison
+hero	Военный герой	Тебе исполнилось 20 лет...	!ending_special_peace	guardDuty	lookoutDuty	combat		garrison
+								
+astronaut	Астронавт	Тебе исполнилось 20 лет...	endAstronaut	studyPhysics	artifacts	bravery	!vace	expeditions
+explorer	Исследователь	Тебе исполнилось 20 лет...		survey	exploreNearby	perception		expeditions
+collector	Собиратель	Тебе исполнилось 20 лет...	!ending_special_peace	artifacts	forage	organization		expeditions
+								
+parent	Плодовитый родитель	Тебе исполнилось 20 лет...	endParent	babysitting	cooking	empathy		quarters
+novelist	Автор бульварных романов	Тебе исполнилось 20 лет...		studyWriting	assistant	creativity		quarters
+entertainer	Артист	Тебе исполнилось 20 лет...	endEntertainer	photophonor	barista	bravery		quarters
+								
+botanist	Ботаник	Тебе исполнилось 20 лет...		analyzePlants	studyBiology	biology		geoponics
+rancher	Говорящий с ксенами	Тебе исполнилось 20 лет...		tendAnimals	relaxPark	animals		geoponics
+farmer	Фермер	Тебе исполнилось 20 лет...		farm	shovel	biology		geoponics
+								
+lawyer	Адвокат	Тебе исполнилось 20 лет...		assistant	studyWriting	persuasion		command
+architect	Архитектор	Тебе исполнилось 20 лет...		construction	studyPhysics	toughness		command
+merchant	Торговец	Тебе исполнилось 20 лет...	marzCapitalism	depot	delivery	organization		command
+								
+doctor	Доктор	Тебе исполнилось 20 лет...		nurse	studyBiology	empathy		engineering
+roboticist	Робототехник	Тебе исполнилось 20 лет...		robotRepair	studyPhysics	engineering		engineering
+professor	Профессор	Тебе исполнилось 20 лет...		tutoring	studyWriting	reasoning		engineering
+								
+rebel	Мятежник	Тебе исполнилось 20 лет...				rebellion		
+hobbyist	Любитель	Тебе исполнилось 20 лет...			relaxLounge, relaxPark, relaxWalls			

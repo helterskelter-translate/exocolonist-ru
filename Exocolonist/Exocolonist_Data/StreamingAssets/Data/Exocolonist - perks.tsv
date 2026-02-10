@@ -1,0 +1,59 @@
+	During intro, saved as mem_trait = catEars								You are 10 years old, and **** .	You are 14 years old and **** .	Second sentence for 2nd perk
+ID	Name	Type	AbilityID	Value	Suit	Increased skills (1.5x)		Description	Snippet1	Snippet2	Snippet3
+eyes	Орлиные глаза	enhancement	perkPerceptionAnimals	1		Perception, Animals		"Навыки ""Внимательность"" и ""Ксенология"" растут быстрее"	твои птичьи глаза ничего не упустят.	можешь заметить милотылька с километра.	Ты можешь заметить милотылька с километра.
+extraFingers	Дополнительные пальцы	enhancement	perkCreativityOrganization	1		Creativity, Organization		"Навыки ""Творчество"" и ""Собранность"" растут быстрее"	твои лишние пальцы очень сподручны (уловил? сподручны).	полидактиль, как и многие великие фотофонористы.	Ты полидакт, как и многие великие фотофонористы.
+spongyBrain	Впитывающий мозг	enhancement	perkBiologyEngineering	1		Biology, Engineering		"Навыки ""Биология"" и ""Инженерия"" растут быстрее"	хорошо усваиваешь информацию благодаря гиперактивным нейронам.	быстрее обучаешься.	Ты хорошо учишься, благодаря гиперактивным нейронам.
+muscles	Супер сила	enhancement	perkToughnessCombat	1		Toughness, Combat		"Навыки ""Стойкость"" и ""Навыки боя"" растут быстрее"	по-прежнему самый сильный ученик в классе.	наращиваешь массу как никто другой.	Ты наращиваешь массу как никто другой.
+calm	Спокойный темперамент	enhancement	gearReduceStress	2				На 2 меньше стресса, когда вы получаете стресс	просто самый спокойный и добродушный человек.	остаёшься спокойным, даже когда другие нервничают.	Ты остаёшься спокойным, даже когда другие нервничают.
+nothing	Без расширений	enhancement	extraKudos	2				На 2 больше похвалы, когда вы получаете похвалу	прекрасно себя чувствуешь и без модификаций, спасибо.	особенный по-своему.	
+											
+											
+	Skill Perks are hardcoded in Skills.cs										
+											
+gearSlot	Дополнительный слот снаряжения	skill						Позволяет экипировать дополнительное снаряжение			
+petUpgrades1	Уровень II питомца	skill						Улучшает карту питомца через отдыха в парке			
+petUpgrades2	Уровень III питомца	skill						Улучшает карту питомца через отдыха в парке			
+shopClothes	Магазин одежды	skill						Новые карты доступны в депо			
+shopGadgets	Магазин гаджетов	skill						Новые карты доступны в депо			
+extraDraw	Разыгрывается дополнительная карта	skill						Рисует дополнительную карту в начале испытания (эффект суммируется)			
+collectiblesHighlight	Находки подсвечиваются	skill						Все находки светятся			
+collectiblesMore	Больше находок	skill						Находки появляются чаще\nи заполняют больше места			
+jobAnalyzePlants	Местная ботаника	skill						Разблокирует ксеноботанику в Геопонике			
+shopWeapons	Магазин оружия	skill						Новые карты в депо			
+spa	Спа	skill						Заплатите, чтобы удалить карту в спа			
+training	Улучшение карт	skill						Улучшает базовые карты в тренажерном зале гарнизона			
+extraStartingPerk	Дополнительное расширение	skill						Расширьте своё ДНК в Инженерии			
+boostSocial	Ускорение социальных	skill	plusSkill	1	social			+1 к увеличению Социальных			
+boostMental	Ускорение ментальных	skill	plusSkill	1	mental			+1 к увеличению Ментальных			
+boostPhysical	Ускорение физических	skill	plusSkill	1	physical			+1 к увеличению Физических			
+skillsBoost	Небольшое ускорение навыков	skill	plusSkillChance	5				5% шанс получить 1 дополнительное очко навыка			
+relaxBetter	Улучшенный отдых	skill						Можно выбрать из трёх карт во время отдыха			
+giftBetter	Улучшенные подарки	skill						Позволяет дарить предметы каждый месяц вместо сезона			
+extraKudos	Дополнительные похвалы	skill	extraKudos	1				+ 1 похвала при получении похвалы			
+loveDestress	Дружба снижает стресс	skill						- 1 стресс всякий раз, когда вы зарабатываете очки дружбы			
+noBottlenecks	Позволяет избегать события	skill						Позволяет проскальзывать между\nпрепятствующих событий			
+skipNewCard	Возможность пропуска карты	skill						Можно отказаться от получения новых карт			
+injuryImmune	Иммунитет к травмам	skill						Никогда не получаешь статус ранения, когда тебе больно			
+											
+socialPlusOne	+1 к Социальным картам	skill						Жёлтые карты получают +1 в социальных испытаниях			
+mentalPlusOne	+1 к Ментальным картам	skill						Голубые карты получают +1 в ментальных испытаниях			
+physicalPlusOne	+1 к Физическим картам	skill						Красные карты получают +1 в физических испытаниях			
+reduceExploreStress	Снижает стресс от исследования	skill						Каждое событие исследования даёт 10 стресса вместо 15			
+	Узнать наивысший возможный результат в испытании работы	skill						Наивысший возможный результат отображается рядом с целью			
+autoplayFairy	Фея автоплея	skill						Фея автоплея периодически собирает руку получше			
+											
+											
+											
+status_stressed	Измотан	status						Не можешь ничего, кроме отдыха.			
+status_calm	Ясный ум	status	plusSkillChance	10				10% шанс получить +1 бонусом, когда улучшается навык.			
+status_enlightened	Просвещенный	status	plusSkill	1	mental			+1 к приросту всех Ментальных навыков на 3 месяца.			
+status_love	Влюблённый	status	plusSkill	1	social			+1 к приросту всех Социальных навыков на 3 месяца.			
+status_mourning	В трауре	status	plusSkill	-1				-1 к приросту всех навыков на 3 месяца.			
+status_starving	Голодающий	status	plusSkill	-1	physical			Прирост Физических навыков снижен на 1.			
+status_injured	Раненный	status	plusSkill	-1	physical			Прирост Физических навыков снижен на 1, излечивается отдыхом.			
+status_hormones	Гормоны	status	multiplyRebellion	200				Прирост мятежности увеличен в три раза.			
+status_insomnia	Бессоница	status	plusSkill	-1	mental			Прирост всех Ментальных навыков снижен на 1 на 3 месяца.			
+status_grounded	Наказан	status	multiplyRebellion	-100				Нельзя исследовать. Лояльность увеличивается в два раза.			
+status_popular	Популярный	status	multiplyKudos	100				Двойная похвала на 3 месяца.			
+status_heroic	Герой	status	plusSkill	1	physical			+1 к приросту всех Физических навыков на 3 месяца.			
+status_feud	Вражда	status	plusSkill	-1	social			Прирост всех Социальных навыков снижен на 1 на 3 месяца.			

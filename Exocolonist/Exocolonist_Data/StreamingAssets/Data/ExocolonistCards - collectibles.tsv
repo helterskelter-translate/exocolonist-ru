@@ -1,0 +1,18 @@
+These items can be given as gifts or traded in to craft other cards.				Sync these to character sheet too									
+Order matters, in battle cards go updown-leftright 1 - 3 - 5 / 2 - 4 - 6 													
+	yellowFlower - fruit - egg / wood - roots - crystal												
+													
+													
+	Sync this to cards list												
+ID	Name	Plural	CardID	Like	Dislike	Biome	NearbySeason	Chance	Plant?	Has battle effect?	Skill 2x	Battle Effect?	Notes
+yellowFlower	Жёлтый цветок	Жёлтый цветок	yellowFlower	tammy, tang, marz, sym	vace	plains, valley, ridge	dust	10	TRUE	TRUE	biology	turn yellow and +1	
+wood	Бревно грибодрева	Бревно грибодрева	wood	rex, sym	tammy, marz	plains, swamp	quiet, pollen, dust, wet	10	TRUE	TRUE	perception	card gets +2	max 80% chance per each of 2 cache slots
+fruit	Голубой поплавник	Голубой поплавник	fruit	cal, sym	vace	valley, swamp	wet	10	TRUE	TRUE	biology	turn blue and +1	
+roots	Лечебные корни	Лечебные корни	roots	tang, dys, sym	marz, nomi	plains, swamp	quiet	10	TRUE	TRUE	biology	draw card	
+egg	Красное ксенояйцо	Красное ксенояйцо	egg	anemone, cal, sym	marz, vace	valley, swamp	pollen	10	FALSE	TRUE	biology	turn red and +1	
+crystal	Кристальный кластер	Кристальный кластер	crystal	marz, nomi, sym	anemone	plains, ridge	glow	10	FALSE	TRUE	perception	redraw hand	
+													
+device	Странное устройство	Странное устройство	device	nomi, dys, vace, sym		ridge		10	FALSE		perception		worth big kudos
+cake	Торт	Торт	cake	cal, vace, sym, rex	dys			0				minus 25 stress	Can make in cooking. Or cookies?
+													
+whiteFlower	Белая астранция	Белая астранция	whiteFlower	sym				0					

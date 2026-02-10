@@ -1,0 +1,2483 @@
+
+=== gameStartIntro ==============================================
+    // can only be called directly
+    ~if location = none
+
+    // no jobs available until talking to dad
+
+    ~set mem_leader = eudicot
+    ~set mem_chiefSurveyor = tonin
+    ~set mem_anemoneNick = Энимона
+    ~set mem_anneNick = Тётушка Сидент
+    ~set mem_anneNickShort = Тётушка
+    // in case something goes wrong while acquiring a pet
+    ~set mem_hopeyeName = Попрыглаз
+    ~set mem_vrikiName = Врики
+    ~set mem_unisaurName = Единозавр
+    ~set mem_surveyPhotosynthsName = солнценежец
+
+    // numLives incremented when you die or reach age 20, is 1 on first playthrough, 2 on second
+    ~setif hog_numLives == 0 ? hog_numLives = 1
+    // hog_numLives won't increment unless this is true, and will set this to false after
+    // so death-reload-death doesn't increment numLives twice unless you start a new game in between
+    ~set hog_lifeStarted = true
+
+    // don't show cards that were awarded above here
+    //~call clearcards()
+    // don't show any cards during this event the first time you run it
+    //~callif !call_setting(disableTutorialMessages) && !hog_firstBirthday ? hideAllCards()
+    // ~callif hog_numLives <= 1 ? hideAllCards()
+
+    // ~callif hog_numLives <= 1 ? hideButtonCards() // moved
+    ~call hideAllMenus()
+    // never skip forward or show a SkipSeenText checkbox during this event
+    ~call preventSeenSkip
+
+    // you start off knowing some basic facts about some dateables
+    ~call charafact(anemone, name)
+    ~call charafact(cal, name)
+    ~call charafact(tang, name)
+    //~call charafact(dys, name) he keeps this secret
+    ~call charafact(marz, name)
+    ~call charafact(tammy, name)
+
+    // starting charas appear on map
+    ~set mem_map_anemone
+    ~set mem_map_cal
+    ~set mem_map_tang
+    ~set mem_map_dys
+    ~set mem_map_marz
+    ~set mem_map_tammy
+    ~set mem_map_mom
+    ~set mem_map_dad
+    ~set mem_map_tonin
+    ~set mem_map_utopia
+
+    // start with almost half a heart for early game kids (but not mem_met)
+    // all love is doubled so +2 means almost half a heart (+4)
+    ~set love_anemone + 2
+    ~set love_cal +2
+    ~set love_tang + 2
+    ~set love_dys + 2
+    ~set love_marz + 2
+    ~set love_tammy + 2
+
+    // sol always starts with +10 empathy because they aren't a sociopath
+    ~set skill_empathy + 10
+
+    // don't show names or love or skill changes
+    ~call clearunlock()
+    ~call clearchanges()
+    
+    // shut up main menu music
+    ~set effect = silence
+    // shut up panting dog during undo
+    ~call stopAllLoopingSounds
+
+/******************************************************************************* }*/
+/** Epilogue - fire *************************************************************/
+/******************************************************************************* {*/
+
+    // subtle black boxes instead of blue ones
+    ~call fancyMode(true)
+    ~set bg = starfield
+    // very slowly fade from main menu to starfield
+    ~set effect = slowTransition
+
+    // starts with no text, just Wake Up button in middle of screen after 3 seconds
+
+    * Wake Up
+    	// first life
+    	~if hog_numLives <= 1
+    	~if !hog_shipDestroyed
+    	~setif call_isDebug() ? hog_numLives = 1
+    	~call hideButtonCards()
+    	~call fancyMode(true)
+    
+    	Предупреждение:
+    
+    	Эта игра затрагивает взрослые темы и может не подходить для всех игроков.
+    
+    	Пожалуйста, ознакомьтесь с предупреждениями о содержании в системном меню, чтобы увидеть подробный список тем и событий.
+    
+    	** Продолжить
+    		> introFirstFire
+
+    * Wake Up Again
+    	// second plus life
+    	~if hog_numLives > 1
+    	~if !hog_shipDestroyed
+    	~setif call_isDebug() && hog_numLives <= 1 ? hog_numLives = 2
+    	~call cheevo(general_second_life)
+    	~call fancyMode(true)
+    
+    	Предупреждение:
+    
+    	Эта игра затрагивает взрослые темы и может не подходить для всех игроков.
+    
+    	Пожалуйста, ознакомьтесь с предупреждениями о содержании в системном меню, чтобы увидеть подробный список тем и событий.
+    
+    	** Продолжить
+    		// play the fire animation every life not just the first
+    		> introFirstFire
+
+    * Wake Up?
+    	// secret ending after blowing up the wormhole
+    	~if hog_shipDestroyed
+    	> introShipDestroyed
+    
+    * DEBUG - Intro Animation - FIRST Life
+    	~if call_isDebug()
+    	~set hog_numLives = 1
+    	~call hideButtonCards()
+    	> introFirstFire
+
+    * DEBUG - Skip Animation - FIRST Life
+    	~if call_isDebug()
+    	~set hog_numLives = 1
+    	~call hideButtonCards()
+    	> question1
+
+    * DEBUG - Skip Animation - SECOND Life
+    	~if call_isDebug()
+    	~set hog_numLives = 2
+    	> question1
+    
+    * DEBUG - Skip to Medbay
+    	~if call_isDebug()
+    
+    	// pick first answers for every question
+    	~call setName(null, Solanaceae)
+    	~call setGenderAppearance(female)
+    	~call setGenderPronouns(female)
+    
+    		~set card_hidden = physical0
+    		~set card_hidden = mental0
+    		~set card_hidden = social0
+    		~set card_hidden = physical1
+    		~set card_hidden = mental1
+    		~set card_hidden = social1
+    
+    		~set mem_work_farm + 5
+    		~set skill_biology + 5
+    		~set card_hidden = introTrowel
+    		~set card_hidden = physical1
+
+    		~set mem_introBook = knight
+    		~set mem_factionTrad + 10
+    		~set skill_creativity + 5
+    		~set card_hidden = tradition
+    		~set card_hidden = physical1
+    		~set card_hidden = mental1
+    
+    	~set skill_perception + 10
+    	~set mem_perk = eyes
+    	~set card = perk_eyes
+    	~set card_hidden = physical1
+
+    	~set mem_childfriend = anemone
+    	~set mem_met_anemone
+    	~set love_anemone + 5
+    	~set skill_toughness + 5
+    	~set skill_combat + 5
+    	~set card_hidden = anemone1
+    	~set card_hidden = physical2
+    
+    	~set love_anemone++
+    	~set skill_rebellion + 5
+    
+    	~set skill_stress + 30
+    
+    	~set skill_stress - 10
+    	~set love_tang++
+    	~set card_hidden = toughFace
+    	~set card_hidden = physical2
+    
+    	~call fancyMode(false)
+    	~call showmenu(skills)
+    	~call showmenu(toolbar)
+    	~call showmenu(portrait)
+    	> medbayContinue
+
+    * DEBUG - Exit Intro to First Week
+    	~if call_isDebug()
+    
+    	// pick first answers for every question
+    	~call setName(null, Solanaceae)
+    	~call setGenderAppearance(female)
+    	~call setGenderPronouns(female)
+    
+    		~set card_hidden = physical0
+    		~set card_hidden = mental0
+    		~set card_hidden = social0
+    		~set card_hidden = physical1
+    		~set card_hidden = mental1
+    		~set card_hidden = social1
+    
+    		~set mem_work_farm + 5
+    		~set skill_biology + 5
+    		~set card_hidden = introTrowel
+    		~set card_hidden = physical1
+
+    		~set mem_introBook = knight
+    		~set mem_factionTrad + 10
+    		~set skill_creativity + 5
+    		~set card_hidden = tradition
+    		~set card_hidden = physical1
+    		~set card_hidden = mental1
+    
+    	~set skill_perception + 10
+    	~set mem_perk = eyes
+    	~set card = perk_eyes
+    	~set card_hidden = physical1
+
+    	~set mem_childfriend = anemone
+    	~set mem_met_anemone
+    	~set love_anemone + 5
+    	~set skill_toughness + 5
+    	~set skill_combat + 5
+    	~set card_hidden = anemone1
+    	~set card_hidden = physical2
+    
+    	~set love_anemone++
+    	~set skill_rebellion + 5
+    
+    	~set skill_stress + 30
+    
+    	~set skill_stress - 10
+    	~set love_tang++
+    	~set card_hidden = toughFace
+    	~set card_hidden = physical2
+    
+    	> landing
+    
+    * DEBUG - Skip Tutorial - Social
+    	~if call_isDebug()
+    
+    	// pick first answers for every question
+    	~call setName(null, Sol)
+    	~call setGenderAppearance(male)
+    	~call setGenderPronouns(male)
+
+    		~set card_hidden = physical0
+    		~set card_hidden = mental0
+    		~set card_hidden = social0
+    		~set card_hidden = physical1
+    		~set card_hidden = mental1
+    		~set card_hidden = social1
+    
+    		~set mem_work_quarters + 5
+    		~set skill_empathy + 5
+    		~set card_hidden = introDoll
+    		~set card_hidden = social1
+
+    		~set mem_introBook = superhero
+    		~set mem_factionLefty + 10
+    		~set skill_combat + 5
+    		~set card_hidden = idealism
+    		~set card_hidden = social1
+    		~set card_hidden = physical1
+    
+    	~set skill_creativity + 10
+    	~set mem_perk = extraFingers
+    	~set card = perk_extrafingers
+    	~set card_hidden = social1
+
+    	~set mem_childfriend = marz
+    	~set mem_met_marz
+    	~set love_marz + 5
+    	~set skill_persuasion + 5
+    	~set skill_organization + 5
+    	~set card_hidden = marz1
+    	~set card_hidden = social2
+    
+    	~set skill_rebellion - 5
+    	~set skill_empathy + 5
+    
+    	~set skill_stress + 30
+    
+    	~set skill_stress - 10
+    	~set love_tammy++
+    	~set love_marz++
+    	~set card_hidden = stressCry
+    	~set card_hidden = social2
+    
+    	> skipTutorial
+
+    * DEBUG - Skip Tutorial - Mental
+    	~if call_isDebug()
+    
+    	// pick first answers for every question
+    	~call setName(null, Solane)
+    	~call setGenderAppearance(nonbinary)
+    	~call setGenderPronouns(nonbinary)
+    
+    		~set card_hidden = physical0
+    		~set card_hidden = mental0
+    		~set card_hidden = social0
+    		~set card_hidden = physical1
+    		~set card_hidden = mental1
+    		~set card_hidden = social1
+    
+    		~set mem_work_expeditions + 5
+    		~set skill_animals + 5
+    		~set card_hidden = introBook
+    		~set card_hidden = mental1
+
+    		~set mem_introBook = futuredog
+    		~set mem_factionFuturist + 10
+    		~set skill_engineering + 5
+    		~set card_hidden = futurism
+    		~set card_hidden = mental1
+    		~set card_hidden = social1
+    
+    	~set skill_reasoning + 10
+    	~set mem_perk = spongyBrain
+    	~set card = perk_spongybrain
+    	~set card_hidden = mental1
+    
+    	~set mem_childfriend = tang
+    	~set mem_met_tang
+    	~set love_tang + 5
+    	~set skill_reasoning + 5
+    	~set skill_engineering + 5
+    	~set card_hidden = tang1
+    	~set card_hidden = mental2
+    
+    	~set skill_bravery + 5
+    	~set skill_rebellion + 5
+    
+    	~set skill_stress + 30
+    
+    	~set skill_stress - 10
+    	~set love_cal++
+    	~set love_dys++
+    	~set love_anemone++
+    	~set card_hidden = distraction
+    	~set card_hidden = mental2
+    
+    	> skipTutorial
+
+    * DEBUG - Skip Tutorial - Physical
+    	~if call_isDebug()
+    
+    	// pick first answers for every question
+    	~call setName(null, Solanaceae)
+    	~call setGenderAppearance(female)
+    	~call setGenderPronouns(female)
+    
+    		~set card_hidden = physical0
+    		~set card_hidden = mental0
+    		~set card_hidden = social0
+    		~set card_hidden = physical1
+    		~set card_hidden = mental1
+    		~set card_hidden = social1
+    
+    		~set mem_work_farm + 5
+    		~set skill_biology + 5
+    		~set card_hidden = introTrowel
+    		~set card_hidden = physical1
+
+    		~set mem_introBook = knight
+    		~set mem_factionTrad + 10
+    		~set skill_creativity + 5
+    		~set card_hidden = tradition
+    		~set card_hidden = physical1
+    		~set card_hidden = mental1
+    
+    	~set skill_perception + 10
+    	~set mem_perk = eyes
+    	~set card = perk_eyes
+    	~set card_hidden = physical1
+
+    	~set mem_childfriend = anemone
+    	~set mem_met_anemone
+    	~set love_anemone + 5
+    	~set skill_toughness + 5
+    	~set skill_combat + 5
+    	~set card_hidden = anemone1
+    	~set card_hidden = physical2
+    
+    	~set love_anemone++
+    	~set skill_rebellion + 5
+    
+    	~set skill_stress + 30
+    
+    	~set skill_stress - 10
+    	~set love_tang++
+    	~set card_hidden = toughFace
+    	~set card_hidden = physical2
+    
+    	> skipTutorial
+
+    *= skipTutorial
+    	// skip over talking to dad and first week but skip the week's events
+    	~set mem_week1dad
+    
+    	// all the starting jobs available immediately
+    	~set mem_job_shovel = true
+    	~set mem_job_sportsball = true
+    	~set mem_job_relaxLounge = true
+    	~set mem_job_studyBiology = true
+    	~set mem_job_studyWriting = true
+    
+    	// dad gives you this on the first week
+    	~set card_hidden = sunMedallion
+    
+    	// skip the first couple weeks which have limited options
+    	~call incrementMonthSilent()
+    	~call incrementMonthSilent()
+
+    	> landing
+	
+	
+/******************************************************************************* }*/
+/** First time - Fire *************************************************************/
+/******************************************************************************* {*/
+
+    *= introFirstFire
+    	// sync with main_attack19
+    	// need when coming back from earth
+    	~call fancyMode(true)
+    	~set bg = intro
+    	// doesn't seem to work if called on the same frame the bg is set? defaults to this clip anyway
+    	~call animation(intro1fire)
+    	~call delayText(2)
+    
+    	Ты просыпаешься в хаосе. Смешение света, жара и дыма...
+    
+    	_Пожар!_
+    
+    	-
+    
+    	Голова раскалывается. Должно быть, ты ударился и отключился, но ты не уверен, как здесь оказался... или что, черт возьми, на _Вертумне_ происходит.
+    
+    	Ты должен вспомнить что-то важное...
+    
+    	-
+    	~call animation(intro2nemmie)
+    	~call delayText(2)
+    
+    	// waited a bit for main menu music to fade out first
+    	// prep the music that will play on the first frame of ship animation (will start muted)
+    	// ~call playMusic(intro)
+    
+    	Тебя мутит, когда пол под ногами крошится, а затем обваливается!
+    
+    	-
+    
+    	Тело ноет, а глаза горят от дыма. Сквозь пламя появляется фигура. Это твой друг!
+    
+    	Твой... друг?
+    
+    	Стоп... почему ты не можешь вспомнить ее имя? Она жестикулирует и кричит на тебя, но все, что ты слышишь, — это звон в ушах.
+    
+    	** "Что происходит??"
+    
+    		Ты пытаешься говорить, но слова выходят путаными. Горло сжимается от полной легкие едкой гари, и ты чувствуешь головокружение и растерянность.
+    
+    		> fireContinue
+    
+    	** Выбраться
+    
+    		Ты пытаешься встать, но одна нога подгибается без сил. Она не выдерживает твой вес.
+    
+    		> fireContinue
+    
+    *= fireContinue
+    	~call animation(intro3door)
+    
+    	Твоя подруга вытаскивает тебя из завалов. Она перекидывает твою руку через плечо и почти тащит тебя к двери.
+    
+    	-
+    
+    	Через нее ты видишь глубокий, зловещий полумрак — темно-синий и холодный на фоне жара огня вокруг.
+    
+    	_Сезон Сияния..._
+    
+    	-
+    	~call animation(intro4dog)
+    	~call delayText(2)
+    
+    	_Светящиеся глаза!_
+    
+    	Ты трясешь головой, чтобы прояснить зрение. Это... какая-то собака, как с Земли?
+    
+    	-
+    	~call animation(intro5lunge)
+    	~call delayText(4)
+    
+    	Существо воет и бросается в атаку!
+    
+    	Его пасть раскрывается...
+    
+    	// invisible choice will be auto-called when intro5lunge animation completes, prevents closing or clicking through lunge animation
+    	** [hidden]
+    		> titles
+	
+
+/******************************************************************************* }*/
+/** Ship Destroyed Intro ***************************************************/
+/******************************************************************************* {*/
+
+    *= introShipDestroyed
+    	~set bg = earth
+    	// back to regular blue boxes
+    	~call fancyMode(false)
+    
+    	Ты рождаешься на Земле, в Комплексе Вертумна.
+    
+    	** Добрая старая Земля
+    		= earth
+    		~set bg = earth
+    		// have to do this at least once before you can undestroy the wormhole
+    		~set hog_shipDestroyedIntro
+    
+    		Ты разумный, сосредоточенный ребенок. Пожалуй, даже _слишком_ разумный, как шутит твой отец, пытаясь вдохновить тебя фантастическими рассказами о приключениях.
+    
+    		-
+    
+    		Твое детство мирное, но по мере того как ты и твои друзья взрослеете, вы начинаете понимать, что жизнь за пределами комплекса для большинства коротка и жестока.
+    
+    		Ядерная война, изменение климата, загрязнение и массовые вымирания сделали планету негостеприимной задолго до твоего рождения. Только богатые живут в комфорте — богатые и те, кто живет в коммунальных анклавах, таких как ваш.
+    
+    		-
+    
+    		Твой комплекс самодостаточен, что делает его мишенью для беженцев, мародеров и — по мере твоего взросления — квазиправительственных ополченцев.
+    
+    		Твоя мать погибает, защищая комплекс, когда тебе всего десять лет. Твой отец, ботаник, уже никогда не будет прежним после этого.
+    
+    		-
+    
+    		Иногда он говорит об отъезде с Земли, но куда бы ты вообще отправился?
+    
+    		Там ничего нет — ни одной известной обитаемой планеты, ни одного места, где можно было бы устроить дом. Луна и Марс бесплодны и заброшены, их атмосфера даже более токсична, чем земная.
+    
+    		Дальше — просто... космос.
+    
+    		-
+    
+    		И все же сегодня вечером ты сидишь на травянистом зеленом утесе и тоскливо смотришь на звезды.
+    
+    		[if hog_acceptedEarth]
+    			Ты постараешься изо всех сил делать добро здесь, улучшать жизни других и исцелять этот мир. Может быть, однажды, если достаточно таких людей, как ты, будут работать над этой целью, ты сможешь сделать Землю тем раем, каким ты ее представляешь.
+    
+    		[else]
+    			Где-то вдалеке ты слышишь, как начинает свой скорбный вой сирена рейда. Ты хватаешь свою винтовку и отправляешься к пролому, чтобы защитить свой комплекс от внешнего мира.
+    		[end]
+    
+    		*** Конец.
+    			~call endGame(earth)
+    
+    	** Снова? Серьезно?
+    		~if hog_shipDestroyedIntro
+    
+    		~set bg = starfield
+    
+    		"Ох... тебе не нравится такой конец твоей истории, да? Недостаточно эпичный для тебя?"
+    
+    		-
+    		~set left = solold
+    
+    		Знакомое лицо держит в своих морщинистых руках нити судьбы.
+    
+    		"Наверное, нам не стоило взрывать ту червоточину, хм? Без червоточины наше приключение заканчивается, не успев начаться. Никаких космических путешествий, никакой аварии в червоточине, никаких древних тайн... ужасно скучно."
+    
+    		"С другой стороны, Вертумна свободна от человеческого вмешательства..." они вздыхают. "В каждой временной линии."
+    
+    		*** "А можно... _развзорвать_ червоточину?"
+    			~set hog_shipDestroyed = false
+    
+    			Старейшина гудит, диссонирующий звук множества голосов, сливающихся в один.
+
+    			"Ладно," говорят они после нескольких мгновений размышлений. "Возможно, у нас остались незаконченные дела на Вертумне."
+    
+    			-
+    			~set charas = none
+    
+    			"Держись, это может немного жечь..."
+    
+    			**** Проснись
+    				// back to the original intro animation
+    				> introFirstFire
+    
+    		*** "Ты прав, Земля — это наше место"
+    			~set hog_acceptedEarth
+    
+    			Старейшина кивает.
+    
+    			"Тогда давай вернемся к этому."
+    
+    			> earth
+
+
+/******************************************************************************* }*/
+/** Title screen ******************************************************************/
+/******************************************************************************* {*/
+
+    *= titles
+    	~call clearText
+    	// calls RestartUnmuteMusic from the animation timeline once loaded
+    	~set bg = intro_titles
+    	// make sure that dog stopped panting
+    	~call stopAllLoopingSounds
+    
+    	// invisible choice will be auto-called when animation completes, prevents closing
+    	** [hidden]
+    		> question1
+	
+
+/******************************************************************************* }*/
+/** Question 1 - name and gender ********************************************/
+/******************************************************************************* {*/
+
+    *= question1
+    	// back to regular blue boxes
+    	~call fancyMode(false)
+    	// make double sure that dog stopped panting
+    	~call stopAllLoopingSounds
+    
+    	Ты рождаешься на борту «Стратосферика», первого колониального корабля Земли, на полпути его двадцатилетнего путешествия к червоточине на краю Солнечной системы.
+    
+    	-
+    	~set bg = intro_titles
+    	~call animation(titles3space)
+    	// will use SoundManagerIntro to start it on the right beat
+    	// then intro_loop will come in after exactly some seconds
+    	// ~call playMusic(intro_bridge)
+    
+    	~set midleft = dad
+    	~set midright = mom
+    
+    	Твои родители управляют гидропонными садами, которые производят свежий воздух и овощи для корабля.
+    
+    	Как и другие колонисты, они смело решились на это путешествие в один конец к неисследованной планете Вертумна IV в надежде сбежать от земных проблем.
+    
+    	Они зачали тебя старомодным способом, смешав свои гены, как смешали свои культуры и традиции. Они называют тебя:
+    
+    		** Solanaceae
+    			~call setName(null, Solanaceae)
+    
+    			> question1gender
+    
+    		** Solana
+    			~call setName(null, Solana)
+    
+    			> question1gender
+    
+    		** Solane
+    			~call setName(null, Solane)
+    
+    			> question1gender
+    
+    		** Что-то другое
+    			// prompt for name
+    			~call setName(question1gender)
+    
+    			*** [hidden]
+    				// unused, prevent story from closing
+    
+    *= question1gender
+    	// don't show getting these cards either first time or return
+    	~set card_hidden = physical0
+    	~set card_hidden = mental0
+    	~set card_hidden = social0
+    	~set card_hidden = physical1
+    	~set card_hidden = mental1
+    	~set card_hidden = social1
+    
+    	// cards will be shown here only on return
+    	~call showmenu(intro)
+
+    	~set bg = creche
+    	// hack: using both spacer and hidden force a smaller scale Sol
+    	~set midright = sol
+    	~set left = spacer
+    	~set right = hidden
+
+    	Ты — светлоглазый ребенок с активным воображением. Иногда _слишком_ активным, как говорит твоя мама.
+    
+    	_(Используй ползунки слева, чтобы выбрать местоимения и внешность в позднем подростковом возрасте. Это можно изменить в любое время)_
+
+    	** ...
+    		~if hog_numLives <= 1
+    		// skip early gift and bedtime story, cards awarded by chara choice
+    		> question4first
+    
+    	** ...
+    		~if hog_numLives > 1
+    		> question2return
+		
+
+/******************************************************************************* }*/
+/** Question 2 (Return only) - birthday present *************************************/
+/******************************************************************************* {*/
+
+    *= question2return
+    	~call showmenu(portrait)
+    	~call showmenu(intro)
+    
+    	// sol moves and faces right
+    	~set bg = creche
+    	~set midright = sol_happy
+    	~set left = spacer
+    	~set right = hidden
+    
+    	Твои самые ранние воспоминания — о твоем четвертом дне рождения. Там большой торт с крутым голоэффектом, который _выглядит_ как огонь, но когда ты тянешься к нему, все, что получаешь, — это пригоршня глазури. Вкусно!
+    
+    	Твой любимый подарок:
+    
+    	** Садовая лопатка твоей мамы
+    		~set mem_work_farm + 5
+    		~set skill_biology + 5
+    		~set card = introTrowel
+    		~set card_hidden = physical1
+    
+    		Тебе на самом деле не нужны лопатки для гидропоники, но однажды ты окажешься на планете с настоящей грязью!
+    
+    		Пока что ты играешь в чистой песочнице с кремниевым песком и помогаешь маме собирать гидропонную клубнику.
+    
+    		> question3return
+    
+    	** Книга о животных от отца
+    		~set mem_work_expeditions + 5
+    		~set skill_animals + 5
+    		~set card = introBook
+    		~set card_hidden = mental1
+    
+    		Самое лучшее — это глава про динозавров!
+    
+    		На Земле было много животных, но на борту «Стратосферика» их нет. Папа говорит, что на Вертумне, возможно, есть животные, но мы не узнаем, пока не подберемся ближе.
+    
+    		Ты бегаешь за папой по садам, притворяясь динозавром.
+    
+    		> question3return
+    
+    	** Кукла от [=mem_anneNick]
+    		~set mem_work_quarters + 5
+    		~set skill_empathy + 5
+    		~set card = introDoll
+    		~set card_hidden = social1
+    
+    		Ты таскаешь эту куклу с собой повсюду и кормишь ее крошечной ложкой, которую нашла в камбузе.
+    
+    		[=mem_anneNick] помогает заботиться обо всех детях колонистов. Ее дочери Энимоне столько же лет, сколько и тебе, но _ей_ не нравятся куклы.
+    
+    		> question3return
+    
+    	** Старая шляпа капитана Эвдикот
+    		~set mem_work_command + 5
+    		~set skill_persuasion + 5
+    		~set card = introHat
+    		~set card_hidden = social1
+    
+    		Капитанша управляет всем целым кораблем. Она очень большая — и очень, очень старая.
+    
+    		У нее обычно нет времени разговаривать с детьми. Твой папа говорит, что ее работа — дело серьезное.
+    
+    		> question3return
+    
+    	** Учебный планшет от профессора Хала
+    		~set mem_work_engineering + 5
+    		~set skill_reasoning + 5
+    		~set card = introTablet
+    		~set card_hidden = mental1
+    
+    		Хал занимается наукой, а это то, что управляет кораблем. Он также учит детей постарше.
+    
+    		На планшете есть игры, которые учат математике с помощью картинок, и много букв, которые ты пока не умеешь читать.
+    
+    		> question3return
+    
+    	** Спортбол от начальника охраны Рэтта
+    		~set mem_work_garrison + 5
+    		~set skill_toughness + 5
+    		~set card = introSportsball
+    		~set card_hidden = physical1
+    
+    		Ты пинаешь этот мяч вдоль коридоров весь день. Ты хочешь играть с Комом и другими детьми постарше, но начальник охраны Рэтт говорит, что тебе стоит подождать пару лет.
+    
+    		Он кажется милым. Ты не понимаешь, почему дети постарше его боятся.
+
+    		> question3return
+
+/******************************************************************************* }*/
+/** Question 3 (Return only) - bedtime story *************************************/
+/******************************************************************************* {*/
+
+    // only on if hog_numLives >= 2
+    *= question3return
+
+    	// temporarily hide sol and intro menu, it will be back
+    	~call hidemenu(intro)
+    
+    	~set bg = bedroom
+    	~set left = dad
+    
+    	[if hog_numLives < 3]
+    		С самого раннего детства каждую ночь тебе снятся яркие сны. Ты видишь во сне незнакомцев, которые кажутся такими знакомыми, и широкие открытые пространства, очень непохожие на «Стратосферик». Иногда сны бывают плохими, и тебе становится страшно засыпать.
+    	[else]
+    		С самого раннего детства каждую ночь тебе снятся яркие сны. Ты видишь во сне своих друзей, но они уже взрослее. Ты видишь во сне и своих родителей, только они серьезнее. По ночам ты исследуешь огромные, неисследованные просторы под открытым небом, наслаждаясь ощущением дождя на лице.
+    
+    		Кроме того, иногда... тебе снятся монстры. Иногда плохие сны заставляют тебя бояться засыпать.
+    	[end]
+    
+    	Поэтому каждую ночь перед выключением света отец рассказывает тебе сказку на ночь.
+    
+    	-
+    
+    	Ты часто просишь рассказы о Земле, месте, которое видел только в головидео.
+    
+    	Твой отец не хочет об этом говорить. «Давай оставим это на другой раз», — говорит он, или «может быть, когда ты станешь старше».
+
+    	Он предпочитает выдуманные истории. Твоя любимая:
+    
+    	** Рыцарь и Принцесса Петтикоутс
+    		~set mem_introBook = knight
+    		~set mem_factionTrad + 10
+    		~set skill_creativity + 5
+    		~set card = tradition
+    		~set card_hidden = physical1
+    
+    		Все было так намного лучше в средневековой Земле, когда мужчины сражались с драконами, а женщины были так прекрасны, что единороги приходили им на помощь, если они когда-либо попадали в беду.
+    
+    		Все было так романтично, естественно и совершенно. Ты надеешься, что Вертумна будет такой.
+    
+    		> question4
+    
+    	** Супергеройские Воины Правосудия
+    		~set mem_introBook = superhero
+    		~set mem_factionLefty + 10
+    		~set skill_combat + 5
+    		~set card = idealism
+    		~set card_hidden = social1
+    
+    		Они сражаются за угнетенных на улицах Города и любят всех, кроме плохих парней, которые злы и пытаются забрать все деньги себе.
+    
+    		«Это и моя любимая», — говорит твой отец.
+    
+    		> question4
+    
+    	** Фьючердог и Космические Кадеты
+    		~set mem_introBook = futuredog
+    		~set mem_factionFuturist + 10
+    		~set skill_engineering + 5
+    		~set card = futurism
+    		~set card_hidden = mental1
+    
+    		Фьючердог может превращаться в луч света, на котором могут кататься Кадеты. У них приключения в самых дальних уголках космоса.
+    
+    		Прямо как у тебя!
+    
+    		> question4
+    
+    	** Истории из твоих снов
+    		~if hog_overseer
+    		~set mem_delusions++
+    		~set skill_bravery + 5
+    		~set card = dreamPeople // no delusions in intro
+    		~set card_hidden = social2
+    
+    		Ты всегда был таким странным. Ты умоляешь его рассказывать тебе истории об инопланетянах по имени Садовники и настаиваешь, что это реальные люди, с которыми ты встречался.
+    
+    		Или... встретишься. Или что-то в этом роде.
+    
+    		-
+    
+    		Они из твоих снов, но все кажется таким реальным! Это больше похоже на воспоминания...
+    
+    		Это сложно объяснить. Твоя семья не понимает, но твой отец с радостью играет в выдумки. Вместе вы каждую ночь придумываете новые приключения для Садовников.
+    
+    		> question4
+    
+    	** Инженерные мануалы корабля
+    		~if hog_secondEngineer
+    		~set skill_engineering + 5
+    		~set mem_factionFuturist + 10
+    		~set var_engineeringBooks
+    		~set card = engineeringBooks
+    		~set card_hidden = mental2
+    
+    		Забудь о выдумках — тебя странно тянет к диаграммам и уравнениям в руководстве, которое случайно оказалось на полке с детскими книжками.
+    
+    		Ты проводишь часы, пытаясь понять смысл этих загадочных картинок. Твой отец пытается объяснить их тебе как может.
+    
+    		> question4
+		
+		
+
+/******************************************************************************* }*/
+/** Question 4 - genetic enhancement *****************************************/
+/******************************************************************************* {*/
+
+    // first time skip questions 2 and 3 and jump right to here
+
+    *= question4first
+    	~call showmenu(toolbar)
+    	~call showmenu(portrait)
+    	~call showmenu(skills)
+    	~call showmenu(intro)
+    
+    	~set bg = bedroom
+    	~set midright = sol_happy
+    	~set left = spacer
+    	~set right = hidden
+    
+    	Тебе снятся яркие сны о вещах, которые ты никогда не испытывал: земля под ногами, небо над головой, бескрайние джунгли и странные животные.
+
+    	Тебе интересно, будет ли Вертумна такой.
+    
+    	> question4
+    
+    // skip to here on return
+    *= question4
+    	~call showmenu(toolbar)
+    	~call showmenu(portrait)
+    	~call showmenu(skills)
+    	~call showmenu(intro)
+    
+    	~set bg = bedroom
+    	~set midright = sol_happy
+    	~set left = spacer
+    	~set right = hidden
+    
+    	Каждому ребенку на «Стратосферике» дают одно генетическое улучшение. К шести годам ты видишь первые признаки своего:
+    
+    	// mirrored in extraStartingPerk
+
+    	** Орлиные глаза
+    		~set skill_perception + 10
+    		~set mem_perk = eyes
+    		~set card = perk_eyes
+    		~set card_hidden = physical0
+    
+    		В твоих глазах есть ДНК и орла, и совы, поэтому у тебя сверхчеловеческое зрение как на дальние расстояния, так и _в ночное время_. 
+    
+    		Ты не только можешь видеть голопроектор с задней парты в классе, но и читать личные заметки профессора Хала на гололадони! Иногда там написано КОНФИДЕНЦИАЛЬНО, что волнующе, но ты не понимаешь большинство больших слов.
+    
+    		*** ...
+    			~if hog_numLives <= 1
+    			Другие дети считают тебя немного странным, кроме:
+    			>! question5
+    
+    		*** ...
+    			~if hog_numLives >1
+    			Другие дети считают тебя немного странным, кроме:
+    			>! question5return
+    
+    	** Дополнительные пальцы
+    		~set skill_creativity + 10
+    		~set mem_perk = extraFingers
+    		~set card = perk_extrafingers
+    		~set card_hidden = social0
+    
+    		Ты слышал, что давным-давно шестой палец был чем-то, что скрывали или даже удаляли. Но [=mem_anneNick] говорит, что у некоторых лучших музыкантов на Земле был ген дополнительных пальцев, прямо как у тебя!
+    
+    		*** ...
+    			~if hog_numLives <= 1
+    			Ты также очень хорошо умеешь делать поделки, и делаешь это со своим другом:
+    			>! question5
+    
+    		*** ...
+    			~if hog_numLives >1
+    			Ты также очень хорошо умеешь делать поделки, и делаешь это со своим другом:
+    			>! question5return
+    
+    	** Впитывающий мозг
+    		// award reasoning BEFORE spongyBrain perk
+    		~set skill_reasoning + 10
+    		~set mem_perk = spongyBrain
+    		~set card = perk_spongybrain
+    		~set card_hidden = mental0
+    
+    		Профессор Хал говорит, что дети учатся быстро, потому что их мозги как губки, но когда люди становятся старше, они не могут впитывать столько нового.
+    
+    		Но не ты! Ты всегда учишься, и твое любопытство не знает границ.
+    
+    		*** ...
+    			~if hog_numLives <= 1
+    			Другим детям трудно за тобой угнаться, но одна пытается:
+    			>! question5
+    
+    		*** ...
+    			~if hog_numLives >1
+    			Другим детям трудно за тобой угнаться, но одна пытается:
+    			>! question5return
+    
+    	** Сверхсила
+    		~set skill_combat + 10
+    		~set mem_perk = muscles
+    		~set card = perk_muscles
+    		~set card_hidden = physical0
+    
+    		Дядя Тонин говорит, что это мечта лентяя: ешь что хочешь, вообще не занимайся спортом и все равно выглядишь так, будто проводишь весь день в спортзале.
+    
+    		*** ...
+    			~if hog_numLives <= 1
+    			Ты невероятно силен для своего возраста, но ты щадишь своего друга:
+    			>! question5
+    
+    		*** ...
+    			~if hog_numLives >1
+    			Ты невероятно силен для своего возраста, но ты щадишь своего друга:
+    			>! question5return
+    
+    	** Спокойный темперамент
+    		~set skill_empathy + 10
+    		~set mem_perk = calm
+    		~set card = perk_calm
+    		~set card_hidden = social0
+    
+    		Тебя ничем не пронять. Ты редко раздражаешься и не позволяешь тревоге взять над тобой верх. Ты отмахиваешься от оскорблений, всегда играешь честно, и тебе никогда не приходится напоминать, что делиться — это хорошо.
+    
+    		*** ...
+    			~if hog_numLives <= 1
+    			Ты особенно добр к своему другу:
+    			>! question5
+    
+    		*** ...
+    			~if hog_numLives >1
+    			Ты особенно добр к своему другу:
+    			>! question5return
+    
+    	** Ничего
+    		// award Kudos first
+    		~set skill_kudos + 30
+    		~set mem_perk = nothing
+    		// extra vanilla cards instead of special card
+    		~set card_hidden = social1
+    		~set card_hidden = mental1
+    		~set card_hidden = physical1
+    
+    		Генетическая чистота настолько вышла из моды на «Стратосферике», что некоторые считают ее инвалидностью. Тем не менее, твои родители считают улучшения слишком инвазивными и решают не давать его тебе.
+    
+    		В детских яслях [=mem_anneNick] осыпает тебя похвалой и Похвалой за все, что ты делаешь хорошо, словно ожидая, что у тебя возникнут трудности.
+    
+    		*** ...
+    			~if hog_numLives <= 1
+    			Ты делишься лишней Похвалой со своим другом:
+    			>! question5
+    
+    		*** ...
+    			~if hog_numLives >1
+    			Ты делишься лишней Похвалой со своим другом:
+    			>! question5return
+
+/******************************************************************************* }*/
+/** Question 5 - friends ************************************************/
+/******************************************************************************* {*/
+
+    *= question5
+    	~call hidemenu(intro)
+    
+    	~set bg = creche
+    	~set left = anemone
+    	~set midleft = cal
+    	~set midright = marz
+    	~set right = dys
+    
+    	// no text, flows through from previous
+    
+    	// simple version the first time through with takeback but no sub-event
+    
+    	** Энергичная и верная Энимона
+    		~set mem_childfriend = anemone
+    		~set mem_met_anemone // auto-set at story end but need now for CharaInfo card
+    		~set love_anemone + 5
+    		~set skill_toughness + 10
+    		~set skill_combat + 10
+    		~set card = anemone1
+    		~set card_hidden = physical1
+    
+    		~set bg = creche
+    		~set left = anemone
+    
+    		Энимона — самый восторженный человек, которого ты знаешь. Твое любимое воспоминание — когда она научила тебя играть в спортбол в невесомости после уроков.
+    
+    		Она никогда не _хотела_ втягивать тебя в неприятности... но почему-то вы всегда оказывались в них вместе.
+    
+    		*** Да, Энимона!
+    			> question6
+    
+    		*** Погоди, это не так...
+    			~set love_anemone - 5
+    			~call decrementSkillWithBonuses(toughness, -10)
+    			~call decrementSkillWithBonuses(combat, -10)
+    			~call losecard(anemone1)
+    			~call losecard(physical1)
+    			~call clearchanges
+    
+    			> question5
+    
+    	** Крепкий и нежный Кел
+    		~set mem_childfriend = cal
+    		~set mem_met_cal
+    		~set love_cal + 5
+    		~set skill_biology + 10
+    		~set skill_animals + 10
+    		~set card = cal1
+    		~set card_hidden = physical1
+    
+    		~set bg = creche
+    		~set left = cal
+    
+    		Кел — милашка, всегда готовый помочь или поиграть. Он и Темми так же неразлучны, так что это почти как иметь двух лучших друзей вместо одного.
+    
+    		Кел учит тебя ухаживать за всеми растениями в классе. Твои родители очень гордятся вами обоими.
+    
+    		*** Да, Кел!
+    			> question6
+    
+    		*** Погоди, это не так...
+    			~set love_cal - 5
+    			~call decrementSkillWithBonuses(biology, -10)
+    			~call decrementSkillWithBonuses(animals, -10)
+    			~call losecard(cal1)
+    			~call losecard(physical1)
+    			~call clearchanges
+    
+    			> question5
+    
+    	** Смелая и уверенная Марц
+    		~set mem_childfriend = marz
+    		~set mem_met_marz
+    		~set love_marz + 5
+    		~set skill_persuasion + 10
+    		~set skill_organization + 10
+    		~set card = marz1
+    		~set card_hidden = social1
+    
+    		~set bg = creche
+    		~set left = marz
+    
+    		Марц — прирожденный лидер. Когда вы все играете вместе, Марц — та, кто придумывает все идеи. Она может быть немного властной, но в этом ее прелесть.
+    
+    		Она всегда организует веселые мероприятия для детей после уроков. Вы оба — основатели Секретного Клуба Веселья.
+    
+    		*** Да, Марц!
+    			> question6
+    
+    		*** Погоди, это не так...
+    			~set love_marz - 5
+    			~call decrementSkillWithBonuses(persuasion, -10)
+    			~call decrementSkillWithBonuses(organization, -10)
+    			~call losecard(marz1)
+    			~call losecard(social1)
+    			~call clearchanges
+    
+    			> question5
+    
+    	** Тихий и любознательный Дис
+    		~set mem_childfriend = dys
+    		~set mem_met_dys
+    		~set love_dys + 5
+    		~set skill_bravery + 10
+    		~set skill_perception + 10
+    		~set card = dys1
+    		~set card_hidden = mental1
+    
+    		~set bg = creche
+    		~set left = dys
+    
+    		В отличие от своей прилежной сестры-близнеца Тангент, Дис сидит на задней парте и рисует на своей гололадони. Вы сближаетесь, отпуская шутки про странные диаграммы в учебниках.
+    
+    		Его тихий нрав и болезненное любопытство делают его немного одиночкой, но по крайней мере у него есть ты.
+    
+    		*** Да, Дис!
+    			> question6
+    
+    		*** Погоди, это не так...
+    			~set love_dys - 5
+    			~call decrementSkillWithBonuses(bravery, -10)
+    			~call decrementSkillWithBonuses(perception, -10)
+    			~call losecard(dys1)
+    			~call losecard(mental1)
+    			~call clearchanges
+    
+    			> question5
+    
+    	** Прилежная и зрелая Тангент
+    		~set mem_childfriend = tang
+    		~set mem_met_tang
+    		~set love_tang + 5
+    		~set skill_reasoning + 10
+    		~set skill_engineering + 10
+    		~set card = tang1
+    		~set card_hidden = mental1
+    
+    		~set bg = creche
+    		~set left = tang
+    
+    		Тангент сидит прямо перед голопроектором и всегда тянет руку.
+    
+    		Она и ее брат-близнец Дис отдалились, когда она начала генную терапию, чтобы ее тело соответствовало ее гендеру. Сегодня Танг — та девушка, которой она всегда была, но ее отношения с Дисом хуже некуда.
+    
+    		*** Да, Тангент!
+    			> question6
+    
+    		*** Погоди, это не так...
+    			~set love_tang - 5
+    			~call decrementSkillWithBonuses(reasoning, -10)
+    			~call decrementSkillWithBonuses(engineering, -10)
+    			~call losecard(tang1)
+    			~call losecard(mental1)
+    			~call clearchanges
+    
+    			> question5
+    
+    	** Застенчивая и милая Темми
+    		~set mem_childfriend = tammy
+    		~set mem_met_tammy
+    		~set love_tammy + 5
+    		~set skill_empathy + 10
+    		~set skill_creativity + 10
+    		~set card = tammy1
+    		~set card_hidden = social1
+    
+    		~set bg = creche
+    		~set left = tammy
+    
+    		Темми — самый добрый человек, которого ты знаешь. Она обожает [=mem_anneNick] и всегда ходит за ней по пятам, помогая с малышами или учась готовить.
+    
+    		У нее лучшие перекусы на перемене, и она всегда делится — особенно с тобой и Келом. Она и Кел так же близки, так что это вроде как иметь двух лучших друзей!
+    
+    		*** Да, Темми!
+    			> question6
+    
+    		*** Погоди, это не так...
+    			~set love_tammy - 5
+    			~call decrementSkillWithBonuses(empathy, -10)
+    			~call decrementSkillWithBonuses(creativity, -10)
+    			~call losecard(tammy1)
+    			~call losecard(social1)
+    			~call clearchanges
+    
+    			> question5
+			
+				
+/******************************************************************************* }*/
+/** Question 5 - friends (2nd life) ************************************************/
+/******************************************************************************* {*/
+
+    *= question5return
+    	~call hidemenu(intro)
+    
+    	~set bg = creche
+    	~set left = anemone
+    	~set midleft = cal
+    	~set midright = marz
+    	~set right = dys
+    
+    	// versions for second time through with sub-events, no takebacks
+    	// skill increases are lower because they're more spread out to other questions
+    
+    	** Энергичная и верная Энимона
+    		~set mem_childfriend = anemone
+    		~set mem_met_anemone
+    		~set love_anemone + 5
+    		~set skill_toughness + 5
+    		~set skill_combat + 5
+    		~set card = anemone1
+    		~set card_hidden = physical2
+    
+    		~set bg = workshop
+    		~set left = anemone
+    
+    		Энимона бежит везде, куда идет.
+    
+    		Вы гоняетесь друг за другом по коридорам и устраиваете воображаемые лазерные бои среди мигающих огней и шума инженерного крыла.
+
+    		-
+    
+    		~set right = instance
+    
+    		Однажды ты вскарабкиваешься на пульт, чтобы застать ее врасплох, но то, до чего ты дотрагиваешься, вызывает всевозможные мигающие огни и визжащие сирены.
+    
+    		Докторка Инстанс врывается в ярости, но Энимона выходит вперед и говорит, что это ее вина.
+    
+    		Ты:
+    
+    		*** Позволяешь Энимоне взять вину на себя
+    			~set love_anemone++
+    			~set skill_reasoning + 5
+    			~set skill_rebellion + 2
+    
+    			Энимону на несколько дней ограничивают жилым крылом, но она совсем не злится. Она любит быть героиней и говорит, что нет причин, по которым _оба_ должны были попасть в неприятности.
+    
+    			Ты заглаживаешь вину, делясь с ней десертами и позволяя ей играть со своими игрушками всю следующую неделю.
+    
+    			> question6
+    
+    		*** Признаешься, что тоже играл в догонялки
+    			~set skill_rebellion - 5
+    			~set skill_bravery + 2
+    
+    			Энимона впечатлена твоей храбростью, но Инстанс говорит, что разочарована в вас обоих. Тебе кажется, что она всегда всем недовольна.
+    
+    			Вас обоих ограничивают жилым крылом на несколько дней. Это не так уж плохо, потому что вы хотя бы вместе.
+    
+    			> question6
+    
+    		*** Говоришь, что пытался учиться
+    			~set skill_engineering + 5
+    			~set skill_rebellion + 2
+    
+    			Ты не уверен, верит ли тебе Инстанс, но она использует возможность отправить тебя к профессору Халу на дополнительные уроки по основам инженерии после школы на месяц.
+    
+    			Ты кое-чему учишься... даже если это должно быть наказанием.
+    
+    			> question6
+    
+    	** Крепкий и нежный Кел
+    		~set mem_childfriend = cal
+    		~set mem_met_cal
+    		~set love_cal + 5
+    		~set skill_biology + 5
+    		~set skill_animals + 5
+    		~set card = cal1
+    		~set card_hidden = physical2
+    
+    		~set bg = otherquarters
+    		~set left = cal
+    
+    		Когда вам обоим восемь лет, Кел находит мышь в вентиляции корабля.
+    
+    		Животные строго запрещены на «Стратосферике», так что кто _знает_, как она туда попала. Кел полон решимости спрятать ее и заботиться о ней. Ты:
+    
+    		*** Помогаешь ее растить
+    			~set love_cal++
+    			~set skill_empathy + 5
+    			~set skill_rebellion + 2
+    			~set left = cal_happy
+    
+    			Ты регулярно пробираешься в гидропонные сады, пока твои родители не видят, и воруешь овощи для крошечной мыши, которую Кел называет Мисс Мэннерс.
+
+    			Он даже учит ее вставать на задние лапки и выпрашивать еду, а иногда носит ее с собой, спрятанной в кармане.
+    
+    			> question6
+    
+    		*** Рассказываешь родителям. Это может быть опасно!
+    			~set skill_organization + 5
+    			~set skill_rebellion - 2
+    			~set left = cal_sad
+    
+    			Кел рыдает часами, когда приходят забирать крошечную Мисс Мэннерс, чтобы уничтожить ее, но ты не думаешь, что он знает, что это ты на него донес.
+    
+    			Капитанша Эвдикот лично благодарит тебя за сообщение. Любой загрязнитель на звездолете может стать потенциальной катастрофой.
+    
+    			> question6
+    
+    		*** Ищешь остальных мышей
+    			~set skill_animals + 5
+    			~set skill_rebellion + 2
+    			~set left = cal_sad
+    
+    			Ты находишь небольшое гнездо над кухней и с помощью Кела ловишь и пытаешься приручить еще двух.
+    
+    			Довольно очевидно, что ты затеял какую-то шалость, и тебя в конце концов обнаруживают. Ты разбит горем, когда твоих питомцев забирают, но ты многое узнаешь о животных в процессе.
+    
+    			> question6
+    
+    	** Смелая и уверенная Марц
+    		~set mem_childfriend = marz
+    		~set mem_met_marz
+    		~set love_marz + 5
+    		~set skill_persuasion + 5
+    		~set skill_organization + 5
+    		~set card = marz1
+    		~set card_hidden = social2
+    
+    		~set bg = creche
+    		~set left = marz
+    
+    		Марц всегда ведет себя так, будто она главная — даже со взрослыми! Она огрызается на [=mem_anneNick] и часто попадает в неприятности.
+    
+    		Однажды, когда вам восемь, вы все идете в спортзал прыгать на прыгучих матах, но Марц не может. Она снова в Уголке.
+    
+    		*** Остаешься с ней
+    			~set skill_rebellion - 5
+    			~set skill_empathy + 2
+    
+    			Ты пытаешься ее подбодрить, но у Марц ужасное настроение. Она дуется и называет тебя скучным, потому что зачем бы ты _захотел_ сидеть в углу, когда можно играть?
+    
+    			Она загружает видео на свою гололадонь — явно нарушая правила Уголка — и отворачивается от тебя, чтобы смотреть его одна.
+    
+    			> question6
+    
+    		*** Помогаешь ей сбежать
+    			~set love_marz++
+    			~set skill_rebellion + 2
+    			~set skill_creativity + 5
+    			~set left = marz_happy
+    
+    			Ты помогаешь Марц устроить в комнате для тихого часа подушки и простыни так, чтобы казалось, будто она спит, а затем вы оба пробираетесь обратно в комнату Марц, где наряжаетесь в ее нарядную одежду и притворяетесь, что ужинаете в ресторане.
+    
+    			Ты никогда не был в ресторане — корабельный камбуз не в счет, там едят _все_ — но Марц знает о них все из своих головидео.
+    
+    			> question6
+    
+    		*** Заступаешься за нее
+    			~set love_marz++
+    			~set skill_rebellion - 2
+    			~set skill_persuasion + 5
+    
+    			Ты убеждаешь [=mem_anneNick] на этот раз отпустить Марц поиграть.
+    
+    			[=mem_anneNick] разрешает, но также предупреждает тебя о том, как _некоторые_ люди будут пользоваться твоей добротой.
+    
+    			> question6
+    
+    	** Тихий и любознательный Дис
+    		~set mem_childfriend = dys
+    		~set mem_met_dys
+    		~set love_dys + 5
+    		~set skill_bravery + 5
+    		~set skill_perception + 5
+    		~set card = dys1
+    		~set card_hidden = mental2
+    
+    		~set bg = engineering
+    		~set left = dys
+    
+    		Дис любит находить на корабле места, о которых никто больше не знает. 
+    
+    		Он меньше других детей, поэтому может забираться в переборки. Ты знаешь, куда он любит ходить, когда хочет побыть один.
+    
+    		-
+    
+    		~set bg = engineering
+    		~set right = anne
+    		~set midright = tang
+    
+    		Свет приглушен для ночного цикла, когда ты понимаешь, что не видел Диcа ни за ужином, _ни_ на вечернем головидео в яслях.
+    
+    		[=mem_anneNick], должно быть, тоже это поняла. Она постоянно проверяет свою гололадонь и тревожно печатает сообщения. Свет мешает тебе смотреть головидео.
+    
+    		Сестра Диca Тангент не волнуется. Она говорит, что он _всегда_ так делает. Ты знаешь, что это правда, но пропустить _ужин?_ Может, что-то не так.
+    
+    		*** Идешь найти его
+    			~set skill_perception + 5
+    			~set love_dys++
+    
+    			~set bg = engineering
+    			~set left = dys
+    
+    			Ты находишь его свернувшимся калачиком в пустой подсобке рядом с комнатой экстракции питательных веществ из компоста. На самом деле там очень приятно пахнет, как свежераздавленные листья томатов.
+    
+    			Он неохотно соглашается вернуться в ясли. Что-то должно было случиться, чтобы он стал тише обычного... но он не хочет об этом говорить.
+    
+    			> question6
+    
+    		*** Прикрываешь его
+    			~set skill_persuasion + 5
+    			~set skill_rebellion + 2
+    			~set love_dys++
+    
+    			Ты говоришь тете, что Дис сегодня ночует в твоих покоях, и твои родители сказали, что все в порядке. Он, наверное, сразу туда ушел, потому что не хотел смотреть головидео.
+    
+    			[=mem_anneNick] выглядит облегченной. Тангент скептически приподнимает бровь, но молчит.
+    
+    			-
+    
+    			~set bg = engineering
+    			~set left = dys
+    
+    			Дис появляется следующим утром. Он благодарен тебе за помощь и делится, что провел ночь в пустой подсобке рядом с комнатой экстракции питательных веществ из компоста. Он говорит, что ты можешь пользоваться этим местом, когда тебе нужно побыть одному, если хочешь.
+    
+    			> question6
+    
+    		*** Рассказываешь им, где он
+    			~set skill_organization + 5
+    			~set skill_rebellion - 2
+    
+    			Ты перечисляешь любимые укрытия Диca. Их _очень_ много.
+    
+    			[=mem_anneNick] благодарит тебя теплыми объятиями.
+    
+    			> question6
+    
+    	** Прилежная и зрелая Тангент
+    		~set mem_childfriend = tang
+    		~set mem_met_tang
+    		~set love_tang + 5
+    		~set skill_reasoning + 5
+    		~set skill_engineering + 5
+    		~set card = tang1
+    		~set card_hidden = mental2
+    
+    		~set bg = command
+    		~set left = tang
+    
+    		В восемь лет вам вживляют гололадони, но доступ к голонету для детей заблокирован.
+    
+    		Тангент хочет пробраться на капитанский мостик и поговорить с ИИ корабля Конгруэнс, потому что с мостика Конгруэнс обязана отвечать на _любой_ вопрос. Ты:
+    
+    		*** Помогаешь, разведывая мостик
+    			~set skill_perception + 5
+    			~set skill_rebellion + 2
+    			~set love_tang++
+    
+    			~set bg = command
+    			~set right = tang
+    			~set left = congruence
+    			~set speaker = tang
+    
+    			Ты заметил, что есть час во время ужина, когда мостик обычно пустует. 
+    
+    			Вы вдвоем пробираетесь внутрь и подбегаете к главной консоли Конгруэнс, смеясь так громко, что вас, наверное, слышно в камбузе. «Верни нас обратно на Землю!» — командует Тангент, лишь наполовину шутя.
+    
+    			-
+    			~set left = congruence_happy
+    			~set speaker = congruence
+    
+    			...Конгруэнс просто смеется и говорит вам вернуться в жилые помещения, прежде чем она поднимет тревогу о нарушителе.
+    
+    			Не верится, что компьютер над тобой посмеялся! ИИ на твоих учебных планшетах такой скучный по сравнению с ней.
+    
+    			> question6
+    
+    		*** Просишь разрешения у капитана
+    			~set skill_persuasion + 5
+    			~set skill_rebellion - 2
+    
+    			~set bg = command
+    			~set right = eudicot
+    
+    			Конечно, капиташа Эвдикот отказывает и обязательно усиливает компьютерную безопасность, чтобы предотвратить любые будущие экспедиции любопытных маленьких детей.
+
+    			Наверное, к лучшему.
+    
+    			> question6
+    
+    		*** Взламываешь голонет
+    			~set skill_engineering + 5
+    			~set skill_rebellion + 2
+    			~set love_tang++
+    
+    			Тебе всего восемь, и, несмотря на уверенность, ты не представляешь, что делаешь. 
+    
+    			Ты даже близко не подбираешься к доступу на мостик со своей гололадони, но тебе с Тангент весело пытаться. Она скоро забывает о своей миссии на мостик.
+    
+    			> question6
+    
+    	** Застенчивая и милая Темми
+    		~set mem_childfriend = tammy
+    		~set mem_met_tammy
+    		~set love_tammy + 5
+    		~set skill_empathy + 5
+    		~set skill_creativity + 5
+    		~set card = tammy1
+    		~set card_hidden = social2
+    
+    		~set bg = cafeteria
+    		~set left = tammy
+    
+    		Когда вам восемь, Темми хочет испечь особый торт для [=mem_anneNick], которая руководит яслями.
+    
+    		Это должен быть настоящий земной морковный торт с настоящей морковью, потому что это любимый тетушки. Темми нужна помощь, чтобы достать морковь из садов, где работают твои родители. Ты:
+    
+    		*** Просишь морковь у мамы
+    			~set skill_biology + 5
+    			~set skill_rebellion - 2
+    
+    			~set bg = cafeteria
+    			~set right = mom
+    
+    			Твоя мама спрашивает, зачем тебе морковь, и ты говоришь, что это секрет.
+    
+    			Она отказывает.
+    
+    			То, что ты ее [ребенок|дочь|сын], не означает, что тебе оказывают какие-то особые предпочтения. Она вместо этого проводит тебе урок биологии.
+    
+    			> question6
+    
+    		*** Просишь морковь у папы
+    			~set love_tammy++
+    			~set skill_persuasion + 5
+    			~set skill_rebellion - 2
+    
+    			~set bg = cafeteria
+    			~set right = dad
+    
+    			Твоего папу всегда легко уговорить. Он спрашивает, зачем тебе морковь, и ухмыляется, когда ты говоришь, что это секрет.
+    
+    			Он подсовывает тебе морковку и напоминает не рассказывать маме.
+    
+    			Торт получается... _нормальным_, но [=mem_anneNick] все равно благодарна.
+    
+    			> question6
+    
+    		*** Воруешь морковь
+    			~set skill_perception + 5
+    			~set skill_rebellion + 2
+    
+    			~set bg = cafeteria
+    			~set midright = dad
+    			~set right = mom
+    
+    			Тебя почти сразу ловят. Откуда _тебе_ было знать, что твоя мама ведет скрупулезный учет биомассы каждой грядки?
+    
+    			Тебе _так_ запретили все. Темми печет тебе печенье в качестве извинений за то, что втянула тебя в неприятности.
+    
+    			> question6
+    
+    		*** Находишь что-то другое
+    			~set skill_creativity + 2
+    
+    			Ты заменяешь яблочным пюре.
+    
+    			Ну... это не настоящее яблочное пюре. Это яблочное желе из порошка. Удивительно, но _это_ не делает торт плохим; настоящий виновник в том, что ты забываешь добавить разрыхлитель, поэтому торт получается безвкусной лепешкой.
+    
+    			Но ты узнаешь кое-что о готовке! Тебе нужны разрыхлители!
+    
+    			> question6
+    
+    	** Корабельный компьютер Конгруэнс
+    		~if hog_fixedCongruence
+    		~set var_congruenceFriend
+    		~set mem_childfriend = congruence
+    		~set mem_met_congruence
+    		~set skill_reasoning + 10
+    		~set skill_engineering + 10
+    		~set card = congruence
+    		~set card_hidden = mental3
+    
+    		~set bg = engineering
+    		~set left = congruence
+    
+    		К восьми годам ты проводишь больше времени в разговорах с корабельным компьютером, чем со сверстниками.
+    
+    		-
+    		~set left = congruence_happy
+    
+    		Ты просто почему-то знаешь о ней некоторые вещи, не понимая, почему. Например, как вежливо попросить ее относиться к тебе как к взрослому, разблокировав команды, о существовании которых другие дети даже не догадываются.
+    
+    		Это твой трюк, последовательность цифр и букв, произносимая шепотом. Тайный язык между тобой и ею.
+    
+    		> question6
+	
+	
+/******************************************************************************* }*/
+/** Question 6 - wormhole start ***************************************************/
+/******************************************************************************* {*/
+
+    // most of this skipped the first time, different version with extra question later
+
+    *= question6
+
+    	~set skill_stress + 10
+    	~set bg = classroom
+    	~set midright = sol_happy
+    	~set left = spacer
+    	~set right = hidden
+    	~call showmenu(intro)
+    
+    	Тебе десять лет, когда корабль наконец достигает червоточины. Профессор Хал говорит, что это как дверь в другие звездные системы, с планетой Вертумна IV по ту сторону.
+
+    	Вы месяцами отрабатываете аварийные учения для подготовки.
+    
+    	-
+    	~set effect = screenShake
+    
+    	Когда день наконец наступает, все начинается с гула, затем вещи начинают соскальзывать со столов. Ты спешишь собраться у спасательных капсул на всякий случай.
+    
+    	** ...
+    		~if hog_numLives <= 1
+    		// straight to the wormhole scene
+    		> wormhole
+    
+    	** ...
+    		~if hog_numLives > 1
+    		// chance for secret ending first
+    		> question6return
+    
+    *= question6return
+    
+    	// chance to blow up the ship first
+    	~set charas = none
+    	~set midleft = hal
+    	~call hidemenu(intro)
+    
+    	«По одному, все,» — профессор Хал велит тебе следовать за ним.
+    
+    	[if hog_timelordVision]
+    		Ты видел этот день в своих снах с тех пор, как был в пеленках. Это одно из твоих самых ранних воспоминаний, даже though оно еще не произошло: когда корабль пройдет через червоточину, щиты откажут. Если ты не перенастроишь их, гидропонные сады твоих родителей будут потеряны.
+    	[end]
+
+    	Ты:
+
+    	** Делаешь, как сказано
+    		> wormhole
+    
+    	** Пытаешься улизнуть
+    		~set skill_rebellion++
+    
+    		~set bg = engineering
+    		~set right = hal
+    
+    		Профессор Хал хватает тебя за шиворот.
+    
+    		«Нет! Извини, [Name], сейчас не время баловаться. Придется идти с остальным классом.»
+    
+    		> wormhole
+    
+    	** Перенастроить щиты!
+    		~if hog_timelordVision
+    
+    		// need:
+    		// 1) unlock glow exploration in story_artifactsBoss3Pyramid (hog_timelordVision)
+    		// 2) fix congruence in story_robotCongruenceBroken (hog_fixedCongruence) and pick her as friend (var_congruenceFriend)
+    		// 3) become second engineering (hog_secondEngineer) and pick engineeringBooks (var_engineeringBooks)
+    
+    		~set bg = engineering
+    		~set left = congruence
+    
+    		Ты ускользаешь от профессора Халя — прием, который ты отрабатывал для этого дня — и мчишься в машинное крыло, мимо озадаченных взрослых, которые пытаются тебя остановить.
+    
+    		Ты находишь ближайший терминал Конгруэнс.
+
+    		*** "Помоги мне, Конгруэнс!"
+    			~if var_congruenceFriend = false
+    			~set left = congruence_angry
+    
+    			Конгруэнс отмахивается от тебя. Почти вся ее значительная вычислительная мощность уходит на то, чтобы червоточина не уничтожила «Стратосферик», и ты не знаешь, как заставить ее сделать то, что тебе нужно.
+    
+    			Ты кричишь и умоляешь ее помочь, но бесполезно.
+    
+    			-
+    			~set charas = none
+    			~set effect = wormhole
+    
+    			Корабль входит в червоточину, пока ты все еще пытаешься с ней говорить.
+    
+    			Ты отключаешься, как и всегда.
+    
+    			> confirmation
+    
+    		*** Ввести код рут-доступа
+    			// show this one so player knows they have more to do
+    			// need hog_fixedCongruence AND pick her as friend
+    			~ifd hog_fixedCongruence // for the icon
+    			~ifd var_congruenceFriend = true
+    			~set left = congruence_happy
+    
+    			Конгруэнс соглашается помочь тебе, потому что ты ее друг, _и_ потому что ты знаешь ее любимую последовательность букв и цифр.
+    
+    			«Код доступа принят,» — говорит она. «Пожалуйста, введите параметры калибровки щитов.»
+    
+    			[if var_engineeringBooks]
+    				Ты провел детство, изучая конструкцию корабля, и до сих пор хранишь тот старый мануал со своего второго дня рождения. Ты даешь Конгруэнс команду:
+    			[end]
+    
+    			**** "Эм-м... я не знаю"
+    				// need hog_secondEngineer AND pick engineeringBooks
+    				~if !var_engineeringBooks
+    
+    				Ты знаешь общую концепцию, но не можешь объяснить ей шаги, потому что просто недостаточно знаешь о корабельной инженерии.
+    
+    				Ты перепробовал все, что мог придумать, все больше волнуясь. Но она не понимает, чего ты хочешь или как это сделать.
+    
+    				-
+    				~set charas = none
+    				~set effect = wormhole
+    
+    				Корабль входит в червоточину, пока ты все еще пытаешься разобраться.
+    
+    				Ты отключаешься, как и всегда.
+    
+    				> medbay
+    
+    			**** Заблокировать излучение червоточины
+    				// don't show these ones because the options should be a surprise
+    				~ifd hog_secondEngineer // for the icon
+    				~if var_engineeringBooks
+    				~set mem_foodSaved
+    				~set mem_foodSavedIntro
+    				~set charas = none
+    				~set effect = wormhole
+    
+    				Турбулентность прекращается. Корабль плавно скользит через червоточину и выходит с другой стороны без повреждений.
+    
+    				Ты... _сделал это_!
+    
+    				-
+    				~set bg = starfield
+    
+    				Когда эффект червоточины рассеивается, ты чувствуешь внезапную сильную волну головокружения, словно гравитация перевернулась с ног на голову. Тебя тянет вниз с неудержимой силой.
+    
+    				Червоточина могла пощадить «Стратосферик», но она никогда не отпустит _тебя_.
+    
+    				Ты отключаешься...
+    
+    				> medbay
+    
+    			**** Пропустить излучение полностью
+    				~ifd hog_secondEngineer // for the icon
+    				~if var_engineeringBooks
+    				~set hog_shipDestroyed
+    
+    				~set bg = starfield
+    
+    				Ты отдаешь команду опустить щиты и уничтожить корабль.
+    
+    				Доверяя тебе, Конгруэнс делает, как велено.
+    
+    				-
+    
+    				Ты чувствуешь, как червоточина начинает растягивать и искривлять твою реальность, а корабль издает ужасный скрипучий звук. Начинают звенеть сирены, но уже слишком поздно.
+    
+    				Первыми взрываются ядерные реакторы в машинном крыле, и ты становишься первой жертвой. В мгновение до мучительной смерти ты чувствуешь, как реальность с треском возвращается на место, а червоточина схлопывается вокруг тебя.
+    
+    				-
+    
+    				Ты умираешь, вместе со всеми, кого когда-либо знал.
+    
+    				***** Конец.
+    					~call endGame(shipDestroyed)
+    
+    			**** Оставить щиты на половинной мощности
+    				~ifd hog_secondEngineer // for the icon
+    				~if var_engineeringBooks
+    
+    				Подумав, ты боишься, что навредишь больше, чем поможешь.
+    
+    				-
+    				~set charas = none
+    				~set effect = wormhole
+    
+    				Пока ты колеблешься, «Стратосферик» входит в червоточину.
+    
+    				Ты отключаешься, как и всегда...
+    
+    				> medbay
+				
+
+/******************************************************************************* }*/
+/** Question 7 - wormhole ***************************************************/
+/******************************************************************************* {*/
+
+    *= wormhole
+    	~call hidemenu(intro)
+    	~set bg = engineering
+    	~set midright = mom
+    	~set right = dad_sad
+    	~set skill_stress + 20
+    	~set effect = silence
+    
+    	Аварийная зона заполнена семьями. «Все будет хорошо, [Name],» — успокаивает отец. «Мы пройдем червоточину и окажемся на планете, прежде чем ты успеешь опомниться. Как мы и тренировались.»
+    
+    	Мама бросает на него резкий, встревоженный взгляд.
+
+    	-
+    
+    	~set skill_stress + 30
+    	~set effect = siren
+    	~set effect = emergency
+    
+    	Загораются красные аварийные огни, и где-то вдалеке на корабле начинает звучать сирена.
+    
+    	Ты пытаешься дышать медленно, как учили, но тебе очень страшно. Ты смотришь в иллюминатор. Звезды исчезли!
+    
+    	Когда тебе страшно, ты...
+    
+    	// two copies with different skills but only one of each will show
+    
+    	** Стараешься быть храбрым для других
+    		~if skill_bravery >= 5
+    		~ifd skill_bravery >= 5
+    
+    		~set skill_stress - 10
+    		~set love_tang++
+    		~set card = toughFace
+    
+    		~set charas = none
+    		~set left = tang_noholo
+    
+    		Иногда ты притворяешься уверенным, чтобы окружающим было менее страшно. Ты смотришь на свою одноклассницу Танг и понимаешь, что она делает то же самое. Она отвечает тебе жесткой улыбкой.
+    
+    		Ты отвечаешь ей и продолжаешь сосредотачиваться на дыхании.
+    
+    		> wormholeWait
+    
+    	** Делаешь храброе лицо
+    		~ifd skill_toughness >= 5
+    		~if skill_bravery < 5
+    
+    		~set skill_stress - 10
+    		~set love_tang++
+    		~set card = toughFace
+    
+    		~set charas = none
+    		~set left = tang_noholo
+    
+    		Иногда ты притворяешься уверенным, чтобы окружающим было менее страшно. Ты смотришь на свою одноклассницу Танг и понимаешь, что она делает то же самое. Она отвечает тебе жесткой улыбкой.
+    
+    		Ты отвечаешь ей и продолжаешь сосредотачиваться на дыхании.
+    
+    		> wormholeWait
+    
+    	** Ощущаешь свои эмоции
+    		~if skill_empathy >= 5
+    		~ifd skill_empathy >= 5
+    
+    		~set skill_stress - 10
+    		~set love_tammy++
+    		~set love_marz++
+    		~set card = stressCry
+    
+    		~set charas = none
+    		~set left = marz
+    		~set midright = tammy_cry
+    
+    		Ты ревешь как белуга. Это приятно.
+    
+    		Ты не один. Неподалеку у твоей одноклассницы Темми по щекам текут слезы. Марц тихо пытается ее утешить. Она вздыхает, когда твой плач заставляет Темми выть еще громче.
+    
+    		Твой отец обнимает тебя, пока ты даешь волю чувствам.
+    
+    		> wormholeWait
+    
+    	** Плачешь неконтролируемо
+    		= cry
+    		~ifd skill_bravery < 5
+    		~if skill_empathy < 5
+    
+    		~set skill_stress - 10
+    		~set love_tammy++
+    		~set love_marz++
+    		~set card = stressCry
+    
+    		~set charas = none
+    		~set left = marz
+    		~set midright = tammy_cry
+    
+    		Ты ревешь как белуга. Это приятно.
+    
+    		Ты не один. Неподалеку у твоей одноклассницы Темми по щекам текут слезы. Марц тихо пытается ее утешить. Она вздыхает, когда твой плач заставляет Темми выть еще громче.
+    
+    		Твой отец обнимает тебя, пока ты даешь волю чувствам.
+    
+    		> wormholeWait
+    
+    	** Придумываешь игру
+    		~if skill_creativity >= 5
+    		~ifd skill_creativity >= 5
+    
+    		~set skill_stress - 10
+    		~set love_cal++
+    		~set love_dys++
+    		~set love_anemone++
+    		~set card = distraction
+    
+    		~set charas = none
+    		~set left = cal
+    		~set midleft = dys
+    		~set midright = anemone_angry
+    		~set speaker = cal
+    
+    		Ты начинаешь игру в Рамбутан с одноклассниками. Ты выбираешь тему: виды фруктов.
+    
+    		Кел задумывается. «Я могу назвать десять видов фруктов,» — говорит он.
+    
+    		> rambutan
+    
+    	** Находишь отвлечение
+    		= distraction
+    		~ifd skill_organization >= 5
+    		~if skill_creativity < 5
+    
+    		~set skill_stress - 10
+    		~set love_cal++
+    		~set love_dys++
+    		~set love_anemone++
+    		~set card = distraction
+    
+    		~set charas = none
+    		~set left = cal
+    		~set midleft = dys
+    		~set midright = anemone_angry
+    		~set speaker = cal
+    
+    		Ты начинаешь игру в Рамбутан с одноклассниками. Ты выбираешь тему: виды фруктов.
+    
+    		Кел задумывается. «Я могу назвать десять видов фруктов,» — говорит он.
+    
+    		> rambutan
+    
+    	**= rambutan
+    		~set speaker = dys
+    
+    		«М-м... может, я смогу назвать одиннадцать,» — бормочет Дис.
+    
+    		Энимона уверенно парирует двенадцатью.
+    
+    		-
+    		~set speaker = cal
+    
+    		Снова очередь Кела. Он снова думает. «Я могу назвать двадцать.»
+    
+    		Остальные пожимают плечами, и Энимона предлагает ему продолжать.
+    
+    		«Яблоко, апельсин, банан,» — начинает Кел. «И помидоры — это фрукты, и огурцы, и кукуруза...»
+    
+    		Игра мгновенно перерастает в спор о семантике, как это часто бывает в играх в Рамбутан.
+    
+    		> wormholeWait
+
+    *= wormholeWait
+    	~set bg = engineering
+    	~set charas = none
+    	~set effect = screenShakeEmergency
+    	~set skill_stress + 20
+    
+    	Ты ждешь.
+    
+    	Тряска усиливается.
+    
+    	-
+    
+    	~call closemenu(skills)
+    	~set effect = wormhole
+    
+    	Затем все начинает становиться _очень_ странным.
+    
+    	Коридор растягивается... растягивается... и ты тоже растягиваешься, твои руки становятся невероятно длинными. Голова словно медленно наполняется, как воздушный шар, и одновременно сжимается до размера атома.
+    
+    	Это червоточина?
+    
+    	-
+    	// ~set effect = screenshakeWormhole
+    
+    	Ты слышишь далекий, зловещий скрип сдающегося металла, когда корабль содрогается и кренится в замедленной съемке.
+    
+    	Самое странное — это чувство дежавю. Ты уверен, что это уже случалось с тобой раньше, и ты почему-то знаешь, что все будет хорошо.
+    
+    	-
+    	// ~set effect = screenshakeWormhole
+    
+    	Содрогания достигают кульминации.
+    
+    	Ты слышишь невероятно громкий _ХРУСТ_ и несколько секунд чувствуешь невесомость, прежде чем гравитация с силой швыряет тебя обратно о стену, головой вперед.
+    
+    	Ты отключаешься...
+    
+    	-
+    	~set bg = starfield
+    	~call stopsound(siren)
+    
+    	Пока ты проваливаешься в бессознательное, ты чувствуешь, как тебя выкручивает из времени. Это сегодня, вчера и завтра одновременно.
+    
+    	И больше, чем _одно_ завтра. Много их.
+    
+    	_Разных_ завтра.
+    
+    	// use ~if random! so it isn't always the same on the same day (month 1)
+    
+    	** ...
+    		~if random!
+    
+    		~set bg = colony_newship
+    		~set right = marz3_angry
+    		~set effect = dream
+
+    		Ты оказываешься в месте, которое знаешь из своих снов.
+    
+    		Вспаханные поля, драматичные гряды, и незнакомка — но также и _не_ незнакомка — ухмыляется, хватая тебя за руку. «Поторопись,» — говорит она. «Я не позволю тебе это пропустить!»
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(kom_attack14)
+    		~set bg = pinup_kom_attack14
+    		~set effect = dream
+    
+    		Ты оказываешься на поле боя, которое знаешь из своих снов.
+    
+    		Вокруг тебя хаос. Ты пытаешься двинуться, но ты по колено увяз в какой-то мерзкой органической грязи. Ты чувствуешь, как нечто большое надвигается на тебя, его горячее дыхание опаляет спину.
+    
+    		Ты не можешь бежать. Ты не можешь это остановить.
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(dad)
+    		~set bg = pinup_dad
+    		~set effect = dream
+    
+    		Ты оказываешься в месте, которое знаешь из своих самых страшных снов.
+    
+    		Твой отец лежит перед тобой на смертном одре. Он тянется к тебе и хватает тебя за запястье. «Ты... выберешься,» — хрипит он, но ты чувствуешь это... это заражает и тебя тоже. Грибок расцветает на твоей руке, на твоей шее. Ты пытаешься держать рот закрытым, но грибок прорастает сквозь губы и вниз по горлу.
+    
+    		Ты не умираешь в этом сне — ты просто становишься... чем-то другим.
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(mom)
+    		~set bg = pinup_mom
+    		~set effect = dream
+    
+    		Ты оказываешься в месте, которое знаешь из своих самых страшных кошмаров.
+    
+    		Полая пустота когтями разрывает тебя изнутри, пожирая твое тело. Невесомый, за исключением тяжкого бремени голода, словно разжеванная косточка персика, сидящая в желудке, ты паришь над бесплодными полями, усеянными истощенными телами. Твоя мама копается в полях — нет, она... копает яму. Массовую могилу. Ее глаза поворачиваются к тебе, когда ты пролетаешь над ней, но ее лицо неузнаваемо.
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(tammy_saved)
+    		~set bg = pinup_tammy_saved
+    		~set effect = dream
+    
+    		Ты оказываешься в знакомом месте. Ты знал бы это место везде. Это твой дом.
+    
+    		Ясли трясутся, и затем их тени сжигает гигантский медведь, сделанный из света. Он фыркает на тебя, затем ревет — ты чувствуешь, как его слюна брызгает на твои щеки, словно горячие искры.
+    
+    		Прохладная рука хватает тебя за запястье. Девочка с розовыми волосами поднимает тебя на ноги. «Давай!» — торопит она. «Теперь моя очередь спасать тебя!»
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(cal)
+    		~set bg = pinup_cal
+    		~set effect = dream
+    
+    		Ты оказываешься в месте, которое знаешь из своих снов.
+    
+    		Ты стоишь на гряде, глядя на великую горную пропасть, горячий воздух бьет тебе в лицо. Великий змей-дракон поднимается из глубин, разворачиваясь, казалось бы, из ниоткуда. Сильный молодой человек — незнакомец, но... странно _знакомый_ — восседает на чудовище и протягивает тебе руку, чтобы присоединиться к нему. «Не сдавайся!» — ободряет он тебя. «Легко ненавидеть то, чего не знаешь... но нужно быть _храбрым_, чтобы быть добрым!»
+    
+    		> confirmation
+    
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(tang)
+    		~set bg = pinup_tang
+    		~set effect = dream
+    
+    		Ты оказываешься в месте, которое знаешь из своих снов.
+    
+    		Девушка с острыми чертами лица в лабораторном халате стоит перед тобой. Во всех направлениях простирается бесплодная пустошь мертвых деревьев, словно кости, прокалывающие сухую кожу планеты.
+    
+    		«В этот раз мы должны сделать лучше,» — говорит она, сжимая твою руку так сильно, что ее ногти впиваются в твое запястье кровавыми бороздами. «_Ты_ должен сделать лучше в этот раз.»
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(dys)
+    		~set bg = pinup_dys
+    		~set effect = dream
+    
+    		Ты оказываешься в месте, которое знаешь из своих снов: пещере во влажном чреве планеты.
+    
+    		Светящаяся жидкость плещется у тебя по щиколоткам. Мальчик проходит мимо тебя в бассейн, хватает тебя за запястье. Ты сопротивляешься, но с неумолимой силой сна он тянет и тянет, пока вы оба не погружаетесь в бассейн. Страх охватывает тебя, когда жидкость смыкается над головой, и ты понимаешь, что не можешь двигаться — ты желатинизируешься вместе с мальчиком, ваши тела уничтожаются и формируются заново во что-то другое.
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(rex)
+    		~set bg = pinup_rex
+    		~set effect = dream
+    
+    		Ты оказываешься в месте, которое знаешь из своих снов.
+    
+    		Это успокаивающий сон. Ты в постели, купаешься в лучах восхода и завернут в самое мягкое одеяло, которое ты когда-либо чувствовал. Тихо похрапывая рядом с тобой, лежит стройный молодой человек с собачьими ушами, и, пока ты изучаешь его, его глаза медленно открываются, и он счастливо улыбается тебе.
+    
+    		«Уже готов встретить день?» — бормочет он, переплетая пальцы с твоими. «Полагаю, да... мы могли бы остаться здесь еще немного...»
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(nomi)
+    		~set bg = pinup_nomi
+    		~set effect = dream
+    
+    		Ты оказываешься в месте, которое знаешь из своих снов.
+    
+    		Твое тело само состоит из света, невесомое и неосязаемое. Дружелюбный гигант держит тебя на своей ладони. «Буп! Не падай духом,» — хихикают они, тыкая тебя в живот своим массивным пальцем. «Это просто игра. Ты можешь играть в нее сколько угодно раз.»
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(vace)
+    		~set bg = pinup_vace
+    		~set effect = dream
+    
+    		Ты оказываешься в знакомом месте.
+    
+    		Это капитанский мостик корабля, и перед тобой простирается бесконечная ночь неизведанной вселенной. Молодой человек с военной выправкой крепко хлопает тебя по плечу. «Все это твое, чтобы взять,» — говорит он. «Тебе просто нужно этого захотеть.»
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(marz)
+    		~set bg = pinup_marz
+    		~set effect = dream
+    
+    		Ты оказываешься в месте, которое знаешь из своих снов.
+    
+    		Ты идешь по глубокому песку, когда спотыкаешься о кусок зарытого камня. Пока ты с трудом поднимаешься на ноги, горячий ветер внезапно поднимается и разбрасывает песок во всех направлениях, обнажая остальную часть камня — разбитую статую. Ее черты были сглажены песком за сотни лет, но ты... узнаешь ее. Ты узнал бы это лицо где угодно. Ты видел его во снах всю свою жизнь.
+    
+    		> confirmation
+    
+    	** ...
+    		~if random!
+    		~if call_hasPinup(anemone)
+    		~set bg = pinup_anemone
+    		~set effect = dream
+    
+    		Ты оказываешься в месте, которое знаешь из своих кошмаров.
+    
+    		Это тот же сон, что тебе всегда снится — огонь, хаос, страх. Ты бежишь, а затем падаешь, спотыкаешься, твое тело разбивается, когда земля уступает и поглощает тебя в горячей, сухой яме горящих обломков.
+    
+    		Сквозь дым ты видишь ее — такую знакомую — женщину с взрывом рыжих волос и паническим взглядом. «Не сдавайся!» — умоляет она, хватаясь за твою руку. «Ты мне нужен!»
+    
+    		> confirmation		
+    
+    	 ** ...
+    		~if random!
+    		~if call_hasPinup(sym)
+    		~set bg = pinup_sym
+    		~set effect = dream
+    
+    		Ты оказываешься в месте, которое знаешь из своих снов.
+    
+    		Незнакомец — но также и _не_ незнакомец — смотрит с беспокойством, хватая тебя за запястье. Ты открываешь руку, рассыпая черные семена, у которых вырастают ноги и которые начинают уходить.
+    
+    		«Что ты делаешь?» — говорит он. «Они не принадлежат здесь!»
+    
+    		> confirmation
+    
+    *= confirmation
+    	~set bg = starfield
+    
+    	Вдалеке ты чувствуешь, что тряска корабля прекратилась, и слышишь встревоженные голоса родителей. 
+    
+    	Чувствуя себя в безопасности, ты погружаешься глубже в теплое объятие звезд.
+    
+    	-
+    
+    	Ты дрейфуешь...
+    
+    	-
+    	= medbay
+    	~set effect = fadeToBlack
+    	~set bg = medbay
+    	// back down to 50
+    	~set skill_stress - 20
+    	~call playMusic(intro_happy)
+    	~call delayText(2)
+    
+    	Постепенно твое сознание восстанавливается. Ты просыпаешься... в медотсеке.
+    
+    	Медкровать под тобой издает мягкий сигнал, и автоматизированный голос произносит: «Прошло две недели. Черепно-мозговая травма пациента полностью зажила. Его можно безопасно выписать.»
+    
+    	-
+    
+    	Когда туман рассеивается в голове, ты понимаешь, что в этой комнате что-то кажется другим. Она такая... светлая?
+    
+    	Ты пытаешься сфокусироваться на окне. Что-то определенно _другое_...
+    
+    	** Солнечный свет...?
+    		> medbayContinue
+    
+    	** Деревья??
+    		> medbayContinue
+    
+    	** Земля!?
+    		=medbayContinue
+    		// could jump here from debug option at start
+    		~set bg = medbay
+
+    		Вместо привычной черноты космоса сквозь окна льется яркий свет от двойных голубого и желтого солнц. Ты вглядываешься и видишь поля, стеклянные купола и стены, окруженные гигантскими грибоподобными деревьями.
+    
+    		Повсюду строительные материалы, и люди ходят вокруг, снаружи, по _земле_!
+    
+    		-
+    		~set midright = sol
+    		~set left = spacer
+    		~set right = hidden
+    		~call showmenu(intro)
+    
+    		Тебе лучше выйти туда и присоединиться к ним!
+    
+    		*** Выбежать на улицу, чтобы начать новую жизнь!
+    			> landing
+    
+    		*** Осторожно выйти на улицу к новой жизни.
+    			> landing
+
+    *= landing
+    	// can't be *=end because of shields and earth endings
+    	// kill the looping character creation music
+    	// no, keep playing it! it no longer loops...
+    	// ~set effect = silence
+    
+    	// just in case
+    	~call showmenu(skills)
+    	~call showmenu(toolbar)
+    	~call showmenu(portrait)
+    	~call hidemenu(intro)
+    	~set skill_stress = 50
+    
+    	// clear the last ending
+    	~set hog_lastEnding = false
+    
+    	~call introComplete()
+		
+		
+
+=== contentWarnings ==============================================
+	~if location = none
+
+    Игра «I was a Teenage Exocolonist» подходит для лиц от 13 лет и старше. Она не содержит чрезмерного насилия или явных сцен сексуального характера, однако затрагивает взрослые темы, которые могут быть неприятны некоторым игрокам.
+    
+    Есть много способов прожить свою жизнь на Вертумне, и, как и в реальной жизни, некоторые выборы могут привести тебя в темные места. В целом, предупреждения о содержании игры включают следующее.
+    
+    Выберите один, чтобы узнать больше:
+    
+    * Смерть главных персонажей
+    
+    	Многие персонажи умирают в течение игры. Некоторые — дети на момент смерти. Некоторые — члены семьи и близкие друзья твоего персонажа.
+    
+    	Некоторых можно спасти, выиграв карточные бои, имея достаточно высокий навык в определенный момент, делая другие выборы или разблокировав возможность спасти их, переиграв игру.
+    
+    	Некоторых персонажей нельзя спасти, как бы ты ни играл.
+    
+    * (Спойлеры) Кто именно умирает?
+    
+    	Темми может погибнуть в результате несчастного случая в первый год игры. Спасти ее тривиально легко при повторном прохождении (или перезагрузке).
+    
+    	Твоя мать может умереть от голода во время голода. Спасти ее трудно.
+    
+    	Твой отец может умереть от респираторного заболевания. Спасти его тривиально легко после обнаружения лекарства от болезни в любом прохождении, что может быть сложно.
+    
+    	Один из твоих учителей может погибнуть насильственной смертью при нападении на колонию. Спасти его тривиально легко при повторном прохождении.
+    
+    	Губернатор колонии может умереть. Ее нужно спасать специально в каждом прохождении, но можно оставить ее судьбе.
+    
+    	Отец Темми может погибнуть насильственной смертью во время экспедиции. Ты можешь спасти его, став свидетелем события и выиграв карточный бой или предотвратив его уход из колонии.
+    
+    	Дис может исчезнуть из колонии в позднем подростковом возрасте после того, как совершит нечто по-настоящему ужасное. Его считают мертвым, но он жив.
+    
+    	В концовке, где вся местная жизнь на Вертумне уничтожена, Кел убивают во время протеста. В этой же концовке докторка Инстанс покончит с собой.
+    
+    	Ком погибнет во время атаки. Его нельзя спасти.
+    
+    	Сим кажется умершим. Он жив.
+    
+    * Дети в опасности/смерти
+    
+    	Один из твоих друзей детства может внезапно умереть в первый год игры.
+    
+    	Брат одного из твоих друзей погибнет во время нападения на колонию.
+    
+    	Есть сцены, подразумевающие, что среди жертв катастрофического события есть дети и младенцы.
+    
+    	Твой персонаж подвергается большой опасности в течение игры.
+    
+    * Жестокость и смерть животных
+    
+    	Возможно стать свидетелем смерти многих диких животных, иногда от твоей собственной руки.
+    
+    	Домашнее животное друга может быть обнаружено и убито колониальным правительством.
+    
+    	Ты можешь стать свидетелем того, как сверстник убивает животное.
+    
+    	Ты можешь стать свидетелем того, как животное сдерживают и причиняют ему вред во время тренировок солдат или ради спорта, или как животных используют в качестве подопытных на уроках биологии или для исследований.
+    
+    	Твой собственный питомец умрет в концовке, где вся местная вертумнианская жизнь уничтожена.
+    
+    * Телесные повреждения и неприятные сцены
+    
+    	Персонаж игрока может столкнуться с ситуациями во время исследования, где его могут жестоко атаковать, проглотить целиком и частично переварить, разорвать на части и другие тревожные события.
+    
+    	Описания различных существ могут быть тревожными.
+    
+    	Бой обычно необязателен, но не всегда будет чистым или мультяшным. Ты можешь убить животное в конце первого года, ткнув его в глаз.
+    
+    * Подразумеваемое сексуальное содержание
+    
+    	Персонажи будут флиртовать с тобой, некоторые используя откровенный язык.
+    
+    	В ходе игры у твоего персонажа будет ряд возможностей быть близким с объектами симпатии. Все сцены затемняются. Эти сцены недоступны, пока твоему персонажу не исполнится шестнадцать.
+    
+    	Все действия описываются как согласованные. Есть одна сцена, где близость с кем-то может избежать конфликта, что может быть истолковано как принуждение, хотя это лишь один из вариантов.
+    
+    	Можно убедить объект симпатии изменить своему партнеру ради тебя.
+    
+    	Твой персонаж может вступить в отношения с существом, которому технически тысячи лет, хотя он был в своей физической форме только в течение игры.
+    
+    	Девятнадцатилетний персонаж может забеременеть и родить ребенка.
+    
+    * Наркотики и алкоголь
+    
+    	Персонажей видят пьющими алкоголь и употребляющими легкие галлюциногены. Некоторым может быть меньше возраста, когда это легально разрешено там, где ты живешь.
+    
+    	Твоему персонажу могут предложить вещества. Принять их или нет — выбор за тобой.
+    
+    	На работе бариста твой персонаж иногда подает алкоголь.
+    
+    * Насилие в тексте
+    
+    	Есть много сцен, где кровавое насилие описывается, иногда очень подробно. Кровавых изображений нет.
+    
+    	Твой персонаж может быть ранен различными способами, хотя его регулярно возвращают к здоровью чудесной медицинской технологией. Выбор, приводящий к твоему исцелению, может привести к смерти или постоянным травмам других.
+    
+    	Другие персонажи могут пострадать и умереть, как на экране, так и за кадром.
+    
+    	Один из твоих сверстников — жестокий задира и регулярно нападает на других сверстников, своего романтического партнера и, возможно, на тебя самого.
+    
+    	Другой подросток может разочароваться и жестоко обрушиться на колонию в акте терроризма, возможно, причинив массовые жертвы.
+    
+    	Ты можешь узнать, что один персонаж напал на другого, когда они были детьми.
+    
+    	Женщине ломают руку в публичной демонстрации силы.
+    
+    * Психическое здоровье и травма
+    
+    	Проживание нескольких жизней сказывается на психическом здоровье твоего персонажа. Он испытывает тревожные сны и моменты деперсонализации.
+    
+    	Рассказывание слишком большому количеству людей о своих пророческих снах может вызвать сцену, где твоему персонажу предлагают лекарства и заставляют взять месяц отдыха. Дальнейшие рассказы о снах приводят к сцене, где его помещают в учреждение и насильно дают медицинское лечение, чтобы «исцелить». Этого можно легко избежать, не упоминая о своих снах.
+    
+    	Некоторые из твоих сверстников страдают от проблем с психическим здоровьем, таких как депрессия, чувство вины выжившего и ПТСР.
+    
+    	Работая медсестрой или бариста, можно узнать, что мать друга покончила с собой, страдая от депрессии.
+    
+    * Домашнее насилие
+    
+    	Два объекта симпатии неизбежно образуют отношения друг с другом. Мужчина в этих отношениях словесно и эмоционально оскорбляет женщину, с подразумеваемым физическим насилием.
+    
+    	Можно убедить любого из них прекратить отношения, подружившись с одним или обоими, хотя ты станешь свидетелем большего количества этого насилия.
+    
+    	Если ты подружишься с ними, но не убедишь их расстаться, ты можешь увидеть, как их несчастье углубляется в их эпилогах. В конечном итоге она сбегает от отношений после длительного насилия.
+    
+    	Эту сюжетную линию можно полностью избежать, не разговаривая с этими персонажами после того, как они сблизятся в твой 17-й день рождения.
+    
+    * Травматические глобальные события
+    
+    	Темы включают колониализм, геноцид, пандемии, голод, терроризм и изменение климата.
+    
+    	Твой персонаж позиционируется как нежелательный поселенец на Вертумне. На Вертумне нет живых коренных народов, хотя остатки их сверхразвитого искусственного интеллекта стремится отразить вас и в конечном итоге уничтожить колонию.
+    
+    	Позднее колониальное правительство явно фашистское по своей природе и использует колониальную риторику для оправдания своих действий на Вертумне.
+    
+    	В детстве твой персонаж изучает очищенную версию истории колонии, которую можно прочитать как культовую индоктринацию, пусть и оптимистичную и утопическую.
+    
+    	Изменение климата, экологическое разрушение и геополитическая нестабильность прямо названы причиной, по которой колонисты покинули Землю. Подобное событие происходит на Вертумне задолго до начала игры.
+    
+    	Колонию постигают голод и респираторное заболевание. Многие люди могут умереть, в том числе близкие к персонажу игрока.
+    
+    	Ты можешь стать свидетелем или даже выбрать участие в крайнем акте эко-терроризма, который может привести к массовым жертвам.
+    
+    	Твои выборы могут вызвать геноцид всей местной жизни на Вертумне с помощью биоинженерной чумы.
+

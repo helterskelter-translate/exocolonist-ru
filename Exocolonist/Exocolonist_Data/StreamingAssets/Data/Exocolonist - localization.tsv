@@ -1,0 +1,875 @@
+ID	EN	Example or notes
+button_friendshipWithChara	Дружба с {1}	Friendship with Tammy 30 or greater
+button_battle	Битва!	
+button_ok	Окей	
+button_cancel	Отмена	
+button_tooStressedOut	Сильное утомление	
+button_icon_flirt	Флирт с {1}	
+button_icon_groundhog	Из прошлой жизни	
+button_icon_seen	Ранее увиденное	
+button_giftTooSoon	Слишком рано, чтобы дарить подарок	
+button_req_lessThan	Нужно {1} меньше чем {2}	Need Rebellion less than 50
+button_req_equalOrGreater	Нужно {1} {2} или выше	Need Empathy 50 or greater
+button_eventsRespawned	Все события обновились.	
+button_eventsRemaining	{1} событий осталось	
+button_collectiblesRemaining	{1} находок осталось	
+button_bossRespawned	Появилось новое событие босса	
+button_bossRemaining	Осталось событие босса	
+button_eventsWillRespawn	Событие обновляются в Тишину	
+button_bind	Нажмите кнопку, чтобы назначить	
+button_customPronouns_order1	они|она|он	Order custom gender strings with they|she|him first
+button_customPronouns_order2	|её	"Then their|her|his and them|her|him and theirs|hers|his (all contain ""|her"")"
+button_customPronouns_customize	Другое	
+button_customPronouns_tooltip	Изменить местоимения ({1})	Modify custom pronouns (they/them)
+button_system	Система	
+button_friends	Друзья	
+button_memories	Воспоминания	
+button_skills	Черты характера	
+button_music_muted	(Заглушено)	
+button_music_noSong	(Музыка не играет)	
+button_main_continue	продолжить	
+button_main_newLife	начать новую жизнь	
+button_main_newGame	новая игра	
+button_main_load	загрузить	
+button_ending_goWith	Идти с ними.	
+button_ending_rollCredits	Пропустить титры.	
+button_on	[вкл]	
+button_off	[выкл]	
+button_done	принять	
+button_save	сохранить	
+button_load	загрузить	
+button_settings	настройки	
+button_credits	титры	
+button_gallery	галерея	
+button_main_menu	главное меню	
+button_tutorial	обучение	
+button_report_a_bug	сообщить о баге	
+button_content_warnings	предупреждения	
+button_debug_settings	настройки отладки	
+button_debug_commands	команды отладки	
+button_next_song	следующая песня	
+button_gear	снаряжение	
+button_collectibles	находки	
+button_open_savegame_folder	папка сохранений	
+button_clear_past_memories	стереть прошлую память	
+button_clear_all_user_data	стереть все данные	
+button_delete_save	удалить сейвы	
+button_general	основные	
+button_graphics	графика	
+button_audio	аудио	
+button_controls	управление	
+button_debug	отладка	
+button_reset	сбросить	
+button_illustrations	иллюстрации	
+button_endings	концовки	
+button_backgrounds	фоны	
+button_cards	карты	
+button_cheevos	ачивки	
+button_next	следующая	
+button_previous	предыдущая	
+button_give_up	сдаться	
+button_okay	окей	
+button_start_your_new_life	начать новую жизнь	
+button_endings_gallery	галерея концовок	
+button_quit	выйти	
+		
+		
+		
+text_system	система	
+text_debug_enabled	отладка включена	
+text_now_playing	сейчас играет	
+text_no_skill_changes	без изменений навыков	
+text_friends	друзья	
+text_goal	цель	
+text_loading...	Загрузка...	
+text_she	она	
+text_he	он	
+		
+		
+		
+picker_title	Выбрать находку	
+perk_newPerk	Новый перк!	
+perk_title	{1} - Уровень {2}	Combat - Level 3
+deck_title_memories	Воспоминания	
+deck_subtitle_memories	{1} карт для использования в испытаниях	20 cards for use in challenges
+deck_title_gear	Снаряжение	
+deck_subtitle_gear	{1} из {2} экипировано	2 of 3 equipped
+deck_button_pets	Только выбранные питомцы	
+deck_title_collectibles	Находки	
+deck_subtitle_collectibles_none	Ищите вещи на земле во время исследования	
+deck_subtitle_collectibles	{1} подарок или одноразовая находка (дубликаты суммируются)	
+deck_popup_gearBattle	Нельзя сменить снаряжение в битве	
+deck_popup_gearEvent	Нельзя сменить снаряжение в событии	
+		
+		
+		
+		
+		
+		
+unlock_job	Открыто {1} в {2}	Unlocked Babysitting in The Living Quarters
+unlock_ultimate	Увеличена награда за {1}	\+ Kudos for Babysitting
+unlock_dating	Начали встречаться {1}!	
+unlock_fact	Изучено: {1} - {2}	
+		
+none	Ничего	
+unknown	Неизвестно	
+questionMark	?	For unknown values eg Congruence's age
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+popup_selectCard	Сначала выбрать карту.	
+popup_warning	Внимание!	
+popup_home_battle	Нельзя отправиться домой в битве	
+popup_home_story	Нельзя отправиться домой в событии	
+popup_home_confirm	Вы уверены, что готовы отправиться домой?	
+popup_stuckPlayer	Обнаружен застрявший игрок, телепорт ко входу. Извините!	
+popup_pickName	Какое имя?	
+popup_shortName	Имя слишком короткое!	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+skillperk_none	Ничего	
+skillperk_gearslots2	Доп слот снаряжения	
+skillperk_gearslots3	Доп слот снаряжения	
+skillperk_gearslots4	Доп слот снаряжения	
+		
+		
+		
+skill_empathy	Эмпатия	
+skill_persuasion	Убеждение	
+skill_creativity	Творчество	
+skill_bravery	Смелость	
+skill_reasoning	Логика	
+skill_organization	Собранность	
+skill_engineering	Инженерия	
+skill_biology	Биология	
+skill_toughness	Стойкость	
+skill_perception	Внимание	
+skill_combat	Навыки боя	
+skill_animals	Ксенология	
+skill_kudos	Похвала	
+skill_stress	Стресс	
+skill_rebellion	Мятежность	
+skillNeg_rebellion	Лояльность	
+		
+skillDesc_empathy	Понимание других людей	
+skillDesc_persuasion	Харизма, позволяющая руководить людьми и выступать на публике	
+skillDesc_creativity	Художественные способности и умение генерировать идеи	
+skillDesc_bravery	Умение справляться с социальными и опасными ситуациями	
+skillDesc_reasoning	Навыки решения проблем и общие знания	
+skillDesc_organization	Приверженность аккуратности и организованности	
+skillDesc_engineering	Знание машин, физики, математикми и программирования	
+skillDesc_biology	Знание растений, биохимии и человеческого тела	
+skillDesc_toughness	Физическая сила и выносливость	
+skillDesc_perception	Умение находить предметы и быть незаметным	
+skillDesc_combat	Навыки тактики и оружия	
+skillDesc_animals	Знание ксенофауны, охоты и скотоводства	
+skillDesc_kudos	Валюта, основанная на репутации	
+skillDesc_stress	Физическое и психическое истощение	
+skillDesc_rebellion	Отношения со взрослыми и правительством колонии	
+		
+skillSnippet1_empathy	У тебя врожденное понимание других, и	
+skillSnippet1_persuasion	Люди склонны слушать тебя, делать то, что ты говоришь, и	
+skillSnippet1_creativity	Тебе нравится мастерить, и	
+skillSnippet1_bravery	Ничто не сможет напугать тебя... или, по крайней мере, ты справляешься со страхом лучше, чем большинство! И	
+skillSnippet1_reasoning	Ты интуитивно умён, и	
+skillSnippet1_organization	Всё, что твоё, хранится аккуратно и упорядоченно, даже содержимое твоей гололадони, и	
+skillSnippet1_engineering	Твоя склонность к математике и машинам придаёт тебе уверенности, и	
+skillSnippet1_biology	Природа открывает тебе свои секреты, и	
+skillSnippet1_toughness	Ты можешь выдержать удар или падение кирпича на ногу, не чертыхаясь, и	
+skillSnippet1_perception	У тебя талант находить скрытое или оставаться незамеченным, когда это нужно. И	
+skillSnippet1_combat	Ты хорош в драке, и	
+skillSnippet1_animals	Иные существа для тебя не загадка, и	
+skillSnippet1_kudos	Ты богат, и	
+skillSnippet1_stress	Ты слишком вымотан, и	
+skillSnippet1_rebellion	Ты бунтарь, и	
+		
+skillSnippet2_empathy	твои лучшие друзья говорят, что ты отличый слушатель.	
+skillSnippet2_persuasion	еще лучше умеешь выигрывать споры.	
+skillSnippet2_creativity	в вопросах творчества ты вне конкуренции.	
+skillSnippet2_bravery	ты почти никогда не боишься. Почти.	
+skillSnippet2_reasoning	логические головоломки легки с твоими способностями к рассуждению.	
+skillSnippet2_organization	тебе не приходилось слышать напоминаний о том, что нужно убраться в своей койке.	
+skillSnippet2_engineering	у тебя хорошие оценки на уроках инженерии.	
+skillSnippet2_biology	у тебя талант к садоводству.	
+skillSnippet2_toughness	ты крепкий ребёнок.	
+skillSnippet2_perception	твой острый взор замечает то, что не могут другие люди.	
+skillSnippet2_combat	говорят, что ты хорошо обращаешься с любым оружием.	
+skillSnippet2_animals	ты знаешь очень многое о животных.	
+skillSnippet2_kudos	ты получаешь много похвалы.	
+skillSnippet2_stress	ты перегружен работой.	
+skillSnippet2_rebellion	ты ненавидишь систему.	
+		
+skillSecond_command	Второй Администратор.	
+skillSecond_garrison	Второй Офицер Службы Безопасности.	
+skillSecond_engineering	Второй Инженер.	
+skillSecond_geoponics	Второй Культиватор.	
+skillSecond_quarters	Второй Стюард.	
+skillSecond_expeditions	Второй Геодезист.	
+skillSecond_leader	Губернатор Колонии Вертумна.	
+		
+		
+skillperk_gearslot	Слот снаряжения	
+skillperk_petslot	Слот питомца	
+skillperk_healthsocial	Здоровье в Социальных Битвах	
+skillperk_healthmental	Здоровье в Ментальных Битвах	
+skillperk_healthphysical	Здоровье в Физических Битвах	
+		
+		
+		
+memchange_food	Пропитание колонии	
+memchange_defense	Защита колонии	
+memchange_rexbuild	Строительный проект Рекса	
+memchange_tammyconfidence	Уверенность Темми	
+memchange_shimmerhelp	Лекарство от Шиммера	
+memchange_tanghelp	Помощь Тангент	
+memchange_mutinyvotes	Голоса Совета	
+memchange_petted_hopeye	Связь с попрыглазом	
+memchange_petted_vriki	Связь с врики	
+memchange_petted_unisaur	Связь с единозавром	
+		
+		
+story_continueButtonText	...	
+story_doneButtonText	Принять	
+story_endingNextButtonText	Но что насчёт...	
+story_doneButtonBeforeJobBattleText	За работу!	
+story_doneButtonBeforeBattleText	Вызов!	
+story_doneButtonTimePassesText	Проходит время...	
+story_jobTitle	Выбрать занятие на месяц:	
+story_unknownName	они	Fallback when character unknown / bff etc memory not set
+		
+		
+		
+		
+		
+charas_welcome	Добро пожаловать	
+charas_date	{1} месяц, {2}, {3} лет	Month 3 of Quiet, age 11
+charas_date_noage	{1} месяц, {2}	Month 3 of Quiet
+charas_date_age	{1} лет	Age 11
+charas_about	О персонаже	
+charas_she	Она	
+charas_he	Он	
+charas_yearsOld	Тебе {1} лет, и	You're 10 years old, and an average kid.
+charas_noPerk	ты обычный ребенок.	You're 10 years old, and an average kid.
+charas_age	Возраст:	
+charas_birthday	День рождения:	
+charas_enhancement	Расширение:	
+charas_dating	В отношениях:	
+charas_likes	Любит:	
+charas_dislikes	Не любит:	
+charas_datingChara	Встречается с {1}	Dating Tammy
+charas_datingYou	Встречается с тобой!	
+charas_friendship	Дружба {1} / {2}	Friendship 46 / 100
+charas_rename	Переименовать {1}	Rename Sol
+charas_popup_renamed	Имя изменено на {1}	
+		
+		
+		
+		
+		
+		
+fact_name	имя	
+fact_basics	basics	
+fact_more	больше	
+fact_enhancement	расширение	
+fact_birthday	день рождения	
+fact_likes	любит {1}	
+fact_dislikes	не любит {1}	
+fact_dating	отношения	
+fact_likesNothing	Ничего	
+fact_likesEverything	Всё	
+fact_noBirthday	Не имеет	
+		
+		
+		
+month_1	Раняя {1}	1st month of {1}
+month_2	Средняя {1}	2nd month of {1}
+month_3	Поздняя {1}	3rd month of {1}
+month_season	Сезон: {1}	Quiet season
+month_age	{1} лет	age 15
+month_food	пища {1}	food +5
+month_defense	защита {1}	defense -2
+month_button_startAge	начать в возрасте {1} лет	start age 16
+month_monthOf	Месяц {1} из {2}	Month 5 of 13
+		
+		
+pronouns_princess	[Они|Она|Он]/[их|её|его].	For princess, may be custom like Ey/em
+pronouns_nonbinary	Они/их.	For non-princess charas only
+pronouns_female	Она/её.	
+pronouns_male	Он/его.	
+appearance_nonbinary	Андрогинная внешность (в позднем возрасте)	
+appearance_female	Феминная внешность (в позднем возрасте)	
+appearance_male	Маскулинная внешность (в позднем возрасте)	
+		
+		
+		
+		
+job_doing_shovel	Копать землю	
+job_doing_farm	Заниматься фермерством	
+job_doing_analyzePlants	Изучать ксеноботанику	
+job_doing_tendAnimals	Ухаживать за животными	
+job_doing_relaxPark	Отдохнуть в парке	
+job_doing_babysitting	Няньчиться	
+job_doing_cooking	Готовить	
+job_doing_barista	Работать в кафе	
+job_doing_photophonor	Играть на фотофоноре	
+job_doing_relaxLounge	Отдохнуть в лаундже	
+job_doing_studyBiology	Изучать науки о жизни	
+job_doing_studyPhysics	Изучать инженерию	
+job_doing_studyWriting	Изучать гуманитарные науки	
+job_doing_tutoring	Репетиторствовать	
+job_doing_robotRepair	Чинить роботов	
+job_doing_nurse	Работать в медотсеке	
+job_doing_sportsball	Играть в спортбол	
+job_doing_defenseTraining	Оборонная подготовка	
+job_doing_lookoutDuty	Караульная служба	
+job_doing_guardDuty	Охранная служба	
+job_doing_relaxWalls	Отдохнуть на стенах	
+job_doing_delivery	Доставлять припасы	
+job_doing_depot	Работать в депо	
+job_doing_construction	Работать на стройке	
+job_doing_assistant	Администрировать	
+job_doing_leader	Работать губернатором	
+job_doing_sneak	Возвращение после тайной вылазки	
+job_doing_survey	Возвращение после разведки	
+job_doing_forage	Возвращение после сбора ресурсов	
+job_doing_hunt	Возвращение после охоты	
+job_doing_exploreGlow	Возвращение после исследования окрестностей	
+job_doing_exploreNearby	Возвращение после исследования окрестностей	
+job_doing_relaxPet	Отдохнуть с питомцем	
+job_doing_rebuild	Восстанавливать колонию	
+job_doing_mourn	Быть в трауре	
+		
+		
+difficulty_none	ничего	
+difficulty_easy	легкое	
+difficulty_normal	среднее	
+difficulty_hard	сложное	
+difficulty_impossible	невозможное	
+		
+battleHeader_difficulty	{1} испытание	easy challenge
+battleHeader_skillDifficulty	{1} {2} испытание	easy empathy challenge
+battleHeader_3rounds	3 раунда	
+battleHeader_bonusLeft	{1} за	plus 3 for (Red Pairs Icon)
+battleHeader_bonusRight_social	социальный стрит	
+battleHeader_bonusRight_mental	ментальный флеш	
+battleHeader_bonusRight_physical	физическая пара	
+		
+battleBonus_fromSource	{1} от {2}	+4 from Pet Bot Gear
+battleBonus_fromSource_multiply	x{1} от {2}	x2 from Pet Bot Gear
+battleBonus_fromSource_zeroed	обнулён за {1}	zeroed by Pet Bot Gear
+battleBonus_tooltip	{1} за {2}	+1 for Straight of 3
+battleBonus_and	и	Bonus1 and Bonus2
+battleBonus_from	{1} от {2}	+3 from Condition and Vriki III
+		
+		
+battlePane_roundLocked	(раунд {1})	round 3
+battle_tooltip_sort_suit	Сортировать по масти	
+battle_tooltip_sort_value	Сортировать по значению	
+battle_tooltip_autoplayFairy	Фея автоплея: раз за битву находит чуть лучшую руку	
+battle_tooltip_tutorial	Показать/Скрыть обучение	
+battle_goal_superGoal	Бонус за скрытую цель:\n+1 к {1}	Bonus for hidden higher goal +1 to Animals
+battle_goal_hand	{1} стоимость руки:\n{2} за значения карт	15 total hand value: 5 from card values
+battle_goal_pairs	{1} от пар/стритов/флешей	+3 from pair/straight/flush
+battle_goal_global	{1} от глобальных бонусов	
+battle_goal_button_nextRound	следующий раунд	
+battle_goal_button_win	победа!	
+battle_goal_button_lose	сдаться	
+battle_goal_finalRound	Последний раунд!	
+battle_goal_round	Раунд {1} из {2}	Round 1 of 3
+battle_goal_title	цель	
+battle_goal_title_super	супер цель!	
+battle_button_pushThrough	Прорваться\n({1} стресса)	Push through (5 stress)
+battle_button_pushThroughNo	Прорваться\n	
+battle_reward_won	Выигранное испытание	
+battle_reward_failed	Проваленное испытание	
+battle_reward_superGoal	Супер цель	
+battle_reward_bestScore	Лучший счёт	
+battle_reward_exactScore	Точный результат от {1}	
+battle_close_keep	Закрыть и оставить карты	
+battle_close_forget	забыть	
+battle_winLose_won	Победа!	
+battle_winLose_lost	Поражение!	
+battle_bestScore_yes	Лучший счёт {1} из {2}	
+battle_bestScore_no	Всего {1} из лучшего результата {2}	
+battle_bestScore_lastRound	(только последний раунд)	
+battle_title_challenge	Испытание	
+battle_fail_defeated	Побеждён	
+battle_fail_wouldHave	Вы бы получили {1}	
+battle_useCard	Использовать {1}?	Use a crystal?
+battle_forgetTitle	Хотите забыть?	
+battle_forgetTooltip	"Выберите карту для удаления или нажмите кнопку ""Закрыть"", чтобы оставить все карты."	
+battle_forgetConfirm	Забыть {1}?	
+battle_forgetConfirmNone	Сохранить воспоминания?	
+		
+		
+		
+cardValueTooltip_gained	Получено 1	when shown in Results Menu
+cardValueTooltip_shop	+1 добавляется в магазин каждый год	
+cardValueTooltip_freeCollectible	Первое использование бесплатно, за состояние	
+cardValueTooltip_collectible	{1} получено	5 owned
+cardValueTooltip_base	Базовое значение {1}	Base value 3
+		
+cardForgetTooltip	Выбрать, чтобы забыть.	For both consoles and pc use controller wording not 'click'
+cardForgetTooltipUndo	Выбрать, чтобы отменить забывание.	
+cardArtCreditsTooltip	Иллюстрация {1}	Illustration by Sarah Northway
+cardForgotten	ЗАБЫТО	
+		
+cardAbilitySource_collectible	одноразовая находка	
+cardAbilitySource_condition	боевое состояние	
+cardAbilitySource_status	Статус {1}	Insomnia Status
+cardAbilitySource_perk	Перк {1}	Spongy Brain Perk
+cardAbilitySource_thisCard	эта карта	
+cardAbilitySource_gear	снаряжение {1}	Captain's Hat gear
+cardAbilitySource_unknown	неизвестная карта	
+		
+cardType_pet	Питомец	
+cardType_gear	Снаряжение	
+cardType_collectible	Находка	
+cardType_memory	Воспоминание	
+		
+cardChange_gained	Получен {1}	Gained Collectible
+cardChange_lost	Потерян {1}	Lost Collectible
+cardChange_forgot	Забыто {1}	Forgot Memory
+cardChange_upgraded	Улучшен {1}	Upgraded Pet
+cardChange_skip	Выберите карту, чтобы пропустить получение.	
+		
+statusChange_gained	Получен статус: {1}	Status Gained: Starving
+statusChange_ended	Статус закончился: {1}	
+statusChange_nothing	ничего	
+		
+shop_shop_title	Магазин депо	
+shop_shop_subtitle	Кликните по карте, чтобы выбрать	
+shop_shop_button	Купить	
+shop_training_title	Тренировочный зал	
+shop_training_subtitle	Выберите базовую карту для улучшения	
+shop_training_button	Улучшить	
+shop_trainingBuy_title	Тренировочный зал	
+shop_trainingBuy_subtitle	Выберите базовую карту для покупки	
+shop_trainingBuy_button	Купить	
+shop_spa_title	Медитация спа	
+shop_spa_subtitle	Выберите воспоминание, чтобы забыть	
+shop_spa_button	Забыть	
+shop_sell_title	Магазин депо	
+shop_sell_subtitle	Выбрать карту для продажи	
+shop_sell_button	Продать	
+popup_shopBuy	Купить {1} за {2} похвал?	Buy Cool Dress for 100 Kudos?
+popup_shopUpgrade	Улучшить {1} до {2} за {3} похвал?	
+popup_shopForget	Вы уверены, что хотите навсегда забыть {1}?	
+popup_shopSell	Продать {1} за {2} похвал?	
+popup_shopPurchaseComplete	Покупка завершена!	
+popup_shopUpgradeComplete	Улучшение завершено!	
+popup_shopForgetComplete	Вы глубоко вдыхаете. Это воспоминание забыто...	
+popup_shop_SellComplete	Продажа завершена!	
+button_shop_buy	Покупка	
+button_shop_buyFor	Куплено за {1} похвал	
+button_shop_afford	Вы не можете себе этого позволить	
+		
+		
+		
+		
+		
+save_title_replace	Выберите сейв для замены	
+save_title_load	Загрузить предыдущую игру	
+save_button_new	Новый сейв	
+save_button_overwrite	Перезаписать	
+popup_save_confirm1	Вы уверены?	
+popup_save_confirm2	Точно-точно уверены?	
+popup_save_deleteGroundhogs1	Удалить ВСЕ воспоминания? Удалить все воспоминания о прошлых жизнях. Настройки и сохранения НЕ будут удалены. Достижения, просмотренные карты, персонажи и концовки НЕ будут удалены.	
+popup_save_deleteGroundhogs2	"Это позволит удалить все отсылки к ""червоточине"", напоминающие о воспоминаниях из прошлых игр."	
+popup_save_deleteGroundhogs3	Воспоминания из прошлых жизней стёрты.	
+popup_save_deleteData1	Удалить ВСЕ данные? Удалить все сохранения, воспоминания о прошлых жизнях и сбросить пользовательские настройки? Включая данные о внутриигровых достижениях, просмотренные карты, персонажей и концовки.	
+popup_save_deleteData2	Это удалит ВСЕ пользовательские данные, включая ВСЕ сохранения, настройки и логи, оставляя заводскую настройку.	
+popup_save_deleteData3	Все пользовательские данные были удалены.	
+popup_save_deleteDataTradeshow	Все пользовательские данные были удалены и все настройки сброшены, кроме Settings.tradeShowMode	
+		
+popup_missingGroundhogs_header	ОШИБКА: отсутствуют воспоминания о прошлых жизнях	
+popup_missingGroundhogs_text	Ваш файл Groundhogs.json, возможно, повреждён.\n\nХотите восстановить воспоминания о прошлых жизнях, достижения, концовки и карты из этого сохранения?	
+popup_missingGroundhogs_warn	Это навсегда заменит ВСЕ воспоминания о прошлых жизнях и контент галереи.\n\nЭто не повлияет на достижения на других платформах, только на их запись в галерее игры.	
+popup_missingGroundhogs_done	Восстановление завершено	
+popup_missingGroundhogs_done2	Воспоминания о прошлых жизнях восстановлены из этого файла сохранения в Groundhogs.json. Предыдущий файл сохранен в Groundhogs_old.json.	
+popup_saveFailed	ОШИБКА: не удалось сохранить файл. Возможно, ваше хранилище переполнено, или игра повреждена.	
+popup_saveFailedFinal	ПОСЛЕДНЕЕ ПРЕДУПРЕЖДЕНИЕ: не удалось сохранить данные в файловую систему.	
+		
+		
+		
+		
+suit_none	ничего	
+suit_social	социальная	
+suit_mental	ментальная	
+suit_physical	физическая	
+suit_wildcard	вайлд	
+suitWithColor_none	ничего	
+suitWithColor_social	социальная (жёлтая)	
+suitWithColor_mental	ментальная (синяя)	
+suitWithColor_physical	физическая (красная)	
+suitWithColor_wildcard	вайлд	
+card_left	слева	Will be replaced with a left arrow when it appears in card text
+card_right	справа	
+		
+		
+player_explore_stress	Проходит время...\n{1}	Time passes... +20 stress
+player_explore_stress_high	Тебе стоит\nскоро пойти домой...	
+player_colony_stress_high	Скоро тебе\nнужен перерыв...	
+player_colony_stress_max	Тебе нужен\nотдых...	
+player_biomeTitle_strato	Колония\nСтрато	
+player_biomeTitle_helio	Колония\nГелио	
+		
+		
+		
+		
+		
+		
+fancyButton_continue	Нажмите, чтобы продолжить...	
+fancyButton_continue_ps	Нажмите кнопку X чтобы продолжить...	
+fancyButton_continue_switch	Нажмите кнопку A чтобы продолжить...	
+fancyButton_continue_xbox	Нажмите кнопку A чтобы продолжить...	
+fancyButton_continue_deck	Нажмите кнопку A чтобы продолжить...	
+		
+		
+tutorial_start1	"Ой! Темми подпрыгивает, когда ты выходишь из каюты позади неё. ""Ты проснулся! Тебе уже лучше? Тебе лучше пойти к папе!"" Она указывает на юго-восток, в сторону геодезических куполов."	
+		
+tutorial_start2	Для ходьбы используйте клавиши WASD, стрелки, щелчок мышью, щелчок и удержание кнопки мыши, а также крестовину или аналоговый джойстик. Чтобы поговорить с персонажем, щелкните по нему или нажмите Enter или кнопку «Взаимодействовать», когда вы находитесь рядом с ним.	
+tutorial_start2_pc	Чтобы идти, щёлкните по земле. Чтобы поговорить с персонажами, щёлкните по ним.	
+tutorial_start2_ps	Для ходьбы используйте левый стик или кнопки направления. Чтобы поговорить с персонажем, нажмите кнопку X, находясь рядом с ним.	
+tutorial_start2_switch	Чтобы ходить, наклоните левый стик или нажмите кнопки направления. Чтобы поговорить с персонажем, нажмите кнопку A, находясь рядом с ним, или коснитесь сенсорного экрана.	
+tutorial_start2_xbox	Для ходьбы используйте левый аналоговый стик или крестовину. Чтобы поговорить с персонажем, нажмите кнопку A, находясь рядом с ним.	
+tutorial_start2_deck	Для ходьбы используйте левый аналоговый стик или крестовину. Чтобы поговорить с персонажем, нажмите кнопку A, находясь рядом с ним, или коснитесь сенсорного экрана.	
+		
+tutorial_doors	Чтобы войти в здание, щелкните по двери или флагу рядом с ним, или подойдите ближе и нажмите «Вход» или другую кнопку действия.\n\nЗатем выберите занятие на месяц, чтобы получить навыки и продвинуться во времени. В году 13 месяцев, до конца игры — 10 лет. У вас будет время сосредоточиться лишь на нескольких вещах.	
+tutorial_doors_pc	Чтобы войти в здание, щелкните по двери или флагу рядом с ним, или подойдите ближе и нажмите «Вход» или другую кнопку действия.\n\nЗатем выберите занятие на месяц, чтобы получить навыки и продвинуться во времени. В году 13 месяцев, до конца игры — 10 лет. У вас будет время сосредоточиться лишь на нескольких вещах.	
+tutorial_doors_ps	Чтобы войти в здание, нажмите кнопку X рядом с дверью или флагом.\n\nЗатем выберите занятие на месяц, чтобы получить навыки и продвинуться во времени. В году 13 месяцев, до конца игры — 10 лет. У вас будет время сосредоточиться лишь на нескольких вещах.	
+tutorial_doors_switch	Чтобы войти в здание, нажмите кнопку A рядом с дверью или флагом, или коснитесь сенсорного экрана.\n\nЗатем выберите занятие на месяц, чтобы получить навыки и продвинуться во времени. В году 13 месяцев, до конца игры — 10 лет. У вас будет время сосредоточиться лишь на нескольких вещах.	
+tutorial_doors_xbox	Чтобы войти в здание, нажмите кнопку A рядом с дверью или флагом.\n\nЗатем выберите занятие на месяц, чтобы получить навыки и продвинуться во времени. В году 13 месяцев, до конца игры — 10 лет. У вас будет время сосредоточиться лишь на нескольких вещах.	
+tutorial_doors_deck	Чтобы войти в здание, нажмите кнопку A рядом с дверью или флагом, или коснитесь сенсорного экрана.\n\nЗатем выберите занятие на месяц, чтобы получить навыки и продвинуться во времени. В году 13 месяцев, до конца игры — 10 лет. У вас будет время сосредоточиться лишь на нескольких вещах.	
+		
+tutorial_deck	"С возрастом ваша колода будет пополняться, и вы сможете забыть о картах, проводя время за отдыхом.\n\nУ вас ограниченное количество слотов для снаряжения, зависящее от вашего навыка ""Собранность"" и прочих. Щелкните по снаряжению, чтобы надеть/снять его.\n\nНайденные во время исследования находки можно дарить друзьям или использовать в испытаниях для получения одноразовых бонусов."	
+tutorial_explore	"Событие в этой зоне можно выполнять в любом порядке. Они не тратят время, но повысят стресс. Вернуться домой можно через флаг на базе экспедиции или с помощью кнопки ""Домой"" в левом верхнем углу экрана.\n\nИщите находки, которые можно собрать в качестве подарков! События возобновляются в начале каждого года, а новые находки могут появляться каждый сезон."	
+tutorial_battle1	Во время работы или учёбы вы будете разыгрывать короткие карточные игры по мере прохождения месяца. Перемещайте карты, чтобы заполнить 5 слотов и составить максимально выгодную комбинацию. Да, порядок имеет значение...	
+tutorial_battle1b	Если ваш результат в круге справа достигнет целевого значения, вы выиграете.\n\nВ зависимости от ваших карт, некоторые испытания не получится пройти, но вы все равно получите награду за свои старания.	
+tutorial_battle2	Бонус за флеши (одинаковые цвета вместе):	
+tutorial_battle2b	Бонус за пары (одинаковые числа вместе):	
+tutorial_battle3	Бонус за стрит (увеличение слева направо):	
+tutorial_battle3b	Чем больше карт во флеше, парах или стрите, тем выше бонус, добавляемый к вашему общему результату. Карты также могут влиять друг на друга и могут быть переставлены для достижения наилучшего общего результата.	
+tutorial_battle_settings_a	Ищете более сложный вариант? Этот вариант «Более сложные испытания» не даст вам заскучать.	
+tutorial_battle_settings_b	Хотите сосредоточиться на сюжете? В этом случае будущие мини-игры будут заменены быстрым подбрасыванием монеты, зависящим от вашего возраста и навыков. Вы можете изменить любой из этих вариантов в любое время в меню настроек.	
+tutorial_battle_story	В сюжетных испытаниях три раунда вместо одного. После каждого раунда вы сохраняете неиспользованные карты и открываете дополнительный слот для их размещения. Проигрыш в сюжетных испытаниях не всегда плохо!	
+tutorial_battle_conditions	С возрастом у испытаний появятся свои условия. Масть испытания (социальная, ментальная или физическая) определяет, какие условия могут возникнуть и какие колоды будут наиболее эффективны.\n\nПостарайтесь собрать социальные (жёлтые) карты, если хотите выигрывать битвы за социальные навыки (эмпатия, убеждение, творчество, смелость).	
+tutorial_afterjob	Ваши навыки растут во время работы или учебы, и вы получаете бонусные очки навыков за победу в испытаниях и бонус за составление самой лучшей комбинации карт.\n\nРабота и учёба также повышает уровень стресса, который помешает вам работать и учиться, если он достигнет 100. Чтобы снять стресс, возьмите месячный отпуск и отдохните в жилом крыле.	
+tutorial_year	Детство скоротечно! Игра закончится, когда вам исполнится 20 лет, поэтому сосредоточьтесь на развитии нескольких навыков и на общении с друзьями. Используйте кнопки «Навыки» и «Друзья» в левом верхнем углу экрана, чтобы следить за ними. Удачи!	
+		
+		
+gallery_bg_attack	атака	
+gallery_bg_bar	бар гелиос	
+gallery_bg_barn	амбар	
+gallery_bg_barn_glow	ночной амбар	
+gallery_bg_bedroom	спальня	
+gallery_bg_bedroom_newship	спальня гелиос	
+gallery_bg_bedroom_newship_night	спальня ночью	
+gallery_bg_bridge	мостик	
+gallery_bg_cafe	кафе	
+gallery_bg_cafeteria	кафетерий	
+gallery_bg_cave	пещера	
+gallery_bg_cave_array	пещера домена	
+gallery_bg_classroom	классная комната	
+gallery_bg_colony	колония страто	
+gallery_bg_colony_dusk	склон в сумерках	
+gallery_bg_colony_glow	инженерия в сиянии	
+gallery_bg_colony_newship	колония гелио	
+gallery_bg_colony_newship_wet	гелио во влагу	
+gallery_bg_colony_quiet	инженерное крыло	
+gallery_bg_colony_wet	обрыв на закате	
+gallery_bg_command	командное крыло	
+gallery_bg_construction	стройка	
+gallery_bg_creche	ясли	
+gallery_bg_creche_night	ясли ночью	
+gallery_bg_darkness	тьма	
+gallery_bg_darkness_suns	система вертумна	
+gallery_bg_depot	депо	
+gallery_bg_destroyed	разрушенная колония	
+gallery_bg_destroyed_dusty	посадка гелио	
+gallery_bg_earth	земля	
+gallery_bg_engineering	инженерия	
+gallery_bg_expeditions	ворота экспедиции	
+gallery_bg_expeditionsreturn	экспедиция в сумерках	
+gallery_bg_expeditionsreturn_day	возврат из экспедиции	
+gallery_bg_expeditions_map	карта экспедиции	
+gallery_bg_fantasy_forest	фентезийный лес	
+gallery_bg_garden	сад	
+gallery_bg_garrison	гарнизон страто	
+gallery_bg_garrison_newship	холл гарнизона	
+gallery_bg_geoponics	геопоника	
+gallery_bg_glow	червоточина в сиянии	
+gallery_bg_glow_alt	сияшки	
+gallery_bg_glow_close	сияние вблизи	
+gallery_bg_greenhouse	теплица	
+gallery_bg_hidden_black	темнота	
+gallery_bg_hidden_geoponics_blur	геопоника в размытии	
+gallery_bg_hidden_papertexture	бумажная текстура	
+gallery_bg_hidden_starfield_white_static	белое звездное поле	
+gallery_bg_medbay	медотсек	
+gallery_bg_medbay_night	медотсек ночью	
+gallery_bg_nearby	окрестный грибной лес	
+gallery_bg_nearby_close	окрестности вблизи	
+gallery_bg_otherquarters	комната друга	
+gallery_bg_pinup_anemone	энимона на защите	
+gallery_bg_pinup_anemone_yuck	отвращение энимоны	
+gallery_bg_pinup_beans	 пикси лихорадка	
+gallery_bg_pinup_cal	кел и носочек	
+gallery_bg_pinup_cal_scared	кел что-то скрывает	
+gallery_bg_pinup_dad	прощание	
+gallery_bg_pinup_dys	трансформация диса	
+gallery_bg_pinup_dys_field	музыка и звёзды	
+gallery_bg_pinup_kom_attack14	безликий атакует	
+gallery_bg_pinup_marz	губернаторка марц	
+gallery_bg_pinup_marz_holopalm	ностальгия марц	
+gallery_bg_pinup_mom	жертва флулу	
+gallery_bg_pinup_nomi	первая игра номи	
+gallery_bg_pinup_nomi_game	персонаж номи	
+gallery_bg_pinup_rex	секси рекс	
+gallery_bg_pinup_rex_cards	карты с рексом	
+gallery_bg_pinup_sfc	решение загадки скв	
+gallery_bg_pinup_sym	верхом на симе	
+gallery_bg_pinup_sym_fall	падение сима	
+gallery_bg_pinup_tammy	темми и эхинацея	
+gallery_bg_pinup_tammy_saved	темми спасена	
+gallery_bg_pinup_tang	танг на крыше	
+gallery_bg_pinup_tang_dys_bar	близнецы в баре	
+gallery_bg_pinup_tonin	тонин под атакой	
+gallery_bg_pinup_vace	космоисследователь вейс	
+gallery_bg_pinup_vace_rex_fight	драка вейса и рекса	
+gallery_bg_plains	равнины вдали	
+gallery_bg_plains_alt	другие равнины	
+gallery_bg_plains_close	равнины вблизи	
+gallery_bg_quarters	жилое крыло страто	
+gallery_bg_quarters_newship	жилое крыло гелио	
+gallery_bg_recycler	похороны	
+gallery_bg_ridge	нагорье вдали	
+gallery_bg_ridge_alt	другое нагорье	
+gallery_bg_ridge_close	нагорье вблизи	
+gallery_bg_ruins	руины домена	
+gallery_bg_sportsball	поле спортбола	
+gallery_bg_swamp	болота вдали	
+gallery_bg_swamp_alt	другие болота	
+gallery_bg_swamp_close	болота вблизи	
+gallery_bg_valley	долина вдали	
+gallery_bg_valley_alt	другая долина	
+gallery_bg_valley_close	долина вблизи	
+gallery_bg_walls	стены	
+gallery_bg_walls_night	стены ночью	
+gallery_bg_workshop	мастерская	
+gallery_bg_ending_architect_f	архитекторка	
+gallery_bg_ending_architect_m	архитектор	
+gallery_bg_ending_architect_nb	архитектор	
+gallery_bg_ending_astronaut_f	астронавтка	
+gallery_bg_ending_astronaut_m	астронавт	
+gallery_bg_ending_astronaut_nb	астронавт	
+gallery_bg_ending_athlete_f	атлетка	
+gallery_bg_ending_athlete_m	атлет	
+gallery_bg_ending_athlete_nb	атлет	
+gallery_bg_ending_botanist_f	ботанша	
+gallery_bg_ending_botanist_m	ботаник	
+gallery_bg_ending_botanist_nb	ботаник	
+gallery_bg_ending_collector_f	собирательница	
+gallery_bg_ending_collector_m	собиратель	
+gallery_bg_ending_collector_nb	собиратель	
+gallery_bg_ending_doctor_f	докторка	
+gallery_bg_ending_doctor_m	доктор	
+gallery_bg_ending_doctor_nb	доктор	
+gallery_bg_ending_entertainer_f	артистка	
+gallery_bg_ending_entertainer_m	артист	
+gallery_bg_ending_entertainer_nb	артист	
+gallery_bg_ending_explorer_f	исследовательница	
+gallery_bg_ending_explorer_m	исследователь	
+gallery_bg_ending_explorer_nb	исследователь	
+gallery_bg_ending_farmer_f	фермерша	
+gallery_bg_ending_farmer_m	фермер	
+gallery_bg_ending_farmer_nb	фермер	
+gallery_bg_ending_governor_f	губернаторка	
+gallery_bg_ending_governor_m	губернатор	
+gallery_bg_ending_governor_nb	губернатор	
+gallery_bg_ending_hero_f	героиня	
+gallery_bg_ending_hero_m	герой	
+gallery_bg_ending_hero_nb	герой	
+gallery_bg_ending_hobbyist_f	любительница	
+gallery_bg_ending_hobbyist_m	любитель	
+gallery_bg_ending_hobbyist_nb	любитель	
+gallery_bg_ending_hunter_f	охотница	
+gallery_bg_ending_hunter_m	охотник	
+gallery_bg_ending_hunter_nb	охотник	
+gallery_bg_ending_lawyer_f	адвокатка	
+gallery_bg_ending_lawyer_m	адвокат	
+gallery_bg_ending_lawyer_nb	адвокат	
+gallery_bg_ending_merchant_f	торговка	
+gallery_bg_ending_merchant_m	торговец	
+gallery_bg_ending_merchant_nb	торговец	
+gallery_bg_ending_novelist_f	писательница	
+gallery_bg_ending_novelist_m	писатель	
+gallery_bg_ending_novelist_nb	писатель	
+gallery_bg_ending_parent_f	родительница	
+gallery_bg_ending_parent_m	родитель	
+gallery_bg_ending_parent_nb	родитель	
+gallery_bg_ending_professor_f	профессорка	
+gallery_bg_ending_professor_m	профессор	
+gallery_bg_ending_professor_nb	профессор	
+gallery_bg_ending_rancher_f	фермерша	
+gallery_bg_ending_rancher_m	фермер	
+gallery_bg_ending_rancher_nb	фермер	
+gallery_bg_ending_rebel_f	бунтарка	
+gallery_bg_ending_rebel_m	бунтарь	
+gallery_bg_ending_rebel_nb	бунтарь	
+gallery_bg_ending_roboticist_f	робототехница	
+gallery_bg_ending_roboticist_m	робототехник	
+gallery_bg_ending_roboticist_nb	робототехник	
+gallery_bg_ending_special_bomb	побег	
+gallery_bg_ending_special_colonydestroyed	колония уничтожена	
+gallery_bg_ending_special_destroygardeners	отключение массива	
+gallery_bg_ending_special_earth	жизнь на земле	
+gallery_bg_ending_special_joingardeners	становление садовником	
+gallery_bg_ending_special_shipdestroyed	страто уничтожен	
+gallery_bg_ending_special_timelord	трансцендентность	
+gallery_bg_ending_special_virus	средство тангент	
+		
+		
+		
+gearPane_empty	Закрыто\n(Нужен перк)	
+fillbar_perk	{1} Перк: {2}	Shop Clothes Perk: New cards in the depot
+fillbar_skill_boosted	{1} улучшено статусом: {2}	Mental boosted from status: Enlightened
+fillbar_skill_reduced	{1} снижено статусом: {2}	
+fillbar_skill_iconTitle	{1} навыки	Mental Skills
+		
+intro_title_enhancement	Расширение	
+intro_title_friend	Друг детства	
+intro_title_cards	Воспоминания	
+		
+		
+		
+hotkey_interact	Взаимодействовать	
+hotkey_cancel	Отмена	
+hotkey_submitInput	Отправить текст	
+hotkey_toolbar	Панель инструментов	
+hotkey_system	Система	
+hotkey_friends	Друзья	
+hotkey_cards	Карты	
+hotkey_skills	Навыки	
+hotkey_home	Домой	
+hotkey_moveUp	Вверх	
+hotkey_moveDown	Вниз	
+hotkey_moveLeft	Влево	
+hotkey_moveRight	Вправо	
+hotkey_guiUp	UI Вверх	
+hotkey_guiDown	UI Вниз	
+hotkey_guiLeft	UI Влево	
+hotkey_guiRight	UI Вправо	
+hotkey_tabLeft	UI Вкладка слева	
+hotkey_tabRight	UI Вкладка справа	
+hotkey_scrollUp	Листать вверх	
+hotkey_scrollDown	Листать вниз	
+hotkey_scrollLeft	Листать влево	
+hotkey_scrollRight	Листать вправо	
+hotkey_choice1	Выбор #1	
+hotkey_choice2	Выбор #2	
+hotkey_choice3	Выбор #3	
+hotkey_choice4	Выбор #4	
+hotkey_choice5	Выбор #5	
+hotkey_choice6	Выбор #6	
+hotkey_choice7	Выбор #7	
+hotkey_choice8	Выбор #8	
+hotkey_choice9	Выбор #9	
+settings_resetAllControls	Сбросить управление	
+settings_customPronouns	Другие местоимения	
+settings_resetAll	Сбросить всё	
+settings_pronounsTitle	Используйте эти кнопки, чтобы заменить приведенные ниже записи или настроить их индивидуально	
+settings_pronounsSingular	Autofill with {1} (Singular: {2} is)	
+settings_pronounsPlural	Autofill with {1} (Plural: {2} are)	
+settings_pronounsBase	они|она|он	For autofilling custom pronouns, not sure if/how this will work
+settings_pronounsThey	они	
+settings_pronounsShe	она	
+		
+setting_disableTutorialMessages	Отключить обучение	
+setting_harderCardChallenges	Более сложные испытания	
+setting_skipCardChallenges	Пропуск испытаний	
+setting_skipSeenText	Пропуск виденного текста	
+setting_sortDrawnCards	Сортировать карты	
+setting_runInBackground	Запуск на фоне	
+setting_hardwareMouseCursor	Аппаратный курсор мыши	
+setting_resolution	Разрешение	
+setting_fullscreenMode	Режим 	
+setting_quality	Качество	
+setting_textureQuality	Качество текстур	
+setting_antiAliasing	Анти алиасинг	
+setting_vSyncCount	В-Синхронизация	
+setting_menuTransparency	Прозрачность меню	
+setting_biggerMenus	Большое меню	
+setting_disableScreenShake	Отключить тряску	
+setting_onlyShowEquippedPets	Только экипированные питомцы	
+setting_terrainEffects	Эффекты рельефа	
+setting_waterEffects	Эффекты воды	
+setting_weatherEffects	Эффекты погоды	
+setting_showGamepadGlyphs	Показывать кнопки геймпада	
+setting_volumeMaster	Общее	
+setting_volumeMusic	Музыка	
+setting_volumeAmbient	Эмбиент	
+setting_volumeUI	Интерфейс	
+setting_volumeEffects	Эффекты	
+setting_volumeFootsteps	Шаги	
+setting_volumeVibrationIntensity	Вибрация	
+setting_constantMusic	Постоянная музыка	
+setting_splodeMode	Splode Mode	
+setting_allChoices	All Choices	
+setting_allTextChunks	All Text Chunks	
+setting_disableBattlesChoose	Disable Battles Choose	
+setting_autoloadSave	Autoload Save	
+setting_autoStartBattle	Auto Start Battle	
+setting_autoplayStories	Autoplay Stories	
+setting_logProdToConsole	Log Prod To Console	
+setting_extraBiggerFonts	Extra Bigger Fonts	
+setting_fastMode	Fast Mode	
+setting_disableCameraRectScalingWin	Disable Camera Rect Scaling Win	
+setting_forceCameraRectScalingMac	Force Camera Rect Scaling Mac	
+setting_skipMonthMenu	Skip Month Menu	
+setting_turboTimeScale	Turbo Time Scale	
+setting_disableCheevos	Disable Cheevos	
+setting_hideConsoleLog	Hide Console Log	
+setting_showQualityOnConsoles	Show Quality On Consoles	
+setting_forceSteamDeck	Force Steam Deck	
+setting_tradeShowMode	Trade Show Mode	
+setting_textureQuality_half	Половина	
+setting_textureQuality_quarter	Четверть	
+setting_textureQuality_eighth	Половина четверти	
+setting_textureQuality_full	Полное	
+setting_antiAliasing_disabled	Отключено	
+setting_antiAliasing_sampling	{1}x Мульти семплинг	2x Multi Sampling
+setting_vSyncCount_every	Каждый В-Бланк	
+setting_vSyncCount_second	Каждый второй В-Бланк	
+setting_vSyncCount_none	Отключено	
+settings_resetConfirm	Уверены, что хотите сбросить все настройки управления до заводских?	
+settings_resetDone	Управление сброшено.	
+settings_resetBindings	Вы уверены, что хотите сбросить ВСЕ настройки и привязки?	
+settings_resetSettings	Настройки сброшены.	
+settings_quality_very_low	очень низкое	
+settings_quality_low	низкое	
+settings_quality_medium	среднее	
+settings_quality_high	высокое	
+settings_quality_very_high	очень высокое	
+settings_quality_ultra	ультра	
+settings_fullscreen_exclusivefullscreen	полноэкранный	
+settings_fullscreen_fullscreenwindow	полный в окне	
+settings_fullscreen_windowed	оконный	
+settings_fullscreen_maximizedwindow	максимальный в окне	

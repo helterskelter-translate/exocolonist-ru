@@ -1,0 +1,16 @@
+					(actually -1)						
+ID	Name	Description	Effect	Icon	Duration	Perk	Notes	AbilityID	Value	Suit	Skills
+stressed	Измотан	Ты слишком измождён и нуждаешься в отдыхе	Не можешь ничего, кроме как отдыхать.	stress_up		status_stressed	From high stress				
+calm	Ясный ум	У тебя нет ни стресса, ни забот.	10% шанс получить +1 бонусом, когда улучшается навык.	stress_down		status_calm	From low stress	skillIncrease	10		social+10, mental+10, physical+10
+enlightened	Просвещенный	Ты получил просветление, освоив новый навык.	+1 к приросту всех Ментальных навыков на 3 месяца.	mental_up	3	status_enlightened	when maxing a skill	plusSkill	1	mental	mental+100
+love	Влюблённый	Ты начал встречаться с кем-то и хочешь поделиться этим со всеми!	+1 к приросту всех Социальных навыков на 3 месяца.	love_up	3	status_love	Start dating someone	plusSkill	1	social	social+100
+mourning	В трауре	Ты скорбишь о потере близкого человека.	-1 к приросту всех навыков на 3 месяца, и некоторая работа становится недоступной.	love_down	3	status_mourning	Loved one dies	plusSkill	-1		social-10, mental-10, physical-10
+mourningSym	В трауре	Ты скорбишь о потере близкого человека.	-1 к приросту всех навыков на 3 месяца, и некоторая работа становится недоступной.	love_down	3	status_mourning	Sym dies (which nobody else should know about). Uses the same perk but different status IDs. Looks the same to the player.	plusSkill	-1		social-10, mental-10, physical-10
+starving	Голодающий	Голод усложняет физические задачи.	Прирост Физических навыков снижен на 1.	food_down		status_starving	Colony starvation. only ends where there's food	skillIncrease	-50	physical	physical-50
+injured	Раненный	Ты ранен и нуждаешься в отдыхе.	Прирост Физических навыков снижен на 1, излечивается отдыхом.	physical_down	6	status_injured	Badly hurt in battle. ends early after resting	skillIncrease	-50	physical	physical-50
+hormones	Гормоны	Подростковые гормоны делают тебя смелым и мятежным.	Прирост мятежности увеличен в три раза.	rebellion_up	9	status_hormones		multiplyRebellion	200		rebellion+200
+insomnia	Бессоница	Недостаток сна усложняет мыслительные задачи.	Прирост всех Ментальных навыков снижен на 1 на 3 месяца.	mental_down	3	status_insomnia		skillIncrease	-50	mental	mental-50
+grounded	Наказан	Ты под домашним арестом! За тобой будут внимательно следить.	Нельзя исследовать. Лояльность увеличивается в два раза.	rebellion_down	3	status_grounded		multiplyRebellion	-100		rebellion-100
+popular	Популярный	Ты победитель, и все хотят с тобой дружить.	Двойная похвала на 3 месяца.	social_up	4	status_popular	From winning vertumnalia events. Duration set to 4 months but says 3 months because the month always ends right after vertumnalia.	multiplyKudos	100		kudos+100
+heroic	Герой	Ты всё ещё полон энергии после последней атаки.	+1 к приросту всех Физических навыков на 3 месяца.	physical_up	4	status_heroic	From participating in attacks. duration 4 for the same reason as popular / vertumnalia, since this is only awarded right before the month changes.	plusSkill	1	physical	physical+100
+feud	Вражда	Ты так злишься на кого-то, что можешь говорить только об этом.	Прирост всех Социальных навыков снижен на 1 на 3 месяца.	social_down	3	status_feud		skillIncrease	-50	social	social-50

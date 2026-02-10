@@ -1,0 +1,41 @@
+	Every season + colony combo has 3 songs (glow has 1)							
+	Track order matters for year 1						137:55	
+ID	Season Playlist	Colony	Mourning OK	SongName	Artist	Filename	Length (game version)	Notes
+silent				Silence (Ambient Interlude)		silent	0:10	
+main_menu				Exocolonist Title Theme	Gordon McGladdery (A Shell in the Pit)	ASITP - Opening Theme	1:34	
+intro				Exocolonist Theme Redux	Gordon McGladdery (A Shell in the Pit)	ASITP - Intro Combined	4:52	
+intro_happy				Exocolonist Theme Happy	Gordon McGladdery (A Shell in the Pit)	ASITP - Intro Happy	2:06	
+vertumnalia				Vertumnalia	Gordon McGladdery (A Shell in the Pit)	ASITP - Vertumnalia	1:20	
+								
+ending_theme_full				The Child You Were (Full)	Frances Aravel	Frances Aravel - The Child You Were (Full)	5:28	
+ending_theme_short				The Child You Were (Short)	Frances Aravel	Frances Aravel - The Child You Were (Short)	3:31	
+								
+quiet	quiet	strato		Quiet	Daniel Rosenfeld (C418)	c418 - Quiet	5:50	
+childhood_memory	quiet	strato		Childhood's Memory	Kiyoshi Iio (Handpan Journey)	Handpan Journey - Childhoods Memory	4:00	
+becoming	quiet	helio	TRUE	Becoming	sintecta	sintecta - Becoming	3:13	
+woven	quiet	all	TRUE	Woven	Jake Gauntlett	Jake Gauntlett - Woven	2:52	
+laser_teeth	quiet	helio		Laser Teeth	Colin Northway	Colin Northway - Laser Teeth	4:31	
+								
+pollen	pollen	all		Pollen	Shannon Mason (Pongball)	Pongball - Pollen	3:15	
+stars_at_sunrise	pollen	strato		Stars at Sunrise	Gabriel Koenig (Ghost Time Games)	Gabriel Koenig - Stars at Sunrise	3:07	
+adulthood_serenity	pollen	helio	TRUE	Adulthood's Serenity	Kiyoshi Iio (Handpan Journey)	Handpan Journey - Adulthoods Serenity	3:42	
+inland_gray	pollen	all	TRUE	Inland, gray	Tim Rich (Crooked Walking)	Crooked Walking - Inland, gray	3:52	
+								
+dust	dust	all		Dust	Andrew Rohrmann (scntfc)	scntfc - Dust	3:45	
+glass	dust	all	TRUE	Glass	Jake Gauntlett	Jake Gauntlett - Glass	2:05	
+uendelig_1	dust	strato		Uendelig I	Al Diaz, Rupert Lally & Espen J Jörgensen	Al Rupert Espen - Uendelig I	2:20	
+uendelig_2	dust	helio	TRUE	Uendelig II	Al Diaz, Rupert Lally & Espen J Jörgensen	Al Rupert Espen - Uendelig II	2:20	same song as above with drums
+								
+teens_bravery	wet	all		Teens's Bravery	Kiyoshi Iio (Handpan Journey)	Handpan Journey - Teens Bravery	3:17	
+motion_2	wet	all		Motion II	Tim Rich (Crooked Walking)	Crooked Walking - Motion II	6:08	
+pines	wet	all	TRUE	Pines	Boris Potschubay (Jogging House)	Jogging House - Pines	8:05	both colony-wet and explore-glow
+								
+forest_pictures	glow	strato	TRUE	Forest Pictures in the Adirondacks	Tim Rich (Crooked Walking)	Crooked Walking - Forest Pictures in the Adirondacks	4:52	
+haus	glow	helio	TRUE	Haus	Tim Rich (Crooked Walking)	Crooked Walking - Haus	6:33	
+								
+nearby			TRUE	Bloom	Boris Potschubay (Jogging House)	Jogging House - Bloom	10:17	
+plains			TRUE	Reeds	Boris Potschubay (Jogging House)	Jogging House - Reeds	6:57	
+valley			TRUE	Gardens	Boris Potschubay (Jogging House)	Jogging House - Gardens	7:07	
+ridge			TRUE	Wounds	Boris Potschubay (Jogging House)	Jogging House - Wounds	6:10	
+swamp			TRUE	Instincts	Boris Potschubay (Jogging House)	Jogging House - Instincts	6:31	
+glow			TRUE	Pines	Boris Potschubay (Jogging House)	Jogging House - Pines	8:05	second copy of file above

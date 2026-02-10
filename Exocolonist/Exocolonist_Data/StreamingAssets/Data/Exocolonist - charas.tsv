@@ -1,0 +1,151 @@
+ID	Name	Nick	G	Love	Age10	Birthday	DialogColor	Default BG	Basics	More	Enhancement	Fillbar1	Fillbar2	Fillbar3		Locations	Skill	CardSuit
+						quiet-2			Solanaceae / Solana / Sol	(player character)	genetic perk chosen by player							
+anemone	Энимона	Энимона	F	TRUE	9	dust-1	FFC6B2	garrison	Энергичная девочка, которая любит спорт.	Упрямо предана своим друзьям и колонии.	Бронечешуйчатая кожа	Мятежная, Лояльная, 9	Спокойная, Энергичная, 7	Дурашливая, Серьёзная, 1, 5, 9		Garrison	toughness	Physical
+cal	Рекелситренс	Кел	M	TRUE	11	dust-3	bef7c7	garden	Физически сильный парень, не боящийся открыто выражать свои эмоции.	Пацифист, любящий животных.	Не чувствует холод и жару	Мятежный, Лояльный, 6	Хрупкий, Стойкий, 8	Мирный, Гневный, 0, 1, 3		Geoponics	biology	Physical
+tang	Тангент	Тангент	F	TRUE	9	wet-3	EED6FF	colony_quiet	Усердная и зрелая девочка, часто слишком занятая, чтобы играть с другими.	Стремится к процветанию колонии благодаря научным достижениям.	Сокращенный сон	Мятежная, Лояльная, 5	Забавная, Стоическая, 8	Умная, Глупая, 1		Engineering	reasoning	Mental
+dys	Дистимия	Дис	M	TRUE	9	wet-3	FFDFB7	expeditions	Замкнутый мальчик, одиночка, неловкий в обществе.	Часто тайком убегает неизвестно куда.	Нет чувства страха	Мятежный, Лояльный, 4, 2, 0	Авантюрный, Домашний, 3, 2, 1	Контролируемый, Дикий, 5, 7, 9		Expeditions	bravery	Mental
+marz	Марципан	Марц	F	TRUE	10	wet-1	C7F0FF	colony	Яростная и страстная девочка с большими мечтами об успехе.	Она обожает быть главной, поэтому лучше ей не мешать.	Нет чувства стыда	Мятежная, Лояльная, 3, 4, 5	Тихая, Прямолинейная, 9	Социалистичная, Капиталистичная, -1		Command	persuasion	Social
+tammy	Аспартам	Темми	F	TRUE	11	pollen-3	FFF9B2	colony	Милая, приземлённая девочка, предпочитающая оставаться дома и заботиться о других.	Честная и непринужденная.	Улучшенный слух	Мятежная, Лояльная, 8	Авантюрный, Домашний, 10	Робкая, Уверенная, -1		Quarters	empathy	Social
+rex	Базорексия	Рекс	M	TRUE	10	pollen-1	9cffe9	colony	Очаровательный парень из Гелиопаузы.	Он больше заинтересован во флирте, чем в работе, но с ним приятно проводить время.	Собачьи уши	Мятежный, Лояльный, 6	Спокойный, Энергичный, 5	Пёс, Мальчик, 7		Command, Quarters	engineering	Social
+nomi	Номинация	Номи-Номи	X	TRUE	8	dust-2	F9D6FF	colony	Необычный небинарный ребёнок из Гелиопаузы.	Кажется, у них никогда ничего не получается, но их энтузиазм помогает доводить дело до конца.	Они не знают	Мятежные, Лояльные, 4	Тихие, Прямолинейные, 5	Обычные, Креативные, 9		visisonor studyEngineering tutoring robotRepair survey forage	creativity	Wildcard
+vace	Оливейшус	Вейс	M	TRUE	13	wet-2	FFBBC8	garrison	Серьёзный, сильный парень постарше из Гелиопаузы.	Никогда не колеблется, защищая других и геройствуя.	Хорошо одарённый	Мятежный, Лояльный, 8	Хрупкий, Стойкий, 9	Терпимый, Подавляющий, -1		Garrison, Expeditions	combat	Physical
+sym	Симбиоз	Сим	M	TRUE			FFFFDB	exploreClose	Загадочный мужчина, который появляется, когда он больше всего нужен.	Он называет себя «Садовником» и восхищается людьми.	ИИ-конструкт	Мятежная, Лояльная, 5	Забавная, Стоическая, 3	Человечная, Чужая, 10, 9, 8		Expeditions	perception	Mental
+																		
+Mom	Флюоресценция	Флулу	F		43	pollen-3		garden	Твоя мама, Главный Культиватор. Сильная женщина, способная справиться с любыми трудностями, которая ожидает того же от других.							Geoponics	organization	
+Dad	Гераний	Гераний	M		41	dust-1		geoponics	Твой папа, работающий в геопонике. Добрый человек, всегда терпеливый с детьми и животными.							Geoponics	animals	
+Eudicot	Эвдикот	Эвдикот	F		81	dust-3		command	Губернаторка вашей колонии и одна из старейших её жителей. Все очень уважают её за знания и лидерские качества.							Command		
+Lum	Бакулюм	Люм	M		25	wet-3		bridge	Губернатор после приземления «Гелиопаузы». Молодой, дерзкий и агрессивный, прошедший военную подготовку, но поднявшийся по службе после гибели экипажа мостика «Гелиопаузы».							Garrison, Command		
+Anne	Антисидент	Тетушка Сидент	F		36	pollen-3		quarters	Главная Стюардесса и всеобщая тётя. Она заведует яслями, помогала воспитывать всех детей колонии, а также свою дочь Энимону.							Quarters		
+Instance	Инстанс	Инстанс	F		50	pollen-1		medbay	Главная Инженерка и корабельная врачиня, всегда очень занятая. Ты знаешь, что лучше ей не мешать, особенно когда она работает над своими исследованиями.							Engineering		
+Hal	Халитозис	Хал	M		40	dust-2		classroom	Твой учитель, весёлый человек, который любит мастерить и находит радость в изучении повседневных вещей.							Engineering		
+Tonin	Мелатонин	Тонин	M		40	wet-2		expeditions	Главный Геодезист и корабельный лоцман, милый человек, который, казалось, больше подходил для космоса, чем для земли. Отец Тэмми.							Expeditions		
+Utopia	Утопия	Утопия	F		22	pollen-2		expeditions	Молодая геодезистка, которая любит летать по планете на своём планере.	Новая Главная Геодезистка после дяди Тонина.						Expeditions		
+Rhett	Риторикал	Ретт	M		50	wet-2		garrison	Начальник Службы Безопасности, грубый мужчина, которого боятся новобранцы. Он очень серьезно относится к безопасности колонии.							Garrison		
+Congruence	Конгруэнс	Конгруэнс	F					workshop	Искусственный интеллект корабля, невероятно мощная компьютерная система, которая управляет всем, от систем жизнеобеспечения до голонетных архивов. У нее тоже есть чувство юмора.							Engineering		
+Seeq	Обсиквиус	Сик	X		40	quiet-2		command	Главный Администратор, аккуратный и организованный человек, который обеспечивает бесперебойную работу колонии. Они не очень любят детей.							Command		
+Kom	Комбуча	Ком	M		15	dust-2		sportsball	Старший брат Энимоны, молодой офицер службы безопасности, который тренирует спортивную команду. Все дети любят его и восхищаются им.							Garrison		
+Nougat	Нуга	Нуга	F		3	dust-3		creche	Младшая девочка, полная едва сдерживаемой энергии. Она любит игры, особенно спортбол.							Garrison		
+																		
+Tirah	Тирамису	Тетушка Тира	F		34	quiet-3		colony	Мама Кела, инженерка по системам жизнеобеспечения.							Engineering		
+Al	Алюминий	Ал	M		32	dust-3		construction	Один из отцов Марц, работает на строительной площадке.							Command		
+Bernie	Бёрниш	Бёрни	M		36	wet-1		construction	Один из отцов Марц, работает на строительной площадке.							Command		
+																		
+																		
+	Mentioned but not pictured																	
+	Арабеск	Беск	F		32	quiet-1			tang and dys's mom who died in space							Quarters		
+	Ноктилусент	Ноктилусент	X						enemy Gardener							Expeditions		
+	Смотритель	Смотритель	X						boss Gardener									
+	Cumulus, Cirrus, Stratus and Nimbus	Clouds	X		7				anemone's bros							Garrison		
+	Эхинацея	Эхинацея	F		-5				tammy's baby							Quarters		
+	Имборглио	Имборглио	M						surveyor who dies							Expeditions		
+	Ярроу	Ярроу	X		45				commander							Garrison		
+	Пелагик	Пелк	F		23				lieutenant							Garrison		
+	Мараскино	Мара							child							Quarters		
+	Соррел	Соррел							surveyor, died year 18							Expeditions		
+	Квинайн	Квинни							surveyor, died year 18							Expeditions		
+	Кватернион	Кватернион							Random Second in command									
+	Дефинестрейт	Дефф							Random Second in command									
+	Нетцуке	Нетцуке							Random Second in command									
+	Юкка	Юкка							Random Second in command									
+	Маржорам	Жорам							Random Second in command									
+	Пеппермайнт	Пеп							Random Second in command									
+																		
+																		
+																		
+																		
+																		
+																		
+		Teriyaki																
+		Latency																
+		Simplicity																
+		Yogurt																
+		Semaphore																
+		Chesterfield																
+		Tuppence																
+		Judicious																
+		Sashay																
+		Salubrious																
+		Edamame																
+		Nutmeg																
+		Zeitgeist																
+		Vestibule																
+		Vendetta																
+		Ambivalence																
+		Oriel																
+		Quadrilateral																
+		Turquoise																
+		Austerity																
+		Affiliate																
+		Amaretto																
+		Angelonia																
+		Antagony																
+		Asbestos																
+		Boisterous																
+		Bumptious																
+		Calescent																
+		Ceviche																
+		Constellation																
+		Contrivance																
+		Coriander																
+		Cyanide																
+		Dianthus																
+		Ikebana																
+		Integral																
+		Judicious																
+		Lavendula																
+		Lenticular																
+		Liliaceae																
+		Liqueur																
+		Liquorish																
+		Mango																
+		Maraschino																
+		Marjoram																
+		Naive																
+		Nylon																
+		Orangina																
+		Ostensible																
+		Palimpsest																
+		Palpable																
+		Palpitation																
+		Paraphernalia																
+		Peppermint																
+		Persimmon																
+		Petition																
+		Pleurisy																
+		Pugilism																
+		Quaternion																
+		Query																
+		Quiescence																
+		Recursion																
+		Repository																
+		Rhetorical																
+		Rumination																
+		Sagacious																
+		Salvia																
+		Sanctimonious																
+		Saturate																
+		Scrupulous																
+		Sequester																
+		Solanine																
+		Soliloquy																
+		Solipsism																
+		Somnambulism																
+		Terracotta																
+		Tesla																
+		Tiramisu																
+		Turquoise																
+		Unilateral																
+		Valediction																
+		Validation																
+		Veneer																
+		Ventricle																
+		Verbena																
+		Verdigris																
+		Wasabi																
+		Wicket																
+		Xanthia																
+		Xiaolongbao																
+		Xylitol																
+		Yukata																
+		Zaibatsu																
+		Zinnia																

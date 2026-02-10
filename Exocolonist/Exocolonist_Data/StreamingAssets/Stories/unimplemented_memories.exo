@@ -1,0 +1,2143 @@
+
+/******************************************************************************* }*/
+/** Testing ***********************************************************/
+/******************************************************************************* {*/
+	
+			
+=== test ==============================================
+	~if location = none
+	~if age > 10
+	
+	// note the first story to be parsed is at the top of chara_anemone.txt
+
+	~set bg = quarters
+	~set charas = none
+	// ~set left = dys1
+	
+	Hello [Name]! You can't see me but you can see my pretty background, eh?
+	
+	"I think [Name] is a wonderful [person|girl|boy]. [They're|She's|He's] one of my favorites! Is that [their|her|his] book over there?"
+	
+	Your secret admirer is: [=call_getSecretAdmirer].
+	
+	>! tests
+	
+	*= tests
+	
+		** Loc tests
+		
+			Italian Translation à è é ì ò ù and À È É Ì Ò Ù.
+		
+			-
+			
+			
+			気になる新作インディーゲームの開発者にインタビューする本企画。今回は、Northway Games開発、PC/Mac/Linux向けに8月26"日にリリースされたカードバトル式シミュレーションRPG『I Was a Teenage Exocolonist』"開発者へのミニインタビューをお届けします。
+
+			本作は、太陽系外の惑星でテ"ィーンエイジャーとして生活す"るシミュレーションRPG。水彩画のような美しいグラフィックで描かれた「ヴァーチュムナ」が舞台で、冒険や恋愛をしながら成長し、プレイヤーの選択がコロニーの命運を左右します。記事執筆時点では日本語未対応。
+			
+			-
+			英倫銀行行長貝利發表聲明，貨幣政策委員會將在下次會議（11月）上對英國政府財政計畫和英鎊貶值的影響進行全面評估，並採取相應行動，貨幣政策委員會將毫不猶豫地需要多少就調整多少利率，以使通脹在中期內可持續地回到2%的目標。
+
+			英倫銀行剛於上周四才公布收緊的貨幣政策，加息0.5厘，以及啟動減債計劃，將持有8380億鎊債券削減800億鎊；不過，英國新任政府卻於翌日公布近50年最激進的減稅方案，並計劃增加發債，以寬鬆的財政政策刺激經濟增長，令英倫銀行處於尷尬位置，僅兩日財政及貨幣政策便處於對立局面，令英鎊出現歷史級下跌。
+			
+			-
+			
+			스텝 밟았다 하면 자이언트인 미국 따라잡기 힘드네요. 21일 미국 연방준비제도(Fed)가 기준금리를 또다시 0.75%p 올리며 3.003.25%로 점프, 우리 기준금리(2.5%)를 앞질렀습니다. 먹을 게 더 없어진 국내 증시에선 다들 뱉기에 바빴고 23일 코스피는 연저점 2292.01로 털썩. 증권사들도 리밸런싱할 때 국내 주식 비중을 줄여가는 분위기라고 합니다. 이럴 때 자산관리(Wealth Management)는 어떻게 해야 하는 걸까요.
+
+			전문가 인터뷰와 요즘 꼭 알아야 할 투자 키워드를 정리해 드리는 앤츠랩의 새로운 코너 앤츠.ssul에서는 편득현 NH투자증권 WM마스터즈 전문위원을 만나 얘기를 들어봤습니다. 부(富)와는 거리가 먼 개미들도 ‘부자 마인드’를 가져야 한다고 합니다.
+
+			*** Back
+				> start
+	
+		** Battestravaganza
+			=batganz
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+			
+			*** Battle
+				~call battle(combat, batganz, batganz)
+				
+			*** Back
+				> start
+		
+		
+		** Test Endings
+			=endings
+		
+			Well you've come to the end of the road...
+				
+			*** Default ending with no text
+				// do this not the other thing
+				~call endGame(default)
+			
+			*** Bomb ending with text first
+				// this doesn't work don't do it
+				It suuuuuuucks!
+			
+				~call endGame(bomb)
+		
+			*** Ship Destroyed ending
+				~call endGame(shipDestroyed)
+		
+			*** Earth ending
+				~call endGame(earth)
+		
+			*** Time Lord ending
+				~call endGame(timeLord)
+		
+			*** Hero ending
+				~call endGame(hero)
+				
+			*** explorer ending
+				~call endGame(explorer)
+		
+			*** joinGardeners
+				~call endGame(joinGardeners)
+		
+			*** destroyGardeners
+				~call endGame(destroyGardeners)
+		
+			*** Show me merchant bg
+				~set bg = ending_merchant_f
+				~set effect = inkbleed_white
+				
+				Not prepped so the fade in won't work properly, it probably has the wrong mask.
+			
+				> endings
+			
+			*** Show me all the Dys
+				~set bg = nearby_close
+				// effect must be set FIRST before charas but after bg
+				~set effect = ending
+				~set left = dys3
+				~set midright = dys2
+				~set right = dys1
+				
+				Hello joe
+				
+				**** What do you know?
+				
+					How do your flowers grow?
+					
+					***** Go away Dys!
+						~set charas = none
+					
+						Go away Dys!
+						
+						Let's go home.
+				
+						> endings
+			
+					***** Keep the Dysses
+						> endings
+			
+			*** Effect AFTER setting charas?
+				~set bg = walls
+				~set left = dys1
+				~set midright = dys2
+				~set right = dys3
+				// WRONG multi-same-chara breaks if effect is set after charas
+				~set effect = ending
+				
+				> endings
+				
+			*** Just show me the white particles
+				~set bg = starfield_white
+			
+				> endings
+			
+			*** Back
+				> start
+			
+			
+		
+		** Test effects
+			= effects
+			
+			Okay here we go:
+						
+			*** None
+				~set effect = none
+				> effects
+				
+			*** Screenshake
+				~set effect = screenshake
+				
+				**** Screenshake again!
+					~set effect = screenshake
+							
+					***** Screenshake one last time!
+						~set effect = screenshake
+						> effects
+							
+			*** ScreenshakeFire
+				~set effect = fire
+				
+				start with fire...
+				
+				**** ScreenshakeFire!
+					~set effect = screenshakeFire
+							
+					***** ScreenshakeFire again!!
+						~set effect = screenshakeFire
+						> effects
+							
+			*** Dream
+				~set effect = dream
+				> effects
+							
+			*** Wormhole
+				~set effect = wormhole
+				> effects
+								
+			*** Rumble
+				~set effect = rumble
+				> effects
+						
+			*** Fade Sexy
+				~set effect = fadesexy
+				
+				**** Fade back up to another scene
+					~set bg = barn
+					~set left = rex
+					~set effect = none
+					> effects
+						
+			*** Holopalm
+				~set effect = holopalm
+				> effects
+				
+			*** Silence
+				~call playMusic(intro)
+				
+				First let's play the opening theme...
+				
+				**** Silence!!
+					~set effect = silence
+					> effects
+				
+			*** Dim
+				~set bg = creche
+				~set effect = none
+				
+				First, we're in the creche
+				
+				**** Turn out the lights!
+					~set effect = dim
+					
+					Who turned off the lights?? Was that you Sarah?
+					
+					***** Go somewhere bright
+						~set bg = quarters
+						
+						So bright!
+						
+						****** Go somewhere dim
+							~set bg = otherQuarters
+							~set effect = dim
+							
+							Where's that light switch...
+							
+							******* Lights back on now
+								~set effect = none
+								> effects
+				
+			*** Pollen
+				~set effect = pollen
+				> effects
+				
+			*** Fadetoblack after bg
+				~set bg = construction
+				~set effect = fadeToBlack
+				
+				AFTER the bg looks like this. And now what should you do??? Before and after are the same, yay!
+				
+				> effects
+				
+			*** Fadetoblack before bg
+				~set effect = fadeToBlack
+				~set bg = command
+				
+				BEFORE the bg looks like this. And now what should you do??? Before and after are the same, yay!
+				
+				> effects
+				
+			*** Fadetoblack
+				~set effect = fadeToBlack
+				
+				**** Fade back up to another scene
+					~set bg = garrison
+					~set effect = none
+					> effects
+				
+			*** Night
+				~set effect = night
+				> effects
+				
+			*** Fire
+				~set effect = fire
+				> effects
+				
+			*** Siren
+				~set effect = siren
+				
+				(this one is sound only)
+				
+				> effects
+				
+			*** Festival
+				~set effect = festival
+				
+				(this one is sound only)
+				
+				> effects
+				
+			*** Heat Haze
+				~set effect = heathaze
+				> effects
+				
+			*** Emergency
+				~set effect = emergency
+				> effects
+				
+			*** solold
+				~set effect = solold
+				> effects
+				
+			*** screenshakeflashdim
+				~set effect = screenshakeflashdim
+				> effects
+				
+			*** screenshakewormhole
+				~set effect = screenshakewormhole
+				> effects
+				
+			*** solold
+				~set effect = solold
+				> effects
+				
+			*** slowtransition
+				~set effect = slowtransition
+				
+				This changes the backgrounds more slowly than usual.
+				
+				> effects
+				
+			*** Rumble
+				~set effect = rumble
+				
+				(this one is haptics only)
+				
+				> effects
+				
+			*** Pick Groundhog Option
+				~if hog_lifeStarted
+				
+				This option required a past life memory to select.
+				
+				**** Back
+					> effects
+				
+			*** Pick Flirt Option
+				~set mem_flirt_rex
+				
+				This option let a character know you're interested.
+				
+				**** Back
+					> effects
+				
+			*** (Season bg with 0 people)
+				~set bg = explore
+				> effects
+		
+			*** (Quarters bg with 2 people)
+				~set bg = quarters
+				~call testrandom2Charas(false)
+				> effects
+				
+			*** (Bedroom bg with 4 people)
+				~set bg = bedroom
+				~call testrandomCharas()
+				> effects
+				
+			*** End Game with ink transition - black
+				~call endgame(bomb)
+				
+			*** End Game with ink transition - white
+				~call endgame(default)
+		
+			*** Back
+				> start
+
+
+
+		** Test charas
+			=testcharas
+			// preserve charas
+		
+			*** Leaners
+				~set left = dys3_sad
+				~set midleft = vace2_angry
+				~set midright = rex2_happy
+				~set right = congruence
+				
+				
+				**** Change speaker
+					~set speaker = congruence
+					
+					***** Again!
+						~set speaker = dys
+						
+						****** Again!!
+							~set speaker = vace
+							
+							> testcharas
+				
+				**** Back
+					> testcharas
+		
+			*** Two Leaners - rex and nomi young
+				~set charas = none
+				~set left = nomi2_happy
+				~set right = rex2_happy
+				
+				> testcharas
+		
+			*** Two Leaners - rex and nomi older
+				~set charas = none
+				~set left = rex3_happy
+				~set right = nomi3_happy
+				
+				How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! How ruuuuuuude! 
+				
+				> testcharas
+		
+			*** Four Leaners 
+				~set charas = none
+				~set left = rex3_happy
+				~set midleft = vace
+				~set midright = congruence
+				~set right = nomi3_happy
+				
+				> testcharas
+				
+			*** One xeno
+				~set bg = swamp
+				~call testrandomChara(true)
+				
+				> back
+
+			*** Two xenos
+				~set bg = ridge
+				~call testrandom2Charas(true)
+				
+				> back
+
+			*** Manticore
+				~set bg = valley
+				~set charas = none
+				~set midright = manticore
+				
+				> back
+
+			*** Fab xeens
+				~set bg = plains
+				~set charas = none
+				~set left = hopeye
+				~set midleft = floatcow
+				~set midright = manticore
+				~set right = vriki
+				
+				> back
+
+			
+			*** One rando
+				~call testrandomChara(false)
+				
+				> back
+
+			*** Two randos
+				~call testrandom2Charas(false)
+				
+				> back
+
+			*** Four randos
+				~call testrandomCharas()
+				
+				> back
+
+			*** Four artstage 1 randos
+				~call testrandomCharas(1)
+				
+				> back
+
+			*** Four artstage 2 randos
+				~call testrandomCharas(2)
+				
+				> back
+
+			*** Four artstage 3 randos
+				~call testrandomCharas(3)
+				
+				> back
+
+			*** Four ADULT randos
+				~call testrandomCharas(4)
+				
+				> back
+				
+			*** Vace and Rex
+				~set charas = none
+				~set left = rex3_happy
+				~set right = vace3_furious
+				~set speaker = vace
+				
+				That was the last straw.
+				
+				"Git outta me bloody face, ye sodding nullshite!" Vace yelled, as Rex blew him another kiss.
+				
+				> back
+
+			*** Less
+				~call testrandomCharasLess()
+				
+				> back
+
+			*** More
+				~call testrandomCharasMore()
+				
+				> back
+
+			*** Set
+				~set left = cal3_happy
+				~set midleft = dys2_angry
+				~set midright = mom
+				~set right = marz3_happy
+				
+				> back
+
+			*** Back
+				> start
+		
+		
+		
+		** Test Backgrounds
+			=bgs
+			
+			Which one you want?
+			
+			*** pinup_tammy_saved
+				~set bg = pinup_tammy_saved
+				
+				WOW you saved Tamtam!
+				
+				Tammadammadingdong lives!
+				
+				> bgs
+				
+			
+			*** attack14
+				~set bg = pinup_kom_attack14
+				
+				**** High tail it to safety
+				
+					[if mem_starve]
+						You pass [=mem_anemoneNick]'s brother Kom rushing toward the fight. He's much thinner than he used to be, but looks absolutely determined.
+					[else]
+						You pass [=mem_anemoneNick]'s brother Kom rushing toward the fight.
+					[end]
+					
+					"[Name]! Great work!" he says, stopping to clap you on the back. "Get to safety with the others! Go on, get! Now!"
+					
+					-
+					
+					> bgs
+			
+			*** command
+				~set bg = command
+				> bgs
+
+			*** engineering
+				~set bg = engineering
+				> bgs
+
+			*** colony
+				~set bg = colony
+				> bgs
+
+			*** colony_wet
+				~set bg = colony_wet
+				> bgs
+		
+			*** walls
+				~set bg = walls
+				> bgs
+		
+			*** geoponics
+				~set bg = geoponics
+				> bgs
+		
+			*** garden
+				~set bg = garden
+				> bgs
+		
+			*** greenhouse
+				~set bg = greenhouse
+				> bgs
+		
+			*** Back
+				> start
+				
+				
+				
+		** Test Statuses
+		
+			*** mourning
+				~set status = mourning
+				>! back
+		
+			*** mourningSym
+				~set status = mourningSym
+				>! back
+		
+			*** injured
+				~set status = injured
+				>! back
+		
+			*** love
+				~set status = love
+				>! back
+		
+			*** enlightened
+				~set status = enlightened
+				>! back
+		
+			*** starving
+				~set status = starving
+				>! back
+		
+			*** remove_starving
+				~set status = remove_starving
+				>! back
+		
+			*** remove_mourning
+				~set status = remove_mourning
+				>! back
+		
+			*** hormones
+				~set status = hormones
+				>! back
+		
+			*** insomnia
+				~set status = insomnia
+				>! back
+		
+			*** grounded
+				~set status = grounded
+				>! back
+		
+			*** popular
+				~set status = popular
+				>! back
+		
+			*** heroic
+				~set status = heroic
+				>! back
+		
+			*** feud
+				~set status = feud
+				>! back
+		
+			*** gimmie two combat!
+				~set skill_combat + 2
+				
+				Okay bub here are your TWOOOOO combat.
+				
+				> back
+		
+			*** 100 stress
+				~set skill_stress + 1000
+				>! back
+		
+			*** 0 stress
+				~set skill_stress - 1000
+				>! back
+		
+			*** (Clear all)
+				~set status = remove_mourning
+				~set status = remove_injured
+				~set status = remove_love
+				~set status = remove_enlightened
+				~set status = remove_starving
+				~set status = remove_hormones
+				~set status = remove_insomnia
+				~set status = remove_grounded
+				~set status = remove_popular
+				~set status = remove_heroic
+				~set status = remove_feud
+				~set skill_stress - 1000
+				~set skill_stress + 50
+				>! back
+		
+			*** (Increment time by a month)
+				~call incrementMonth()
+				>! back
+		
+			*** Back
+				> start
+		
+				
+				
+		** Test Skill Gains
+			=gains
+			
+			*** Gimme 1 Toughness
+				~set skill_toughness++
+				> gains
+			
+			*** Gimme 1 Animals
+				~set skill_animals++
+				> gains
+				
+			*** Gimme 5 Animals
+				~set skill_animals + 5
+				> gains
+				
+			*** Gimme 10 Creativity
+				~set skill_creativity + 10
+				> gains
+				
+			*** Gimmie 1 Reasoning
+				~set skill_reasoning++
+				> gains
+				
+			*** Gimme 2 Reasoning
+				~set skill_reasoning + 2
+				> gains
+				
+			*** Gimmie 1 Engineering
+				~set skill_engineering++
+				> gains
+				
+			*** Gimmie 1 Biology
+				~set skill_biology++
+				> gains
+				
+			*** Gimmie 1 Perception
+				~set skill_perception++
+				> gains
+				
+			*** Gimmie 10 Stress
+				~set skill_stress + 10
+				> gains
+				
+			*** Gimmie 1 Rebellion
+				~set skill_rebellion++
+				> gains
+				
+			*** Gimmie 1 Kudos
+				~set skill_kudos++
+				> gains
+				
+			*** Done
+			
+		** MORE TESTS!
+			> moretests
+			
+		** Done
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	//////////////////////////////////////////////////////////////////////// 
+	//////////////////////////////////////////////////////////////////////// 
+	////////////////// More tests go here! ///////////////////////////////
+	////////////////// Old tests go here! ///////////////////////////////
+	////////////////// Finished tests go here! ///////////////////////////////
+	//////////////////////////////////////////////////////////////////////// 
+	//////////////////////////////////////////////////////////////////////// 
+		
+	*= moretests
+		
+		
+		
+		
+	
+		** Test mipmapped vs not
+			=mipmaps
+			
+			Here it is, what now?
+		
+			*** Mipmapped scene with garrison
+				~set bg = garrison
+				~set left = anemone_happy
+				
+				>mipmaps
+			
+			*** Full res scene with sportsball
+				~set bg = sportsball
+				~set left = anemone
+				
+				>mipmaps
+		
+			*** End
+		
+		** Test continue and end
+			This...
+			
+			-
+			
+			Is...
+			
+			-
+			
+			The end.
+		
+		
+		
+		
+		** Test cards
+			= cards
+			~set bg = biome
+			~set left = marz
+			~set right = tang
+			
+			How'd we get out here??? Ew a bug.
+			
+			*** marz1
+				~ifd skill_empathy >= 10
+				~set card = marz1
+				> cards
+				
+			*** marz2
+				~ifd skill_empathy >= 10
+				~set card = marz2
+				> cards
+		
+			*** marz3
+				~set card = marz3
+				> cards
+				
+			*** remove marz
+				~call loseCard(marz1)
+				~call loseCard(marz2)
+				~call loseCard(marz3)
+				> cards
+		
+			*** stranger unique
+				~set card = stranger
+				> cards
+		
+			*** stranger3 unique
+				~ifd skill_toughness >= 100
+				~set card = stranger3
+				> cards
+		
+			*** work muscles multi
+				~ifd hog_loungeBar
+				~set card = workMuscles
+				> cards
+		
+			*** wood
+				~set mem_flirt_rex
+				~set card = wood
+				> cards
+		
+			*** nomi1
+				~set card = nomi1
+				> cards
+		
+			*** backpack
+				~set card = backpack
+				> cards
+				
+			*** done
+				// leave
+			
+		
+		** Test charafacts
+			= facts
+			
+			*** Anemone More
+				~call charafact(anemone, more)
+				
+				She's more her than ever before.
+				
+				> facts
+				
+			*** Anemone Enhancement
+				~call charafact(anemone, enhancement)
+				
+				Scaly lizard lady.
+				
+				> facts
+				
+			*** Anemone Likes
+				~call charafact(anemone, likes_egg)
+				
+				Yumtime eggs yum
+				
+				> facts
+				
+			*** Done.
+		
+		
+		
+		
+		** Test Battles
+			= battles
+		
+			// should show battle button
+			*** Easy Animals no text
+			
+				~call battle(animals_easy, testWin, testLose)
+					
+			*** Hard Reasoning with text before it
+				This is important text you should read before the battle starts!!
+				
+				~call battle(reasoning_hard, testWin, testLose)
+					
+			*** Normal persuasion with pagebreak before it
+				First here's some text, then a pagebreak before the battle:
+				
+				-
+				
+				~call battle(persuasion, testWin, testLose)
+					
+			*** Normal combat with pagebreak and more text
+				First here's some text, then a pagebreak, then...
+				
+				-
+				
+				More text! And THEN the battle
+				
+				~call battle(combat, testWin, testLose)
+					
+			*** Normal Engineering no text
+			
+				~call battle(engineering, testWin, testLose)
+					
+			***= testWin
+				Won!
+				**** Back
+					> battles
+			
+			***= testLose
+				Lost!
+				**** Back
+					> battles
+					
+			*** Back
+				> start
+				
+		
+		
+		
+		
+		
+		** Test stat changes
+			~set left = marz
+			~set love_marz + 2
+			~set skill_kudos - 10
+			~set skill_stress + 1000
+			~set skill_toughness + 2
+			
+			This is the first one! There is text here it's great I love it.
+			
+			*** More stats
+				~set left = tammy
+				~setif love_tang >= 10 ? left = tang
+				~set midleft = marz
+				~set midright = anemone
+				~set right = cal
+				~setif love_dys >= 10 ? right = dys
+				
+				~set skill_organization--
+				~set skill_kudos + 5
+				~set skill_rebellion--
+				~set love_marz--
+				
+				Bleh bleh bleh.
+				
+				> back
+			
+			*** A card!
+				~set left = tammy
+				~set midleft = marz
+				~set midright = anemone
+				~set right = cal
+				
+				~set card = yellowFlower
+				~set skill_rebellion++
+				~set skill_empathy ++
+				~set skill_stress - 10
+				~set love_marz--
+				
+				Bleh
+				-
+				> back
+				
+			*** No stat changes thank you just text.
+			
+				"Sometimes I think about... the xeno I had to kill, the first time they attacked. Like, yeah, obviously I'm glad _I'm_ alive, duh, but... now... it's dead."
+				
+				-
+				
+				His eyes go back to Anemone. She's stopped sparring with the training dummy, but when she notices he's watching her from across the colony, neither of them wave at the other.
+				
+				"It was an accident. I didn't mean to kill it," he continues, quietly. "It just happened. I wish I could tell it I'm sorry."
+				
+				Cal clenches his fist. "There's gotta be a way to figure out how to live in peace with all the cool things that live on this planet," he says. "Like, hey! Look at this weed I saw growing over here..."
+				
+				-
+				
+				"Nope!" Cal says. "Nope, nope, nope! Nobody's life is worth more than anyone else's life. It doesn't matter if they're human, xeno, or anything else out there! We all need to live in peace!"
+				
+				> back
+			
+			*** Back to start
+				~set left = marz
+				~set love_marz --
+				~set skill_kudos + 5
+				~set skill_reasoning++
+				~set skill_empathy + 2
+				~set skill_rebellion++
+			
+				> start
+				
+				
+		** Test expressions	
+		
+			~set bg = bridge
+			~set left = marz_happy
+			~set right = dys_sad
+			
+			~set speaker = marz
+			
+			"Ho ho ho welcome to _my_ bridge which _I_ am totally the boss of."
+
+			-
+			
+			// this does not work must have a page break first
+			~set speaker = dys
+			
+			"Ug Marz this place smells funny."
+			
+			-
+			
+			// this does not work must have a page break first
+			~set speaker = marz
+			
+			"He who smelt it dealt it, Nerd."
+			
+			*** Sad marz, happy dys
+			
+				~set midleft = marz_happy
+				~set midright = dys_happy
+		
+				It was a trick! Dys is never happy.
+		
+				> start
+				
+			*** Mask Dys and Angry Marz
+			
+				~set right = marz_angry
+				~set midright = dys_mask
+				
+				There they are...
+		
+				> start
+		
+			*** Back
+				> start
+				
+		
+		** Test button locking
+			= buttons
+		
+			*** Simple option you can do it!
+				
+				>! buttons
+			
+			*** This needs ONE empathy
+				~ifd skill_empathy >= 1
+				
+				>! buttons
+			
+			*** This needs MUCH combat
+				~ifd skill_combat >= 100
+				
+				>! buttons
+			
+			*** Smooch
+				~set mem_flirt_dys = true
+				
+				>! buttons
+			
+			*** Whooeeeoooo
+				~if hog_numLives
+				~ifd love_dys >= 90
+				~ifd skill_rebellion < 30
+				
+				>! buttons
+		
+			*** Foraging
+				~ifd status != stressed
+				~ifd status != grounded
+				~ifd status != mourning
+				~call job(forage)
+				
+				>! buttons
+				
+			*** Relax in the Lounge
+				~call job(relaxLounge)
+				
+				>! buttons
+		
+			*** Back
+				> start
+		
+		** Test mem equals
+			= equals
+			
+			*** Set mem_whatever to 1
+				~set mem_whatever = 1
+				> equals
+				
+			*** Set mem_whatever to 2
+				~set mem_whatever = 2
+				> equals
+			
+			// should warn that we don't do = anymore
+			// *** Test mem_whatever = 1
+				// ~if mem_whatever = 1
+				// Yeah, it's 1! [=mem_whatever]
+				// > equals
+		
+			*** Test mem_whatever == 1
+				~if mem_whatever == 1
+				Yeah, it's 1! [=mem_whatever]
+				> equals
+			
+			// should warn that we don't do = anymore
+			// *** Test mem_whatever = 2
+				// ~if mem_whatever = 2
+				// Yeah, it's 2! [=mem_whatever]
+				// > equals
+		
+			*** Test mem_whatever == 2
+				~if mem_whatever == 2
+				Yeah, it's 2! [=mem_whatever]
+				> equals
+				
+			*** Done 
+			
+			
+		** Test dynamic charas
+			= dyno
+			~set bg = quarters
+			~set charas = none
+			
+			Marz loves me this much: [=call_getLove(marz)]
+			
+			*** Simple ver
+				~set left = cal_happy
+				~set midleft = rex
+				~setif love_marz >= 30 ? midleft = marz_happy
+				~set midright = vace_happy
+				~setif love_nomi >= 30 ? midright = nomi_happy
+				~set right = tang_happy
+				~setif love_anemone >= 30 ? right = anemone_happy
+				
+				Lokkit them all!
+				
+				> dyno
+				
+			*** Dyno
+				~set left = cal_happy
+				~setif call_getLove(marz) > call_getLove(rex) ? midleft = marz_happy : midleft = rex_happy
+				~setif call_getLove(tang) > call_getLove(nomi) ? midright = tang_happy : midright = nomi_happy
+				~setif call_getLove(vace) > call_getLove(anemone) ? right = vace_happy : right = anemone_happy
+		
+				Better!
+				> dyno
+				
+				
+		** Test intro
+			=intro
+			
+			*** Start
+				~set bg = intro
+				> intro
+			
+			*** Doggo
+				~call animation(intro4dog)
+				> intro
+			
+			*** Doggo transformed
+				~call animation(intro6transform)
+				// ~call animation(intro6transformedLoop)
+				> intro
+		
+			*** Stop
+				~set bg = quarters
+				> intro
+			
+		** Test call compare
+			= callCompare
+
+			BestSkill Social: [= call_bestSkill(social)]
+			BestSkill Mental: [= call_bestSkill(mental)]
+			BestSkill Physical: [= call_bestSkill(physical)]
+			
+			BestSkill: [= call_bestSkill]
+			
+			bestSkillValue: [= call_bestSkillValue]
+			bestSkillValueRoundDownMinusOne: [= call_bestSkillValueRoundDownMinusOne]
+			
+		** Test load maps
+			= loadmaps
+			~set bg = colony
+			
+			Where do you want to go today?
+			
+			*** Intro complete!
+				~call introComplete()
+				
+			*** Helio!
+				~call loadScene(colonyHelio)
+			
+			*** Strato!
+				~call loadScene(colonyStrato)
+			
+		** Test delay
+			= delay
+			~set bg = colony
+			
+			Okay what you want to delay?
+			
+			*** Marz in bedroom 2 sec delay
+				~set bg = bedroom
+				~set left = marz
+				~call delayText(2)
+				
+				Here she is! Marz!
+				
+				-
+				~set left = none
+				
+				That was her!
+				
+				> delay
+				
+			*** Longer delay 5 seconds Dys
+				~set bg = nearby
+				~set left = dys
+				~call delayText(5)
+				
+				My buddy Dys
+				
+				-
+				~set left = none
+				
+				Bye bro!
+				
+				> delay
+			
+			*** PINUP
+				~set bg = pinup_marz
+				
+				Hey itsa marz
+				
+				-
+				
+				Sweeeeet
+				
+				> delay
+		
+		** Test Stress
+		
+			~set skill_stress + 30
+			
+			Ouch!!!
+			
+			> start
+		
+		
+		** Test simple
+			= simple
+		
+			Oh isn't this great! It's a text box!
+			
+			*** Again!
+				Are you sure? here we go!
+				
+				Are you sure? here we go!
+				
+				Are you sure? here we go!
+				
+				Are you sure? here we go!
+			
+				> simple
+				
+			*** I want out
+				> start
+		
+		
+		** Test months since perk
+		
+			Months since jobAnalyzePlants: [= call_monthsSincePerk(jobAnalyzePlants) ]
+				
+			*** Has perk
+				~if call_monthsSincePerk(jobAnalyzePlants) >= 0
+				
+				Testing on animals.
+			
+			*** Perk today
+				~if call_monthsSincePerk(jobAnalyzePlants) == 0
+				
+				Testing on animals.
+			
+			*** Perk last month
+				~if call_monthsSincePerk(jobAnalyzePlants) == 1
+				
+				Testing on animals.
+			
+			*** Perk Ago
+				~if call_monthsSincePerk(jobAnalyzePlants) >= 2
+				
+				Testing on animals.
+			
+		
+		** Test dead ends
+				
+			*** Help him with the animals
+				~ifd skill_animals >= 80
+				
+				Testing on animals.
+			
+		** Test Once
+			= once
+			
+			*** Whisper back
+				~if once_today
+				~call battle(animals, oncewinlose, oncewinlose)
+
+			*** Another once
+				~if once_today
+				
+				asdf
+				
+				> once
+
+			*** YET Another once
+				~if once_today
+				
+				asdf
+				
+				> once
+				
+			***= oncewinlose
+				You won or lost!
+				
+				> once
+
+			*** Do nothing for a minute
+				Okay you hang out and don't whisper back.
+			
+				> once
+			
+			*** Done
+		
+		** Test social skill checks
+			= social
+			
+			*** This requires Empathy 50
+				~ifd skill_empathy >= 50
+				> social
+			
+			*** This requires Creativity 50
+				~ifd skill_creativity >= 50
+				> social
+			
+			*** This requires Persuasion 50
+				~ifd skill_persuasion >= 50
+				> social
+			
+			*** This requires Animals 50
+				~ifd skill_animals >= 50
+				> social
+			
+			*** This requires Reasoning 50
+				~ifd skill_reasoning >= 50
+				> social
+			
+			*** Done
+		
+		** Test love
+			=love
+			
+			*** Hi Dys!
+				~set midleft = dys
+			
+				> love
+			
+			*** Hi Nem!
+				~set right = anemone
+			
+				> love
+			
+			*** Hi Nominomi!
+				~set midright = nomi3
+			
+				> love
+			
+			*** Hi HAPPY Nominomi!
+				~set midright = nomi3_happy
+			
+				> love
+			
+			*** He loves you
+				~set love_dys++
+			
+				> love
+			
+			*** He loves you not
+				~set love_dys--
+				
+				> love
+				
+			*** SHE love you
+				~set love_anemone++
+				
+				> love
+				
+			*** THEY love you not
+				~set love_nomi--
+				
+				> love
+				
+			*** HI AND LOVE ME Noms
+				~set left = nomi3_sad
+				~set love_nomi++
+				
+				> love
+				
+			*** Go away everybody
+				~set charas = none
+				
+				> love
+				
+			*** Back
+				> start 
+				
+		
+		** Test hogs
+			= hogs
+			How do you do?
+			
+			[if hog_test]
+				I remember this one!
+			[else]
+				I don't know what you mean...
+			[end]
+			
+			*** Set the hog
+				~set hog_test = true
+				> hogs
+				
+			*** Unset the hog
+				~set hog_test = false
+				> hogs
+				
+			*** Disable hogs
+				~set mem_hogsDisabled = true
+				> hogs
+				
+			*** Enable hogs
+				~set mem_hogsDisabled = false
+				> hogs
+				
+			*** Geddaodahere
+			
+			
+			
+		** Test jumps
+			=jumps
+			
+			A variety of jumps to a choice with no text, for your testing pleasure.
+			
+			*** One arrow no text
+				// will not add an extra page break
+				> notext
+			
+			*** One arrow with text
+				Here we have a regular jump.
+				
+				> notext
+			
+			*** Two arrows with text
+				This means to skip the page break AND any text in the following choice.
+				
+				>> notext
+			
+			*** Exclamation mark with text
+				An exclamation mark adds extra spice, and means skip the page break.
+				
+				>! notext
+			
+			***= notext
+				**** Just
+					> jumps
+				**** Some
+					> jumps
+				**** Choices
+					> jumps
+					
+					
+		** Test naming
+			=naming
+			
+			~set bg = walls
+			~set midleft = dys
+
+			*** With dummy choice
+				// prompt for name
+				~call setName(nameNext)
+				
+				**** you can see this but can't click it!
+				
+					Shouldn't see this? But we might need it to prevent ending
+					
+					> naming
+				
+			*** With hidden choice
+				// prompt for name
+				~call setName(nameNext)
+				
+				**** [hidden]
+				
+					Now THIS one should be hidden,
+					
+					> naming
+				
+			*** With NO choice
+				~call setName(nameNext)
+				
+				I hope this works...
+				
+			*** With ID only choice
+				// prompt for name
+				~call setName(nameNext2)
+				
+				****= nameNext2
+				
+					222 Your name is [Name]!!!
+					
+					> naming
+					
+			*** Nemmie time with hidden
+				~call setInputMem(anemoneNick, nemmieNext)
+					
+				****= nemmieNext
+				
+					NEMMMIE your name is [=mem_anemoneNick]!
+					
+					> naming
+				
+			***= nameNext
+			
+				Your name is [Name]!!!
+				
+				> naming
+		
+			*** Back
+				> start
+		
+		** Test skill gating
+			=gating
+			
+			*** You must be 70 tough to ride the ride
+				~ifd skill_toughness >= 70
+				> gating
+			
+			*** You must be 70 tough to even SEE the ride
+				~if skill_toughness >= 70
+				> gating
+			
+			*** You must be under 30 tough to ride the ride
+				~ifd skill_toughness < 30
+				> gating
+				
+			*** You must be over 70 empathy to ride the ride
+				~ifd skill_empathy >= 70
+				> gating
+			
+			// *** You must be under 30 empathy to ride the ride
+				// ~ifd skill_empathy < 30
+				// > gating
+			
+			*** toughness and empathy
+				~ifd skill_toughness >= 70
+				~ifd skill_empathy >= 70
+				> gating
+			
+			*** toughness OR empathy
+				~ifd skill_toughness >= 70 or skill_empathy >= 70
+				> gating
+		
+			*** toughness and empathy AND reasoning
+				~ifd skill_toughness >= 70
+				~ifd skill_empathy >= 70
+				~ifd skill_reasoning >= 70
+				> gating
+				
+			*** if you're 70 tough here's a card battle
+				~ifd skill_toughness >= 70
+				~call battle(toughness, gating, gating)
+				
+			*** if you're 70 empathy here's a card battle
+				~ifd skill_empathy >= 70
+				~call battle(toughness, gating, gating)
+				
+			*** if you're 70 tough here's a job
+				~ifd skill_toughness >= 70
+				~call job(sportsball)
+				
+			*** if you're 70 empathy here's a job
+				~ifd skill_empathy >= 70
+				~call job(sportsball)
+		
+		** Test speaker
+			=speaker
+			~set charas = none
+			~set midleft = marz
+			~set speaker = marz
+			
+			"It's-a me, marzio!"
+			
+			*** add folks but marz still speaker!
+				~set midright = cal
+				~set right = tammy
+				~set speaker = marz
+				
+				"I'mma still marz! "
+				
+				**** add tang and she's speaker
+					~set left = tang
+					
+					"Move OVER marz ugh your lucious grabbable ass is so in my face right now I hate you"
+					
+					"I _love_ you"
+					
+					"I _hate_ you"
+						
+					***** next cal will speak!
+						~set speaker = cal
+						
+						"I am teh sexy MANNNN. watch out!"
+						
+						> speaker
+						
+			*** marz is ANGRY
+				= marzlone
+				~set midleft = marz_angry
+				
+				"That's right hon look at these eyes I'm going to kill you in your sleep"
+				
+				**** marz is HAPPY
+					~set midleft = marz_happy
+					
+					She dances!
+					
+					***** marz is SAD
+						~set midleft = marz
+						
+						She dances! "It is a trick. Marz does not sad."
+						
+						****** again
+							> marzlone
+						
+						****** back
+							> speaker
+						
+			*** marz is ANGRY and not alone
+				= marzgroup
+				~set midleft = marz_angry
+				~set left = cal
+				~set midright = tammy
+				
+				"This is tammy I am the talker now. Marz is scaring me waaah."
+				
+				**** marz is SPEAKER
+					~set midleft = marz_happy
+					~set speaker = marz
+					
+					She dances! "Whatch out!! Here I come!"
+					
+					***** marz is SAD
+						~set midleft = marz
+						
+						She dances! "It is a trick. Marz does not sad."
+						
+						****** again
+							> marzgroup
+						
+						****** back
+							> speaker
+						
+			*** marz is ANGRY with rex
+				= marzrex
+				~set midleft = marz_angry
+				~set left = rex
+				
+				"I am the rex. WOOF."
+				
+				**** marz is SPEAKER
+					~set midleft = marz_happy
+					~set speaker = marz
+					
+					She dances! "Whatch out!! Here I come!"
+						
+					***** marz is SAD
+						~set midleft = marz
+						
+						She dances! "It is a trick. Marz does not sad."
+						
+						****** again
+							> marzrex
+						
+						****** back
+							> speaker
+					
+		
+			*** Back
+				> start
+		
+		
+		
+		** Test done buttons
+			Some of these are done buttons, whatchu think
+			
+			*** This one is a done for sure, no content
+				// actually it won't be if =end exists
+			
+			*** This one NOT a done, content
+				=donejump
+			
+				Hehe just a bit more, okay that's all folks.
+				
+			*** This one NOT done, jump
+				> donejump
+				
+			*** This one ... ending?
+				~call endGame(bomb)
+				
+			*** This one ... go home?
+				~call goHome()
+			
+			// ***= end
+				// Heheheh this is the post done end, this is gonna annoy EVERY BODY
+
+		** Test Jumpy SeenText
+			= jumpyseentextstart
+		
+			Here's some seeeeen text!
+			
+			-
+			=jumpyseen2
+			
+			Bet you seen it before haven'tcha.
+			
+			*** What about a battle!
+				=jumpyseenbattle
+				
+				here this one is new, but it ends with a surprise!
+				
+				-
+				=jumpyseenbattleB
+				
+				first some more text, then....
+				
+				**** battle!
+					=jumpyseenbattleC
+					~call battle(persuasion_hard, jumpyseentextstart, jumpyseentextstart)
+		
+			*** What about done?
+				=jumpydone
+				
+				Nothing to see here...
+				
+				**** I'm done
+					=jumpydoneB
+		
+			*** Jump number one
+				=jumpyseen3
+				> jumpyseentextt
+			
+			*** Jump number two goes to the same place
+				=jumpyseen4
+				> jumpyseentextt
+			
+			*** Jump three has some text first
+				=jumpyseen5
+				Some text that is first
+				
+				- 
+				=jumpyseen5b
+				
+				Maybe another page of it why not, but now the jump right here watch out!
+				
+				> jumpyseentextt
+			
+			***=jumpyseentextt
+				This is the jumpyseen text that you've been hearing about.
+				
+				-
+				=jumpyseen6b
+				
+				Here we are, in an event that has been seen and jumped to from all over.
+				
+				- 
+				=jumpyseen6c
+				
+				I wonder what the next page will hold?
+				
+				**** How about button not continue next
+					=jumpyseen7
+					
+					Tricked ya it's just back up to the start
+					
+					> jumpyseentextstart
+
+		
+		** Test Random Logic
+			~set var_false = false
+			~set var_alsofalse = false
+			
+			*** Test regular random
+					
+				allinone: [if random : Random 1 | Random 2 | Random 3]
+				allinone again: [if random : Random 1 | Random 2 | Random 3]
+				allinone again 2: [if random : Random 1 | Random 2 | Random 3]
+				allinone again 3: [if random : Random 1 | Random 2 | Random 3]
+				allinone again 4: [if random : Random 1 | Random 2 | Random 3]
+				
+				Split up:
+				[if random]
+					Random 1
+				[else]
+					Random 2
+				[else]
+					Random 3
+				[end]
+				
+				-
+				= secondrandom
+			
+				Split up again:
+				[if random]
+					Random 1
+				[else]
+					Random 2
+				[else]
+					Random 3
+				[end]
+				
+				-
+				= thirdrandom
+			
+				Split up again:
+				[if random]
+					Random 1
+				[else]
+					Random 2
+				[else]
+					Random 3
+				[end]
+				
+				-
+			
+				Split up again:
+				[if random]
+					Random 1
+				[else]
+					Random 2
+				[else]
+					Random 3
+				[end]
+			
+				Split up again:
+				[if random]
+					Random 1
+				[else]
+					Random 2
+				[else]
+					Random 3
+				[end]
+			
+				[if !var_false ? This is true! : This is false]
+				
+				[if !var_false ? This is true and that's it!]
+				[if var_false ? This is false and that's it!]
+				
+				[if !var_false]
+					This is "Hello [Name]!!!" true
+				[else if var_alsofalse]
+					This is "Hello [Name]!!!" false
+				[else]
+					Also false
+				[end]
+				
+				[if var_false]
+					This is false there's no true
+				[else if var_alsofalse]
+					Also false and that's it.
+				[end]
+				
+				[if var_false]
+					This is false
+				[else]
+					This default is true.
+				[end]
+				
+				[if random]
+					This is random 1.
+				[else]
+					This is random 2.
+				[else]
+					This is random 3.
+				[end]
+				
+				[if random : random1 | random2 | random3]
+				
+				**** Pick random 1
+					~if random
+					> start
+					
+				**** Pick random 2
+					~if random
+					> start
+					
+				**** Pick random 3
+					~if random
+					> start
+			
+			*** Test SUPER random
+					
+				allinone: [if random! : Random 1 | Random 2 | Random 3]
+				allinone again: [if random! : Random 1 | Random 2 | Random 3]
+				allinone again 2: [if random! : Random 1 | Random 2 | Random 3]
+				allinone again 3: [if random! : Random 1 | Random 2 | Random 3]
+				allinone again 4: [if random! : Random 1 | Random 2 | Random 3]
+				
+				Split up:
+				[if random!]
+					Random 1
+				[else]
+					Random 2
+				[else]
+					Random 3
+				[end]
+			
+				Split up again:
+				[if random!]
+					Random 1
+				[else]
+					Random 2
+				[else]
+					Random 3
+				[end]
+			
+				Split up again:
+				[if random!]
+					Random 1
+				[else]
+					Random 2
+				[else]
+					Random 3
+				[end]
+			
+				Split up again:
+				[if random!]
+					Random 1
+				[else]
+					Random 2
+				[else]
+					Random 3
+				[end]
+			
+				Split up again:
+				[if random!]
+					Random 1
+				[else]
+					Random 2
+				[else]
+					Random 3
+				[end]
+			
+				[if !var_false ? This is true! : This is false]
+				
+				[if !var_false ? This is true and that's it!]
+				[if var_false ? This is false and that's it!]
+				
+				[if !var_false]
+					This is "Hello [Name]!!!" true
+				[else if var_alsofalse]
+					This is "Hello [Name]!!!" false
+				[else]
+					Also false
+				[end]
+				
+				[if var_false]
+					This is false there's no true
+				[else if var_alsofalse]
+					Also false and that's it.
+				[end]
+				
+				[if var_false]
+					This is false
+				[else]
+					This default is true.
+				[end]
+				
+				[if random!]
+					This is random 1.
+				[else]
+					This is random 2.
+				[else]
+					This is random 3.
+				[end]
+				
+				[if random! : random1 | random2 | random3]
+				
+				**** Pick random 1
+					~if random!
+					> start
+					
+				**** Pick random 2
+					~if random!
+					> start
+					
+				**** Pick random 3
+					~if random!
+					> start
+		
+		
+		
+		** Test SFX
+			=sfx
+			~set bg = colony
+			~set left = rex
+			~set effect = none
+				
+			*** Pick Groundhog Option
+				~if hog_lifeStarted
+				
+				This option required a past life memory to select.
+				
+				**** Back
+					> sfx
+				
+			*** Pick Flirt Option
+				~set mem_flirt_rex
+				
+				This option let a character know you're interested.
+				
+				**** Back
+					> sfx
+				
+			*** Get a pinup
+				~set bg = pinup_rex
+				
+				This image is now unlocked and you can find it in the main menu later (once implemented).
+				
+				**** Back
+					> sfx
+				
+			*** Get a card
+				~set card = introHat
+				
+				Can't have too many hats!
+				
+				**** Back
+					> sfx
+				
+			*** Holopalm effect
+				~set effect = holopalm
+				
+				Rex is talking to you long distance via your holopalm.
+				
+				**** Back
+					> sfx
+				
+			*** Dream effect
+				~set effect = dream
+				
+				Dreeeeaammmmmy......
+				
+				**** Back
+					> sfx
+				
+			*** Screenshake
+				~set effect = screenshake
+				
+				**** Screenshake again!
+					~set effect = screenshake
+							
+					***** Back
+						// this will not fire
+						~set effect = screenshake
+						> sfx
+					
+			*** Siren!
+				~set effect = siren
+				
+				WHAT'S THAT? I CAN'T HEAR YOU.
+				
+				**** Back
+					> sfx		
+			*** Done
+				
+		
+		** Back
+			> start
